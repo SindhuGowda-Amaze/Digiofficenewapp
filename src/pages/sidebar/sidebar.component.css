@@ -1,0 +1,33 @@
+.common{
+    float: left;
+    width: 12px;
+    margin-top: 5px;
+}
+.background{
+    background-color: #3a1944;
+    font-family: Bookman Old Style;
+}
+.negative-padding{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.side-height{
+    height: 90vh;
+}
+.side-anchr {
+    margin-top: 10px;
+    color: white;
+    margin-left: 5px;
+    font-size: 16px;
+}
+.HrLine {
+    color: white;
+    border: solid 1%;
+    opacity: 1;
+}
+span:hover {
+    background-color:#3a1944;
+    text-decoration: none;
+    color: #ffc83d;
+    cursor: pointer;
+  }

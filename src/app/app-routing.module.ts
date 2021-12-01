@@ -1,7 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+import { SidebarComponent } from 'src/pages/sidebar/sidebar.component';
+
+const routes: Routes = [
+
+  { path: "", redirectTo: "Login", pathMatch: "full" },
+  {
+    path: "Sidebar", component: SidebarComponent
+  },
+
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
