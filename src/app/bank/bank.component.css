@@ -66,9 +66,18 @@
       padding:1%;
     }
     .edit{
-        text-align: center;
-        color:rgb(7, 106, 119);
-        text-decoration: underline;
-        text-decoration-color:rgb(7, 106, 119) ;
-        font-weight: bold;
-    }
+        width: 50%;
+  
+  border: none;
+  background-color:rgb(7, 106, 119);;
+  text-align: center;
+  border-radius: 16px;
+  color: white;
+  margin-top: 6px;
+  font-family: sans-serif;
+ 
+}
+.align{
+  text-align: center;
+}
+    

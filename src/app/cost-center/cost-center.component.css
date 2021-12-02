@@ -68,6 +68,7 @@ table, th, td {
   text-decoration-color: black;
   color:rgb(7, 106, 119);
   font-weight: bold;
+  text-align: center;
 }
 .Button1{
   text-align: center;
@@ -86,4 +87,15 @@ table, th, td {
   color:white;
   border: none;
   font-size: 18px;
+}
+.act{
+  width: 50%;
+  border: none;
+  background-color:rgb(7, 106, 119);;
+  
+  border-radius: 16px;
+  color: white;
+  margin-top: 6px;
+  font-family: sans-serif;
+  margin-left: 5px;
 }
