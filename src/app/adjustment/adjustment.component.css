@@ -1,10 +1,10 @@
 .pckg {
     font-weight: bolder;
     float: left;
-    padding-bottom: 6px;
     text-align: center;
     font-size: 24px;
     font-family: sans-serif;
+    padding-left: 15px;
 }
 
 .add {
@@ -17,9 +17,10 @@
     color: white;
     margin-top: 6px;
     font-family: sans-serif;
+    margin-right: 15px;
 }
 
-.search {
+/* .search {
     width: 22%;
     margin-left: 19px;
     padding-left: 12px;
@@ -27,6 +28,10 @@
     border: 1px solid #b9bbbe;
     border-radius: 5px;
     padding-bottom: 6px;
+} */
+
+.Srch{
+  margin-left: 15px;
 }
 
 table, th, td {

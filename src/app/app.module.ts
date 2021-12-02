@@ -14,6 +14,10 @@ import { CompanyAdjustmentComponent } from './company-adjustment/company-adjustm
 import { CostCenterComponent } from './cost-center/cost-center.component';
 import { DepartmentComponent } from './department/department.component';
 import { EmployeeComponent } from './employee/employee.component';
+import { CostCenterFormComponent } from './cost-center-form/cost-center-form.component';
+import { CompanyAdjustmentFormComponent } from './company-adjustment-form/company-adjustment-form.component';
+import { EmployeeFormComponent } from './employee-form/employee-form.component';
+import { DepartmentFormComponent } from './department-form/department-form.component';
 import { GeneralLedgerComponent } from './general-ledger/general-ledger.component';
 import { OtRatesComponent } from './ot-rates/ot-rates.component';
 import { PayGroupComponent } from './pay-group/pay-group.component';
@@ -37,6 +41,10 @@ import { UserComponent } from './user/user.component';
     CostCenterComponent,
     DepartmentComponent,
     EmployeeComponent,
+    CostCenterFormComponent,
+    CompanyAdjustmentFormComponent,
+    EmployeeFormComponent,
+    DepartmentFormComponent,
     GeneralLedgerComponent,
     OtRatesComponent,
     PayGroupComponent,
