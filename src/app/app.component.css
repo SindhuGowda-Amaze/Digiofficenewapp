@@ -4,6 +4,7 @@
 }
 .head-height{
     height: 10vh;
+    margin-bottom: -1px;
 }
 .side-height{
     height: 90vh;

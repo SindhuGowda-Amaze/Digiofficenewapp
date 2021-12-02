@@ -25,6 +25,13 @@ import { PayRollComponent } from './pay-roll/pay-roll.component';
 import { PhilHealthComponent } from './phil-health/phil-health.component';
 import { SSSComponent } from './sss/sss.component';
 import { UserComponent } from './user/user.component';
+import { GeneralLedgerFormComponent } from './general-ledger-form/general-ledger-form.component';
+import { OtRatesFormComponent } from './ot-rates-form/ot-rates-form.component';
+import { PayGroupFormComponent } from './pay-group-form/pay-group-form.component';
+import { PayRollFormComponent } from './pay-roll-form/pay-roll-form.component';
+import { PhillHealthFormComponent } from './phill-health-form/phill-health-form.component';
+import { SSSFormComponent } from './sssform/sssform.component';
+import { UsersFormComponent } from './users-form/users-form.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +58,14 @@ import { UserComponent } from './user/user.component';
     PayRollComponent,
     PhilHealthComponent,
     SSSComponent,
-    UserComponent
+    UserComponent,
+    GeneralLedgerFormComponent,
+    OtRatesFormComponent,
+    PayGroupFormComponent,
+    PayRollFormComponent,
+    PhillHealthFormComponent,
+    SSSFormComponent,
+    UsersFormComponent
   ],
   imports: [
     BrowserModule,

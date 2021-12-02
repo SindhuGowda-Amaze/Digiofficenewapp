@@ -24,6 +24,13 @@ import { PayRollComponent } from './pay-roll/pay-roll.component';
 import { PhilHealthComponent } from './phil-health/phil-health.component';
 import { SSSComponent } from './sss/sss.component';
 import {UserComponent} from './user/user.component';
+import { GeneralLedgerFormComponent } from './general-ledger-form/general-ledger-form.component';
+import { OtRatesFormComponent } from './ot-rates-form/ot-rates-form.component';
+import { PayGroupFormComponent } from './pay-group-form/pay-group-form.component';
+import { PayRollFormComponent } from './pay-roll-form/pay-roll-form.component';
+import { PhillHealthFormComponent } from './phill-health-form/phill-health-form.component';
+import { SSSFormComponent } from './sssform/sssform.component';
+import { UsersFormComponent } from './users-form/users-form.component';
 
 const routes: Routes = [
 
@@ -63,6 +70,27 @@ const routes: Routes = [
   {
     path: "DepartmentForm", component: DepartmentFormComponent
   },
+  {
+    path: "GeneralLedgerForm", component: GeneralLedgerFormComponent
+  },
+  {
+    path: "OtRatesForm", component: OtRatesFormComponent
+  },
+  {
+    path: "PayGroupForm", component: PayGroupFormComponent
+  },
+  {
+    path: "PayRollForm", component: PayRollFormComponent
+  },
+  {
+    path: "PhillHealthForm", component: PhillHealthFormComponent
+  },
+  {
+    path: "sssForm", component: SSSFormComponent
+  },
+  {
+    path: "UsersForm", component: UsersFormComponent
+  },
   {path:"Adolfo",component:AdolfoComponent},
   
   {path:"CompanyAdjustment",component:CompanyAdjustmentComponent},
@@ -85,10 +113,7 @@ const routes: Routes = [
   
   {path:'SSS',component:SSSComponent},
   
-  {path:'User',component: UserComponent}
-
-
-
+  {path:'User',component: UserComponent},
 
 ];
 
