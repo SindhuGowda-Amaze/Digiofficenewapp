@@ -5,6 +5,11 @@ import { SidebarComponent } from 'src/pages/sidebar/sidebar.component';
 import{AdjustmentComponent} from 'src/app/adjustment/adjustment.component';
 import { CompanyprofileComponent } from './companyprofile/companyprofile.component';
 import { HeaderComponent } from './header/header.component';
+import { AdolfoComponent } from './adolfo/adolfo.component';
+import { CompanyAdjustmentComponent } from './company-adjustment/company-adjustment.component';
+import { CostCenterComponent } from './cost-center/cost-center.component';
+import { DepartmentComponent } from './department/department.component';
+import { EmployeeComponent } from './employee/employee.component';
 
 const routes: Routes = [
 
@@ -22,6 +27,16 @@ const routes: Routes = [
   {
     path: "Companyprofile", component: CompanyprofileComponent
   },
+  {path:"Adolfo",component:AdolfoComponent},
+  
+  {path:"CompanyAdjustment",component:CompanyAdjustmentComponent},
+
+  {path:"CostCenter",component:CostCenterComponent},
+
+  {path:'Department',component:DepartmentComponent},
+  
+  {path:'Employee',component:EmployeeComponent},
+
 
 ];
 

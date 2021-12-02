@@ -8,6 +8,10 @@ import { HeaderComponent } from './header/header.component';
 import { AdjustmentComponent } from './adjustment/adjustment.component';
 import { AdolfoComponent } from './adolfo/adolfo.component';
 import { CompanyprofileComponent } from './companyprofile/companyprofile.component';
+import { CompanyAdjustmentComponent } from './company-adjustment/company-adjustment.component';
+import { CostCenterComponent } from './cost-center/cost-center.component';
+import { DepartmentComponent } from './department/department.component';
+import { EmployeeComponent } from './employee/employee.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +20,11 @@ import { CompanyprofileComponent } from './companyprofile/companyprofile.compone
     HeaderComponent,
     AdjustmentComponent,
     AdolfoComponent,
-    CompanyprofileComponent
+    CompanyprofileComponent,
+    CompanyAdjustmentComponent,
+    CostCenterComponent,
+    DepartmentComponent,
+    EmployeeComponent
   ],
   imports: [
     BrowserModule,
