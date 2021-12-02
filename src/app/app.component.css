@@ -5,6 +5,7 @@
 .head-height{
     height: 10vh;
     margin-bottom: -1px;
+    overflow-y: hidden;
 }
 .side-height{
     height: 90vh;

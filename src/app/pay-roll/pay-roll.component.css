@@ -68,3 +68,9 @@ table, th, td {
   .card{
       background-color: rgb(7, 106, 119);
   }
+  .text{
+    font-size: 15px;
+    color:rgb(7, 106, 119);
+    text-decoration: underline;
+    text-decoration-color:black;
+  }

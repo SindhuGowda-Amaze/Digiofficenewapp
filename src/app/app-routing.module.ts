@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { SidebarComponent } from 'src/pages/sidebar/sidebar.component';
+import { CompanyprofileComponent } from '../pages/companyprofile/companyprofile.component';
 import { AdjustmentComponent } from 'src/app/adjustment/adjustment.component';
-import { CompanyprofileComponent } from './companyprofile/companyprofile.component';
 import { HeaderComponent } from './header/header.component';
 import { HelpComponent } from './help/help.component';
 import { SproutPayrollComponent } from './sprout-payroll/sprout-payroll.component';
@@ -34,7 +34,6 @@ import { UsersFormComponent } from './users-form/users-form.component';
 
 const routes: Routes = [
 
-  { path: "", redirectTo: "Login", pathMatch: "full" },
   
   { path: "", redirectTo: "Adjustment", pathMatch: "full" }, 
 
