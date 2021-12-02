@@ -4,34 +4,102 @@
             <p class="side-anchr">Welcome Admin</p>
             <hr class="HrLine">
             <p>
-               
-                <span routerLink="/Enquery"  class="side-anchr ">Pay Roll</span>
+                <span routerLink="/Enquery" class="side-anchr ">Pay Roll</span>
             </p>
             <p>
-                
-                <span routerLink="/BlogsFoodSense" class="side-anchr ">Reports</span>
-            </p>
+                <button data-toggle="collapse" class="togglebtn button" data-target="#reports">Reports</button>
+            <div id="reports" class="collapse submenu">
+                <a class="tablinks submenu" routerLink="/Companyprofile">
+                    Company
+                </a><br>
+                <a class="tablinks submenu" routerLink="/ProjectDetailsDashboard">
+                    Payroll
+                </a><br>
+                <a class="tablinks submenu" routerLink="/ProjectBlocksDashboard">
+                    Reference
+                </a><br>
+                <a class="tablinks submenu" routerLink="/unitdetails">
+                    Access Control
+                </a>
+            </div>
             <p>
-                
-                <span routerLink="/Companyprofile" class="side-anchr ">Set-up</span>
-            </p>
+                <button data-toggle="collapse" class="togglebtn button" data-target="#setup">
+                    Set-up
+                </button><br>
+            <div id="setup" class="collapse submenu">
+                <a class="tablinks menu togglebtn button" data-toggle="collapse" data-target="#company">
+                    Company
+                </a>
+                <div id="company" class="collapse submenu">
+                    <a class="tablinks submenu" routerLink="/Companyprofile">
+                        Profile
+                    </a><br>
+                    <a class="tablinks submenu" routerLink="/ProjectDetailsDashboard">
+                        Cost centres
+                    </a><br>
+                    <a class="tablinks submenu" routerLink="/ProjectBlocksDashboard">
+                        General Ledgers
+                    </a><br>
+                    <a class="tablinks submenu" routerLink="/unitdetails">
+                        Departments
+                    </a><br>
+                    <a class="tablinks submenu" routerLink="/unitdetails">
+                        Banks
+                    </a><br>
+                    <a class="tablinks submenu" routerLink="/unitdetails">
+                        Pay Group
+                    </a>
+                </div>
+                <br>
+                <a class="tablinks menu togglebtn button" data-toggle="collapse" data-target="#payroll">
+                    Payroll
+                </a>
+                <div id="payroll" class="collapse submenu">
+                    <a class="tablinks submenu" routerLink="/Companyprofile">
+                        OT Rates
+                    </a><br>
+                    <a class="tablinks submenu" routerLink="/ProjectDetailsDashboard">
+                        Adjustment Template
+                    </a><br>
+                    <a class="tablinks submenu" routerLink="/ProjectBlocksDashboard">
+                        Company Adjustment
+                    </a>
+                </div>
+                <br>
+                <a class="tablinks menu togglebtn button" data-toggle="collapse" data-target="#reference">
+                    Reference
+                </a>
+                <div id="reference" class="collapse submenu">
+                    <a class="tablinks submenu" routerLink="/Companyprofile">
+                        Tax Table
+                    </a><br>
+                    <a class="tablinks submenu" routerLink="/ProjectDetailsDashboard">
+                        Tax Table Annual
+                    </a><br>
+                    <a class="tablinks submenu" routerLink="/ProjectBlocksDashboard">
+                        PhilHealth
+                    </a><br>
+                    <a class="tablinks submenu" routerLink="/ProjectDetailsDashboard">
+                        SSS
+                    </a><br>
+                    <a class="tablinks submenu" routerLink="/ProjectDetailsDashboard">
+                        Govt. OR Records
+                    </a><br>
+                </div>
+                <br>
+                <a class="tablinks menu" routerLink="/unitdetails">
+                    Access Control
+                </a>
+            </div>
             <p>
-                
-
                 <span routerLink="/TestimonialsFoodSense" class="side-anchr ">Employees</span>
             </p>
             <p>
-                
-
                 <span routerLink="/ResumesFoodSense" class="side-anchr ">Users</span>
             </p>
             <p>
-                
-
                 <span routerLink="/ResumesFoodSense" class="side-anchr ">Help</span>
             </p>
-
-
         </div>
-
-       </div>
+    </div>
+</div>
