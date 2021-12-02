@@ -33,6 +33,7 @@ import { PayRollFormComponent } from './pay-roll-form/pay-roll-form.component';
 import { PhillHealthFormComponent } from './phill-health-form/phill-health-form.component';
 import { SSSFormComponent } from './sssform/sssform.component';
 import { UsersFormComponent } from './users-form/users-form.component';
+import { GovernmentComponent } from './government/government.component';
 
 @NgModule({
   declarations: [
@@ -67,7 +68,8 @@ import { UsersFormComponent } from './users-form/users-form.component';
     PayRollFormComponent,
     PhillHealthFormComponent,
     SSSFormComponent,
-    UsersFormComponent
+    UsersFormComponent,
+    GovernmentComponent
   ],
   imports: [
     BrowserModule,
