@@ -20,6 +20,7 @@ import { PayGroupComponent } from './pay-group/pay-group.component';
 import { PayRollComponent } from './pay-roll/pay-roll.component';
 import { PhilHealthComponent } from './phil-health/phil-health.component';
 import { SSSComponent } from './sss/sss.component';
+import { UserComponent } from './user/user.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { SSSComponent } from './sss/sss.component';
     PayGroupComponent,
     PayRollComponent,
     PhilHealthComponent,
-    SSSComponent
+    SSSComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
