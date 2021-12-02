@@ -18,6 +18,13 @@ import { CostCenterFormComponent } from './cost-center-form/cost-center-form.com
 import { CompanyAdjustmentFormComponent } from './company-adjustment-form/company-adjustment-form.component';
 import { EmployeeFormComponent } from './employee-form/employee-form.component';
 import { DepartmentFormComponent } from './department-form/department-form.component';
+import { GeneralLedgerComponent } from './general-ledger/general-ledger.component';
+import { OtRatesComponent } from './ot-rates/ot-rates.component';
+import { PayGroupComponent } from './pay-group/pay-group.component';
+import { PayRollComponent } from './pay-roll/pay-roll.component';
+import { PhilHealthComponent } from './phil-health/phil-health.component';
+import { SSSComponent } from './sss/sss.component';
+import { UserComponent } from './user/user.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +44,14 @@ import { DepartmentFormComponent } from './department-form/department-form.compo
     CostCenterFormComponent,
     CompanyAdjustmentFormComponent,
     EmployeeFormComponent,
-    DepartmentFormComponent
+    DepartmentFormComponent,
+    GeneralLedgerComponent,
+    OtRatesComponent,
+    PayGroupComponent,
+    PayRollComponent,
+    PhilHealthComponent,
+    SSSComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,

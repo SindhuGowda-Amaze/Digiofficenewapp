@@ -17,6 +17,13 @@ import { CostCenterFormComponent } from './cost-center-form/cost-center-form.com
 import { CompanyAdjustmentFormComponent } from './company-adjustment-form/company-adjustment-form.component';
 import { EmployeeFormComponent } from './employee-form/employee-form.component';
 import { DepartmentFormComponent } from './department-form/department-form.component';
+import { GeneralLedgerComponent } from './general-ledger/general-ledger.component';
+import { OtRatesComponent } from './ot-rates/ot-rates.component';
+import { PayGroupComponent } from './pay-group/pay-group.component';
+import { PayRollComponent } from './pay-roll/pay-roll.component';
+import { PhilHealthComponent } from './phil-health/phil-health.component';
+import { SSSComponent } from './sss/sss.component';
+import {UserComponent} from './user/user.component';
 
 const routes: Routes = [
 
@@ -65,6 +72,22 @@ const routes: Routes = [
   {path:'Department',component:DepartmentComponent},
   
   {path:'Employee',component:EmployeeComponent},
+
+  {path:'GeneralLedger',component:GeneralLedgerComponent},
+  
+  {path:'OtRates',component:OtRatesComponent},
+  
+  {path:'PayGroup',component:PayGroupComponent},
+  
+  {path:'PayRoll',component:PayRollComponent},
+
+  {path:'PhilHealth',component: PhilHealthComponent},
+  
+  {path:'SSS',component:SSSComponent},
+  
+  {path:'User',component: UserComponent}
+
+
 
 
 ];
