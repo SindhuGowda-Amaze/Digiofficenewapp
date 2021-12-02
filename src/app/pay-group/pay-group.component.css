@@ -1,11 +1,16 @@
+.card{
+  background-color:rgb(7, 106, 119) ;
+}
+
 .pckg {
-    font-weight: bolder;
+    font-weight: bold;
     float: left;
     padding-bottom: 6px;
     text-align: center;
     font-size: 20px;
     font-family: sans-serif;
     color:white;
+    padding-left: 15px;
 }
 
 .add {
@@ -18,16 +23,11 @@
     color: black;
     margin-top: 6px;
     font-family: sans-serif;
+    margin-right: 15px;
 }
 
-.search {
-    width: 22%;
-    margin-left: 19px;
-    padding-left: 12px;
-    margin-top: -23px;
-    border: 1px solid #b9bbbe;
-    border-radius: 5px;
-    padding-bottom: 6px;
+.form-control{
+  margin-left:15px;
 }
 
 table, th, td {
@@ -55,7 +55,7 @@ table, th, td {
   }
   .menu
   {
-    font-weight: bolder;
+    font-weight: bold;
     font-family:sans-serif;
     font-size: 16px;
   }
@@ -67,4 +67,14 @@ table, th, td {
   }
   .card{
       background-color: rgb(7, 106, 119);
+  }
+  .Button{
+    background-color: rgb(7, 106, 119);
+    border: none;
+    border-radius: 16px;
+    color: white;
+    margin-top: 6px;
+    font-family: sans-serif;
+    margin-right: 15px;
+    width:28%;
   }

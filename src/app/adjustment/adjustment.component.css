@@ -1,34 +1,30 @@
+.card{
+  background-color:rgb(7, 106, 119) ;
+}
+
 .pckg {
     font-weight: bolder;
     float: left;
     text-align: center;
-    font-size: 24px;
+    font-size: 22px;
     font-family: sans-serif;
     padding-left: 15px;
+    color:white;
 }
 
 .add {
     width: 98%;
     float: right;
     border: none;
-    background-color:rgb(7, 106, 119);
+    background-color:white;
     height: 27px;
     border-radius: 16px;
-    color: white;
+    color: black;
     margin-top: 6px;
     font-family: sans-serif;
     margin-right: 15px;
 }
 
-/* .search {
-    width: 22%;
-    margin-left: 19px;
-    padding-left: 12px;
-    margin-top: -23px;
-    border: 1px solid #b9bbbe;
-    border-radius: 5px;
-    padding-bottom: 6px;
-} */
 
 .Srch{
   margin-left: 15px;

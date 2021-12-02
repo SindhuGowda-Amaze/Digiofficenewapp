@@ -24,6 +24,7 @@ import { PayRollComponent } from './pay-roll/pay-roll.component';
 import { PhilHealthComponent } from './phil-health/phil-health.component';
 import { SSSComponent } from './sss/sss.component';
 import { UserComponent } from './user/user.component';
+import { BankComponent } from './bank/bank.component';
 import { GeneralLedgerFormComponent } from './general-ledger-form/general-ledger-form.component';
 import { OtRatesFormComponent } from './ot-rates-form/ot-rates-form.component';
 import { PayGroupFormComponent } from './pay-group-form/pay-group-form.component';
@@ -31,11 +32,12 @@ import { PayRollFormComponent } from './pay-roll-form/pay-roll-form.component';
 import { PhillHealthFormComponent } from './phill-health-form/phill-health-form.component';
 import { SSSFormComponent } from './sssform/sssform.component';
 import { UsersFormComponent } from './users-form/users-form.component';
+import { GovernmentComponent } from './government/government.component';
 
 const routes: Routes = [
 
   
-  { path: "", redirectTo: "Adjustment", pathMatch: "full" }, 
+  { path: "", redirectTo: "PayRoll", pathMatch: "full" }, 
 
   {
     path: "Sidebar", component: SidebarComponent
@@ -113,6 +115,12 @@ const routes: Routes = [
   {path:'SSS',component:SSSComponent},
   
   {path:'User',component: UserComponent},
+
+  {path:'Bank',component:BankComponent},
+
+  {path:'Government',component:GovernmentComponent}
+
+
 
 ];
 
