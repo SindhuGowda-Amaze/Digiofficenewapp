@@ -6,6 +6,7 @@
     font-size: 20px;
     font-family: sans-serif;
     color:white;
+    padding-left: 15px;
 }
 
 .add {
@@ -18,16 +19,11 @@
     color: black;
     margin-top: 6px;
     font-family: sans-serif;
+    margin-left: 15px;
 }
 
-.search {
-    width: 22%;
-    margin-left: 19px;
-    padding-left: 12px;
-    margin-top: -23px;
-    border: 1px solid #b9bbbe;
-    border-radius: 5px;
-    padding-bottom: 6px;
+.form-control{
+  margin-left: 15px;
 }
 
 table, th, td {

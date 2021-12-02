@@ -25,6 +25,7 @@ import { PayRollComponent } from './pay-roll/pay-roll.component';
 import { PhilHealthComponent } from './phil-health/phil-health.component';
 import { SSSComponent } from './sss/sss.component';
 import { UserComponent } from './user/user.component';
+import { BankComponent } from './bank/bank.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { UserComponent } from './user/user.component';
     PayRollComponent,
     PhilHealthComponent,
     SSSComponent,
-    UserComponent
+    UserComponent,
+    BankComponent
   ],
   imports: [
     BrowserModule,

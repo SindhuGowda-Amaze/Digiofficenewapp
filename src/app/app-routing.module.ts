@@ -24,6 +24,7 @@ import { PayRollComponent } from './pay-roll/pay-roll.component';
 import { PhilHealthComponent } from './phil-health/phil-health.component';
 import { SSSComponent } from './sss/sss.component';
 import {UserComponent} from './user/user.component';
+import { BankComponent } from './bank/bank.component';
 
 const routes: Routes = [
 
@@ -85,7 +86,9 @@ const routes: Routes = [
   
   {path:'SSS',component:SSSComponent},
   
-  {path:'User',component: UserComponent}
+  {path:'User',component: UserComponent},
+
+  {path:'Bank',component:BankComponent},
 
 
 

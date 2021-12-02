@@ -1,3 +1,8 @@
+.card{
+  background-color:rgb(7, 106, 119) ;
+}
+
+
 .pckg {
     font-weight: bolder;
     float: left;
@@ -6,28 +11,24 @@
     font-size: 20px;
     font-family: sans-serif;
     color:white;
+  padding-left: 15px;
 }
 
 .add {
-    width: 98%;
-    float: right;
-    border: none;
-    background-color:white;
-    height: 27px;
-    border-radius: 16px;
-    color: black;
-    margin-top: 6px;
-    font-family: sans-serif;
+  width: 98%;
+  float: right;
+  border: none;
+  background-color:white;
+  height: 27px;
+  border-radius: 16px;
+  color: black;
+  margin-top: 6px;
+  font-family: sans-serif;
+  margin-right: 15px;
 }
 
-.search {
-    width: 22%;
-    margin-left: 19px;
-    padding-left: 12px;
-    margin-top: -23px;
-    border: 1px solid #b9bbbe;
-    border-radius: 5px;
-    padding-bottom: 6px;
+.form-control{
+  margin-left: 15px;
 }
 
 table, th, td {
