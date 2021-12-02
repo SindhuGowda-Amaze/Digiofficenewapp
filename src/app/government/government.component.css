@@ -1,0 +1,45 @@
+.government{
+    background-color: rgb(7, 106, 119);
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color:white;
+}
+.form-control{
+    width:100%;
+    height:auto;
+    padding:0px;
+}
+.save{
+    border-radius: 10px;
+    background-color: rgb(7, 106, 119);
+    color:white;
+    width:80%;
+    margin-left: 10%;
+    border:none;
+}
+   
+.delete{
+    border-radius: 10px;
+    background-color:rgb(7, 106, 119);
+    color:white;
+    width:80%;
+    margin-left: 10%;
+    border:none;
+
+}
+.background{
+    background-color:whitesmoke;
+}
+.text{
+    color:black;
+    font-weight: bold;
+    font-family:sans-serif;
+}
+
+.text1{
+    color:black;
+    font-weight: bold;
+    font-family:sans-serif;
+    text-align: center;
+}
