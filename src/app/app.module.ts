@@ -8,6 +8,9 @@ import { HeaderComponent } from './header/header.component';
 import { AdjustmentComponent } from './adjustment/adjustment.component';
 import { AdolfoComponent } from './adolfo/adolfo.component';
 import { CompanyprofileComponent } from './companyprofile/companyprofile.component';
+import { HelpComponent } from './help/help.component';
+import { SproutPayrollComponent } from './sprout-payroll/sprout-payroll.component';
+import { AdjustmentFormComponent } from './adjustment-form/adjustment-form.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { CompanyprofileComponent } from './companyprofile/companyprofile.compone
     HeaderComponent,
     AdjustmentComponent,
     AdolfoComponent,
-    CompanyprofileComponent
+    CompanyprofileComponent,
+    HelpComponent,
+    SproutPayrollComponent,
+    AdjustmentFormComponent
   ],
   imports: [
     BrowserModule,
