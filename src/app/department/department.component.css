@@ -3,7 +3,7 @@
     float: left;
     padding-bottom: 6px;
     text-align: center;
-    font-size: 24px;
+    font-size: 20px;
     font-family: sans-serif;
 }
 
@@ -64,3 +64,24 @@ table, th, td {
   .card-padding2{
     padding:1%;
   }
+
+  .Button1{
+    float: right;
+    border: none;
+    background-color: rgb(7, 106, 119);
+    border-radius: 8px;
+    color: white;
+    margin-top: 6px;
+    font-family: sans-serif;
+    width: 154px;
+  }
+   .Button2{
+    border: none;
+    background-color:rgb(7, 106, 119);
+    height: 27px;
+    border-radius: 8px;
+    color: white;
+    margin-top: 6px;
+    font-family: sans-serif;
+    width: 186px;
+   }

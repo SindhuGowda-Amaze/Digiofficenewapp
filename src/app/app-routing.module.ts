@@ -8,10 +8,16 @@ import { HeaderComponent } from './header/header.component';
 import { HelpComponent } from './help/help.component';
 import { SproutPayrollComponent } from './sprout-payroll/sprout-payroll.component';
 import { AdjustmentFormComponent } from './adjustment-form/adjustment-form.component';
+import { AdolfoComponent } from './adolfo/adolfo.component';
+import { CompanyAdjustmentComponent } from './company-adjustment/company-adjustment.component';
+import { CostCenterComponent } from './cost-center/cost-center.component';
+import { DepartmentComponent } from './department/department.component';
+import { EmployeeComponent } from './employee/employee.component';
 
 const routes: Routes = [
 
-  // { path: "", redirectTo: "Login", pathMatch: "full" },
+  { path: "", redirectTo: "Login", pathMatch: "full" },
+  
   { path: "", redirectTo: "Adjustment", pathMatch: "full" }, 
 
   {
@@ -34,6 +40,16 @@ const routes: Routes = [
   {
     path: "AdjustmentForm", component: AdjustmentFormComponent
   },
+  {path:"Adolfo",component:AdolfoComponent},
+  
+  {path:"CompanyAdjustment",component:CompanyAdjustmentComponent},
+
+  {path:"CostCenter",component:CostCenterComponent},
+
+  {path:'Department',component:DepartmentComponent},
+  
+  {path:'Employee',component:EmployeeComponent},
+
 
 ];
 
