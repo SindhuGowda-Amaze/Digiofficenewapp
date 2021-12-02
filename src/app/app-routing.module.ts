@@ -23,7 +23,7 @@ import { PayGroupComponent } from './pay-group/pay-group.component';
 import { PayRollComponent } from './pay-roll/pay-roll.component';
 import { PhilHealthComponent } from './phil-health/phil-health.component';
 import { SSSComponent } from './sss/sss.component';
-import {UserComponent} from './user/user.component';
+import { UserComponent } from './user/user.component';
 import { GeneralLedgerFormComponent } from './general-ledger-form/general-ledger-form.component';
 import { OtRatesFormComponent } from './ot-rates-form/ot-rates-form.component';
 import { PayGroupFormComponent } from './pay-group-form/pay-group-form.component';
