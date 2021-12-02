@@ -10,6 +10,12 @@ import { CompanyAdjustmentComponent } from './company-adjustment/company-adjustm
 import { CostCenterComponent } from './cost-center/cost-center.component';
 import { DepartmentComponent } from './department/department.component';
 import { EmployeeComponent } from './employee/employee.component';
+import { GeneralLedgerComponent } from './general-ledger/general-ledger.component';
+import { OtRatesComponent } from './ot-rates/ot-rates.component';
+import { PayGroupComponent } from './pay-group/pay-group.component';
+import { PayRollComponent } from './pay-roll/pay-roll.component';
+import { PhilHealthComponent } from './phil-health/phil-health.component';
+import { SSSComponent } from './sss/sss.component';
 
 const routes: Routes = [
 
@@ -36,6 +42,20 @@ const routes: Routes = [
   {path:'Department',component:DepartmentComponent},
   
   {path:'Employee',component:EmployeeComponent},
+
+  {path:'GeneralLedger',component:GeneralLedgerComponent},
+  
+  {path:'OtRates',component:OtRatesComponent},
+  
+  {path:'PayGroup',component:PayGroupComponent},
+  
+  {path:'PayRoll',component:PayRollComponent},
+
+  {path:'PhilHealth',component: PhilHealthComponent},
+  
+  {path:'SSS',component:SSSComponent},
+
+
 
 
 ];
