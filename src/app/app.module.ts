@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SidebarComponent } from '../pages/sidebar/sidebar.component';
 import { HeaderComponent } from './header/header.component';
-import { CompanyprofileComponent } from './companyprofile/companyprofile.component';
+import { CompanyprofileComponent } from '../pages/companyprofile/companyprofile.component';
 
 @NgModule({
   declarations: [
