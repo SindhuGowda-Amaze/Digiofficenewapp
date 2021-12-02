@@ -60,7 +60,7 @@ import { UsersFormComponent } from './users-form/users-form.component';
     PhilHealthComponent,
     SSSComponent,
     UserComponent,
-    BankComponent
+    BankComponent,
     GeneralLedgerFormComponent,
     OtRatesFormComponent,
     PayGroupFormComponent,

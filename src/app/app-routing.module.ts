@@ -36,7 +36,7 @@ import { UsersFormComponent } from './users-form/users-form.component';
 const routes: Routes = [
 
   
-  { path: "", redirectTo: "Adjustment", pathMatch: "full" }, 
+  { path: "", redirectTo: "PayRoll", pathMatch: "full" }, 
 
   {
     path: "Sidebar", component: SidebarComponent
