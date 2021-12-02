@@ -4,9 +4,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SidebarComponent } from '../pages/sidebar/sidebar.component';
 import { HeaderComponent } from './header/header.component';
+import { CompanyprofileComponent } from '../pages/companyprofile/companyprofile.component';
 import { AdjustmentComponent } from './adjustment/adjustment.component';
 import { AdolfoComponent } from './adolfo/adolfo.component';
-import { CompanyprofileComponent } from './companyprofile/companyprofile.component';
 import { HelpComponent } from './help/help.component';
 import { SproutPayrollComponent } from './sprout-payroll/sprout-payroll.component';
 import { AdjustmentFormComponent } from './adjustment-form/adjustment-form.component';
@@ -26,6 +26,13 @@ import { PhilHealthComponent } from './phil-health/phil-health.component';
 import { SSSComponent } from './sss/sss.component';
 import { UserComponent } from './user/user.component';
 import { BankComponent } from './bank/bank.component';
+import { GeneralLedgerFormComponent } from './general-ledger-form/general-ledger-form.component';
+import { OtRatesFormComponent } from './ot-rates-form/ot-rates-form.component';
+import { PayGroupFormComponent } from './pay-group-form/pay-group-form.component';
+import { PayRollFormComponent } from './pay-roll-form/pay-roll-form.component';
+import { PhillHealthFormComponent } from './phill-health-form/phill-health-form.component';
+import { SSSFormComponent } from './sssform/sssform.component';
+import { UsersFormComponent } from './users-form/users-form.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +61,13 @@ import { BankComponent } from './bank/bank.component';
     SSSComponent,
     UserComponent,
     BankComponent
+    GeneralLedgerFormComponent,
+    OtRatesFormComponent,
+    PayGroupFormComponent,
+    PayRollFormComponent,
+    PhillHealthFormComponent,
+    SSSFormComponent,
+    UsersFormComponent
   ],
   imports: [
     BrowserModule,

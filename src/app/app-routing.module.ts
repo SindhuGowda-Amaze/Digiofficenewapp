@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { SidebarComponent } from 'src/pages/sidebar/sidebar.component';
+import { CompanyprofileComponent } from '../pages/companyprofile/companyprofile.component';
 import { AdjustmentComponent } from 'src/app/adjustment/adjustment.component';
-import { CompanyprofileComponent } from './companyprofile/companyprofile.component';
 import { HeaderComponent } from './header/header.component';
 import { HelpComponent } from './help/help.component';
 import { SproutPayrollComponent } from './sprout-payroll/sprout-payroll.component';
@@ -25,10 +25,16 @@ import { PhilHealthComponent } from './phil-health/phil-health.component';
 import { SSSComponent } from './sss/sss.component';
 import {UserComponent} from './user/user.component';
 import { BankComponent } from './bank/bank.component';
+import { GeneralLedgerFormComponent } from './general-ledger-form/general-ledger-form.component';
+import { OtRatesFormComponent } from './ot-rates-form/ot-rates-form.component';
+import { PayGroupFormComponent } from './pay-group-form/pay-group-form.component';
+import { PayRollFormComponent } from './pay-roll-form/pay-roll-form.component';
+import { PhillHealthFormComponent } from './phill-health-form/phill-health-form.component';
+import { SSSFormComponent } from './sssform/sssform.component';
+import { UsersFormComponent } from './users-form/users-form.component';
 
 const routes: Routes = [
 
-  { path: "", redirectTo: "Login", pathMatch: "full" },
   
   { path: "", redirectTo: "Adjustment", pathMatch: "full" }, 
 
@@ -63,6 +69,27 @@ const routes: Routes = [
   },
   {
     path: "DepartmentForm", component: DepartmentFormComponent
+  },
+  {
+    path: "GeneralLedgerForm", component: GeneralLedgerFormComponent
+  },
+  {
+    path: "OtRatesForm", component: OtRatesFormComponent
+  },
+  {
+    path: "PayGroupForm", component: PayGroupFormComponent
+  },
+  {
+    path: "PayRollForm", component: PayRollFormComponent
+  },
+  {
+    path: "PhillHealthForm", component: PhillHealthFormComponent
+  },
+  {
+    path: "sssForm", component: SSSFormComponent
+  },
+  {
+    path: "UsersForm", component: UsersFormComponent
   },
   {path:"Adolfo",component:AdolfoComponent},
   

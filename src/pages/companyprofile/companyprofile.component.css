@@ -31,7 +31,18 @@
     padding: 10px;
     font-family: 'Open Sans', sans-serif;
     color: white;
-    margin-top: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.companyinfo{
+    font-weight: 700;
+    font-size: 18px;
+    background-color: rgb(7, 106, 119);;
+    text-align: left;
+    padding: 10px;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
 }
 .btn{
     background-color: rgb(7, 106, 119);
@@ -54,7 +65,7 @@
 }
 label{
     padding-left: 10px;
-    font: 500;
+    
 
 }
 .profilelogo{
@@ -66,3 +77,4 @@ label{
 .checkboxtxt{
     font-size: 14px;
 }
+
