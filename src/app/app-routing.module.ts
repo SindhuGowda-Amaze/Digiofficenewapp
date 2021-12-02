@@ -13,6 +13,10 @@ import { CompanyAdjustmentComponent } from './company-adjustment/company-adjustm
 import { CostCenterComponent } from './cost-center/cost-center.component';
 import { DepartmentComponent } from './department/department.component';
 import { EmployeeComponent } from './employee/employee.component';
+import { CostCenterFormComponent } from './cost-center-form/cost-center-form.component';
+import { CompanyAdjustmentFormComponent } from './company-adjustment-form/company-adjustment-form.component';
+import { EmployeeFormComponent } from './employee-form/employee-form.component';
+import { DepartmentFormComponent } from './department-form/department-form.component';
 
 const routes: Routes = [
 
@@ -39,6 +43,18 @@ const routes: Routes = [
   },
   {
     path: "AdjustmentForm", component: AdjustmentFormComponent
+  },
+  {
+    path: "CostCenterForm", component: CostCenterFormComponent
+  },
+  {
+    path: "CompanyAdjustmentForm", component: CompanyAdjustmentFormComponent
+  },
+  {
+    path: "EmployeeForm", component: EmployeeFormComponent
+  },
+  {
+    path: "DepartmentForm", component: DepartmentFormComponent
   },
   {path:"Adolfo",component:AdolfoComponent},
   

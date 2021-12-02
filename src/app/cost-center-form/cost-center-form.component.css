@@ -1,0 +1,145 @@
+/* You can add global styles to this file, and also import other style files */
+
+.card {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+
+
+td,
+th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.addbtns {
+    width: 100%;
+    background-color: black;
+    color: aliceblue;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    height: 30px;
+}
+
+.savebtns {
+    width: auto;
+    background-color: black;
+    color: aliceblue;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    height: 30px;
+}
+
+h1 {
+    font-family: "Bookman Old Style";
+}
+
+h2 {
+    font-family: "Bookman Old Style";
+}
+
+h3 {
+    font-family: "Bookman Old Style";
+}
+
+h4 {
+    font-family: "Bookman Old Style";
+}
+
+h5 {
+    font-family: "Bookman Old Style";
+}
+
+h6 {
+    font-family: "Bookman Old Style";
+}
+
+label {
+    font-family: "Bookman Old Style";
+    font-size: 14px;
+}
+
+.form-control {
+    font-family: "Bookman Old Style";
+    font-size: 14px;
+}
+
+p {
+    font-family: "Bookman Old Style";
+}
+
+table {
+    font-family: "Bookman Old Style";
+    font-size: 12px;
+}
+
+a {
+    font-family: "Bookman Old Style";
+    font-size: 14px;
+}
+
+button {
+    font-family: "Bookman Old Style";
+    font-size: 14px;
+}
+
+.ck-editor__editable_inline {
+    min-height: 300px !important;
+}
+
+ ::-webkit-scrollbar {
+    width: 6px;
+}
+
+
+/* Track */
+
+ ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+
+/* Handle */
+
+ ::-webkit-scrollbar-thumb {
+    background: #e7bf47;
+}
+
+
+/* Handle on hover */
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: #e7bf47;
+}
+
+.enablebtn {
+    background-color: #4ed64e;
+    color: aliceblue;
+    border: none;
+    width: 80px;
+}
+
+.disablebtn {
+    background-color: #d64e4e;
+    color: aliceblue;
+    border: none;
+    width: 80px;
+}
+
+.dashhead {
+    background-color: #f0a500;
+}
