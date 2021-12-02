@@ -1,0 +1,71 @@
+
+.TopNavSprout{
+    color: rgba(229, 126, 38, 1);
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.TopNavPayroll{
+    text-decoration: none;
+    font-size: 13px;
+    color: #787878;
+
+}
+
+.BarAlign{
+    text-align: center;
+}
+
+.SearchBar{
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    height: 40px;
+    padding-left: 20px;
+    width: 100%;
+}
+
+.HeadingSprout{
+    font-size: 32px;
+    font-family: 'Lucida Grande', 'Lucida Sans', 'Lucida Sans Unicode', sans-serif;
+    font-weight: 400;
+    margin-top: 0;
+    color: rgba(69, 69, 69, 1);
+}
+
+.SubHeading{
+    font-family: 'Lucida Grande', 'Lucida Sans', 'Lucida Sans Unicode', sans-serif;
+    margin-top: 0;
+    color: rgba(69, 69, 69, 1);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.CardTypeWords{
+    margin-left: -80px;
+    line-height: 1.5;
+}
+
+.WordList{
+    font-family: 'Lucida Grande', 'Lucida Sans', 'Lucida Sans Unicode', sans-serif;
+    font-size: 16px;
+    padding: 15px 0;
+    color: rgba(69, 69, 69, 1);
+    text-decoration: none;
+}
+
+.OrngWord{
+    font-family: 'Lucida Grande', 'Lucida Sans', 'Lucida Sans Unicode', sans-serif;
+    font-size: 15px;
+    padding: 15px 0;
+    color: rgba(229, 126, 38, 1);
+    text-decoration: none;
+}
+
+.SubHeading1{
+    font-size: 16px;
+    width: 70%;
+    margin: 0;
+    color: rgba(69, 69, 69, 1);
+    display: inline-block;
+    font-family: 'Lucida Grande', 'Lucida Sans', 'Lucida Sans Unicode', sans-serif;
+}
