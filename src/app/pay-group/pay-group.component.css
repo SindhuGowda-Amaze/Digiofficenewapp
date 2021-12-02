@@ -68,3 +68,13 @@ table, th, td {
   .card{
       background-color: rgb(7, 106, 119);
   }
+  .Button{
+    background-color: rgb(7, 106, 119);
+    border: none;
+    border-radius: 16px;
+    color: white;
+    margin-top: 6px;
+    font-family: sans-serif;
+    margin-right: 15px;
+    width:28%;
+  }
