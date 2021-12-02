@@ -7,6 +7,7 @@ import { SidebarComponent } from '../pages/sidebar/sidebar.component';
 import { HeaderComponent } from './header/header.component';
 import { AdjustmentComponent } from './adjustment/adjustment.component';
 import { AdolfoComponent } from './adolfo/adolfo.component';
+import { CompanyprofileComponent } from './companyprofile/companyprofile.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { AdolfoComponent } from './adolfo/adolfo.component';
     SidebarComponent,
     HeaderComponent,
     AdjustmentComponent,
-    AdolfoComponent
+    AdolfoComponent,
+    CompanyprofileComponent
   ],
   imports: [
     BrowserModule,

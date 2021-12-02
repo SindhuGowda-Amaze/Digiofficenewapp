@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { SidebarComponent } from 'src/pages/sidebar/sidebar.component';
 import{AdjustmentComponent} from 'src/app/adjustment/adjustment.component';
+import { CompanyprofileComponent } from './companyprofile/companyprofile.component';
+import { HeaderComponent } from './header/header.component';
 
 const routes: Routes = [
 
@@ -14,6 +16,12 @@ const routes: Routes = [
   },
   
   {path:"Adjustment",component:AdjustmentComponent},
+  {
+    path: "Header", component: HeaderComponent
+  },
+  {
+    path: "Companyprofile", component: CompanyprofileComponent
+  },
 
 ];
 

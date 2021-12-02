@@ -4,7 +4,7 @@
     margin-top: 5px;
 }
 .background{
-    background-color: #3a1944;
+    background-color: rgb(7, 106, 119);
     font-family: Bookman Old Style;
 }
 .negative-padding{
@@ -21,13 +21,20 @@
     font-size: 16px;
 }
 .HrLine {
-    color: white;
     border: solid 1%;
     opacity: 1;
+    background-color: white;
 }
 span:hover {
-    background-color:#3a1944;
+    background-color:rgb(7, 106, 119);
     text-decoration: none;
     color: #ffc83d;
     cursor: pointer;
   }
+
+
+
+
+
+
+
