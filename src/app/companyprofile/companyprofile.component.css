@@ -1,0 +1,68 @@
+.container-fluid{
+    background-color: rgb(226, 224, 224);
+}
+.container{
+    background-color: white;
+}
+.bandtxt{
+    font-weight: 700;
+    font-size: 18px;
+    background-color:rgb(214, 208, 208);
+    text-align: center;
+    padding-bottom: 2px;
+    font-weight: 900;
+    padding-top: 12px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.formtxt{
+    font-weight: 700;
+    font-size: 18px;
+    background-color: gainsboro;
+    text-align: left;
+    padding: 4px;
+    font-family: 'Open Sans', sans-serif;
+}
+.formheading{
+    font-weight: 700;
+    font-size: 18px;
+    background-color: rgb(7, 106, 119);;
+    text-align: left;
+    padding: 10px;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    margin-top: 10px;
+}
+.btn{
+    background-color: rgb(7, 106, 119);
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    width: 50%;
+    font-weight: 700;
+}
+.btn:hover{
+    background-color: silver;
+    color: rgb(7, 106, 119);;
+}
+
+.negative-padding{
+    padding: 0px;
+}
+.form-control{
+    margin-bottom: 20px;
+}
+label{
+    padding-left: 10px;
+    font: 500;
+
+}
+.profilelogo{
+    width: 50%;
+    height: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.checkboxtxt{
+    font-size: 14px;
+}
