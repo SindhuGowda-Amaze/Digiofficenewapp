@@ -34,6 +34,7 @@ import { SSSFormComponent } from './sssform/sssform.component';
 import { UsersFormComponent } from './users-form/users-form.component';
 import { GovernmentComponent } from './government/government.component';
 import { BankFormComponent } from './bank-form/bank-form.component';
+import { LoginScreenComponent } from './login-screen/login-screen.component';
 
 const routes: Routes = [
 
@@ -95,6 +96,9 @@ const routes: Routes = [
   },
   {
     path: "BankForm", component: BankFormComponent
+  },
+  {
+    path: "Login", component: LoginScreenComponent
   },
   {path:"Adolfo",component:AdolfoComponent},
   
