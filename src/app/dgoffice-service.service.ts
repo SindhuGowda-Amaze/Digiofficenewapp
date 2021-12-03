@@ -39,4 +39,14 @@ export class DgofficeServiceService {
     return this.http.post<any[]>(APIURL,json);
   }
   
+
+  
+  public GetBanks() {
+    debugger
+    let APIURL = this.baseURL+"Master/GetBanks";
+    return this.http.get<any[]>(APIURL);
+  }
+
+
+
 }
