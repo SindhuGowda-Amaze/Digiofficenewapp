@@ -33,6 +33,7 @@ import { PhillHealthFormComponent } from './phill-health-form/phill-health-form.
 import { SSSFormComponent } from './sssform/sssform.component';
 import { UsersFormComponent } from './users-form/users-form.component';
 import { GovernmentComponent } from './government/government.component';
+import { TaxTableComponent } from './tax-table/tax-table.component';
 
 const routes: Routes = [
 
@@ -118,7 +119,9 @@ const routes: Routes = [
 
   {path:'Bank',component:BankComponent},
 
-  {path:'Government',component:GovernmentComponent}
+  {path:'Government',component:GovernmentComponent},
+  
+  {path:'TaxTable',component:TaxTableComponent}
 
 
 

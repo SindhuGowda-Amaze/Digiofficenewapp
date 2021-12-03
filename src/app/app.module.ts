@@ -34,6 +34,7 @@ import { PhillHealthFormComponent } from './phill-health-form/phill-health-form.
 import { SSSFormComponent } from './sssform/sssform.component';
 import { UsersFormComponent } from './users-form/users-form.component';
 import { GovernmentComponent } from './government/government.component';
+import { TaxTableComponent } from './tax-table/tax-table.component';
 
 @NgModule({
   declarations: [
@@ -69,7 +70,8 @@ import { GovernmentComponent } from './government/government.component';
     PhillHealthFormComponent,
     SSSFormComponent,
     UsersFormComponent,
-    GovernmentComponent
+    GovernmentComponent,
+    TaxTableComponent
   ],
   imports: [
     BrowserModule,
