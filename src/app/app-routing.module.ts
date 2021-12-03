@@ -33,6 +33,7 @@ import { PhillHealthFormComponent } from './phill-health-form/phill-health-form.
 import { SSSFormComponent } from './sssform/sssform.component';
 import { UsersFormComponent } from './users-form/users-form.component';
 import { GovernmentComponent } from './government/government.component';
+import { BankFormComponent } from './bank-form/bank-form.component';
 
 const routes: Routes = [
 
@@ -92,6 +93,9 @@ const routes: Routes = [
   {
     path: "UsersForm", component: UsersFormComponent
   },
+  {
+    path: "BankForm", component: BankFormComponent
+  },
   {path:"Adolfo",component:AdolfoComponent},
   
   {path:"CompanyAdjustment",component:CompanyAdjustmentComponent},
@@ -119,9 +123,6 @@ const routes: Routes = [
   {path:'Bank',component:BankComponent},
 
   {path:'Government',component:GovernmentComponent}
-
-
-
 ];
 
 @NgModule({
