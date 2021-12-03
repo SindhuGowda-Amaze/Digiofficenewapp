@@ -26,6 +26,9 @@ export class DgofficeServiceService {
     let APIURL = this.baseURL + "Master/InsertCompany_Profile";
     return this.http.post<any[]>(APIURL,json);
   }
-
+  public InsertDepartment(json:any){
+    let APIURL=this.baseURL+"Master/InsertDepartment";
+    return this.http.post<any[]>(APIURL,json);
+  }
   
 }
