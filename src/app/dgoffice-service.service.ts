@@ -15,5 +15,17 @@ export class DgofficeServiceService {
     return this.http.get<any[]>(APIURL);
   }
 
+  public GetCompanyProfile() {
+    debugger
+    let APIURL = this.baseURL+"Master/GetCompanyProfile";
+    return this.http.get<any[]>(APIURL);
+  }
+
+  public InsertCompany_Profile(json : any) {
+    debugger
+    let APIURL = this.baseURL + "Master/InsertCompany_Profile";
+    return this.http.post<any[]>(APIURL,json);
+  }
+
   
 }
