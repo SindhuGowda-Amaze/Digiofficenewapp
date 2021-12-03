@@ -15,5 +15,13 @@ export class DgofficeServiceService {
     return this.http.get<any[]>(APIURL);
   }
 
+
+    public GetOTRates() {
+    debugger
+    let APIURL = this.baseURL+"Master/GetOTRates";
+    return this.http.get<any[]>(APIURL);
+  }
+
+
   
 }
