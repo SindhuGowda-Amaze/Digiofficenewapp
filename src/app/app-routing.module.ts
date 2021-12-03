@@ -23,7 +23,7 @@ import { PayGroupComponent } from './pay-group/pay-group.component';
 import { PayRollComponent } from './pay-roll/pay-roll.component';
 import { PhilHealthComponent } from './phil-health/phil-health.component';
 import { SSSComponent } from './sss/sss.component';
-import {UserComponent} from './user/user.component';
+import { UserComponent } from './user/user.component';
 import { BankComponent } from './bank/bank.component';
 import { GeneralLedgerFormComponent } from './general-ledger-form/general-ledger-form.component';
 import { OtRatesFormComponent } from './ot-rates-form/ot-rates-form.component';
@@ -34,6 +34,8 @@ import { SSSFormComponent } from './sssform/sssform.component';
 import { UsersFormComponent } from './users-form/users-form.component';
 import { GovernmentComponent } from './government/government.component';
 import { TaxTableComponent } from './tax-table/tax-table.component';
+import { BankFormComponent } from './bank-form/bank-form.component';
+import { LoginScreenComponent } from './login-screen/login-screen.component';
 
 const routes: Routes = [
 
@@ -93,6 +95,12 @@ const routes: Routes = [
   {
     path: "UsersForm", component: UsersFormComponent
   },
+  {
+    path: "BankForm", component: BankFormComponent
+  },
+  {
+    path: "Login", component: LoginScreenComponent
+  },
   {path:"Adolfo",component:AdolfoComponent},
   
   {path:"CompanyAdjustment",component:CompanyAdjustmentComponent},
@@ -121,10 +129,9 @@ const routes: Routes = [
 
   {path:'Government',component:GovernmentComponent},
   
-  {path:'TaxTable',component:TaxTableComponent}
-
-
-
+  {path:'TaxTable',component:TaxTableComponent},
+  
+  {path:'Government',component:GovernmentComponent}
 ];
 
 @NgModule({

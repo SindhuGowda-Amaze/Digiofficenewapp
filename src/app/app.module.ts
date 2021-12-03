@@ -35,6 +35,8 @@ import { SSSFormComponent } from './sssform/sssform.component';
 import { UsersFormComponent } from './users-form/users-form.component';
 import { GovernmentComponent } from './government/government.component';
 import { TaxTableComponent } from './tax-table/tax-table.component';
+import { BankFormComponent } from './bank-form/bank-form.component';
+import { LoginScreenComponent } from './login-screen/login-screen.component';
 
 @NgModule({
   declarations: [
@@ -71,7 +73,9 @@ import { TaxTableComponent } from './tax-table/tax-table.component';
     SSSFormComponent,
     UsersFormComponent,
     GovernmentComponent,
-    TaxTableComponent
+    TaxTableComponent,
+    BankFormComponent,
+    LoginScreenComponent
   ],
   imports: [
     BrowserModule,
