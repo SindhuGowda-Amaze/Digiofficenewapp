@@ -30,23 +30,14 @@
                     <td><span class="menu">Remarks</span></td>  
                     <td style="text-align: center;" ><span class="menu" >Actions</span></td>           
                 </tr>
-                <tr>
-                    <td>MobileVenturesInc</td>
-                    <td>Bnorphim</td>
-                    <td>            </td>
+                <tr *ngFor="let dept of Departmentlist">
+                    <td>{{dept.name}}</td>
+                    <td>{{dept.code}}</td>
+                    <td>{{dept.remarks}}</td>
                     <td class="align">
                         <button class="edit">Edit</button>  <br>
                         <button class="edit">Delete</button>  <br>
                     </td>                      
-                </tr>
-                <tr>
-                    <td>True North</td>
-                    <td>213145671616</td>
-                    <td> Test  </td>
-                    <td class="align">
-                        <button class="edit">Edit</button>  <br>
-                        <button class="edit">Delete</button>  <br>
-                    </td> 
                 </tr>
             </table>
         </div>
