@@ -34,7 +34,7 @@ export class PayGroupFormComponent implements OnInit {
       this.result = data;
       this.result=this.result.filter((x: {id: any;})=>x.id==Number(this.id));
 
-      this.selectDescription=this.result[0].designation;
+      this.selectDescription=this.result[0].description;
       
 
     })

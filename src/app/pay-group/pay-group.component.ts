@@ -14,13 +14,30 @@ export class PayGroupComponent implements OnInit {
     this.GetPayGroup()
   }
 
-  Paygrouplist:any
+  result:any
 
   public GetPayGroup() {
     this.DgofficeServiceService.GetPayGroup().subscribe(data=>{
       debugger
-      this.Paygrouplist=data ;
+      this.result=data ;
      })
+  }
+
+
+
+  delete(details: any){
+    var json={
+      "ID":details.id
+    }
+    this.DgofficeServiceService.DeletePayGroup(json).subscribe(
+      data => {
+        debugger        
+        this.DgofficeServiceService.GetPayGroup().subscribe(
+          data => {
+            debugger
+            this.result = data;
+        })
+    })
   }
 
 }
