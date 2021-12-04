@@ -47,6 +47,24 @@ export class DgofficeServiceService {
     return this.http.get<any[]>(APIURL);
   }
 
+  public InsertBanks(json:any) {
+    debugger
+    let APIURL = this.baseURL+"Master/InsertBanks";
+    return this.http.post<any[]>(APIURL, json);
+  }
+
+  public GetPayGroup() {
+    debugger
+    let APIURL = this.baseURL+"Master/GetPayGroup";
+    return this.http.get<any[]>(APIURL);
+  }
+
+  public InsertPayGroup(json:any) {
+    debugger
+    let APIURL = this.baseURL+"Master/InsertPayGroup";
+    return this.http.post<any[]>(APIURL, json);
+  }
+
 
 
 }
