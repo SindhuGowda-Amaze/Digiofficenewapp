@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DgofficeServiceService } from '../dgoffice-service.service';
 
 @Component({
   selector: 'app-ot-rates',
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OtRatesComponent implements OnInit {
 
-  constructor() { }
 
+  constructor(private DgofficeService: DgofficeServiceService) { }
+  Otlist:any
   ngOnInit(): void {
+    this.GetOtRates();
+  }
+
+
+
+  public GetOtRates() {
+    debugger
+    
+    this.DgofficeService.GetOTRates().subscribe(data => {
+
+      this.Otlist = data;
+    })
   }
 
 }

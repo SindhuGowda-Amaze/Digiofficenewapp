@@ -15,6 +15,14 @@ export class DgofficeServiceService {
     return this.http.get<any[]>(APIURL);
   }
 
+
+    public GetOTRates() {
+    debugger
+    let APIURL = this.baseURL+"Master/GetOTRates";
+    return this.http.get<any[]>(APIURL);
+  }
+
+
   public GetCompanyProfile() {
     debugger
     let APIURL = this.baseURL+"Master/GetCompanyProfile";
@@ -42,4 +50,14 @@ export class DgofficeServiceService {
     return this.http.post(APIURL, formdata);
   }
   
+
+  
+  public GetBanks() {
+    debugger
+    let APIURL = this.baseURL+"Master/GetBanks";
+    return this.http.get<any[]>(APIURL);
+  }
+
+
+
 }
