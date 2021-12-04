@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DgofficeServiceService } from '../dgoffice-service.service';
 
 @Component({
   selector: 'app-pay-group',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PayGroupComponent implements OnInit {
 
-  constructor() { }
+  constructor(private DgofficeServiceService:DgofficeServiceService) { }
 
   ngOnInit(): void {
+    this.GetPayGroup()
+  }
+
+  Paygrouplist:any
+
+  public GetPayGroup() {
+    this.DgofficeServiceService.GetPayGroup().subscribe(data=>{
+      debugger
+      this.Paygrouplist=data ;
+     })
   }
 
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DgofficeServiceService } from '../dgoffice-service.service';
 
 @Component({
   selector: 'app-bank',
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BankComponent implements OnInit {
 
-  constructor() { }
+  constructor( private DgofficeServiceService:DgofficeServiceService) { }
 
   ngOnInit(): void {
+   this.GetBanks()
   }
+
+
+  Departmentlist:any
+  public GetBanks() {
+    this.DgofficeServiceService.GetBanks().subscribe(data=>{
+      debugger
+      this.Departmentlist=data ;
+     })
+  }
+
+
+
 
 }
