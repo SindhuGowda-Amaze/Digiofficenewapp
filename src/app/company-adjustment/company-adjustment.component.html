@@ -25,7 +25,6 @@
         <div class="col-lg-12"><br>
             <table>
                 <tr> 
-                    <td><span class="menu"> </span></td>
                     <td><span class="menu">Type</span></td>
                     <td><span class="menu">Name</span></td>
                     <td><span class="menu">Code</span></td>
@@ -36,45 +35,18 @@
                     <td><span class="menu">Max Accumulated</span></td>
                     <td style="text-align: center;"><span class="menu">Actions </span></td>
                 </tr>   
-                <tr>               
-                    <td> SSS Loan</td>  
-                    <td> SSS4  Loan</td> 
-                    <td> Sal 4 Loan</td> 
-                    <td> $2,0000.00.0</td> 
-                    <td> For Alderin Bersamira</td> 
-                    <td>False</td> 
-                    <td>False</td> 
-                    <td>None</td>
-                    <td>Npne</td>
-                    <td style="text-align: center;"> <button class="button">Edit</button></td>
-                </tr>
-                <tr>                  
-                    <td>Calamity Loan</td>  
-                    <td> SSS Calamity  Loan</td> 
-                    <td> Sal C Loan2</td> 
-                    <td> $886.00.0</td> 
-                    <td> For Alderin Bersamira</td> 
-                    <td>False</td> 
-                    <td>False</td> 
-                    <td>None</td>
-                    <td>None</td>
-                    <td style="text-align: center;"> <button class="button">Edit</button></td>
-                </tr>
-                <tr>                  
-                    <td>SSS Loan</td>  
-                    <td> SSS3Loan</td> 
-                    <td> Sal  Loan2</td> 
-                    <td> $886.00.0</td> 
-                    <td> For Alderin Bersamira</td> 
-                    <td>False</td> 
-                    <td>False</td> 
-                    <td>None</td>
-                    <td>None</td>
-                    <td style="text-align: center;"> <button class="button">Edit</button></td>
-                </tr>
-                
-
-
+               
+                <tr *ngFor ="let company of companylist"> 
+                    <td>{{company.type}}</td>
+                    <td>{{company.name}}</td>
+                    <td>{{company.code}}</td>
+                    <td>{{company.amount}}</td>
+                    <td>{{company.writeremarks}}</td>
+                    <td>{{company.before}}</td>
+                    <td>{{company.taxable}}</td>
+                    <td>{{company.maxaccumulated}}</td>
+                    <td style="text-align: center;"><span class="menu">Actions </span></td>
+                </tr>   
             </table>
         </div>
     </div>

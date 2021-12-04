@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DgofficeServiceService } from '../dgoffice-service.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-department',
@@ -8,20 +9,39 @@ import { DgofficeServiceService } from '../dgoffice-service.service';
 })
 export class DepartmentComponent implements OnInit {
 
-  constructor(private DgofficeServiceService:DgofficeServiceService) { }
+  constructor(private DgofficeServiceService:DgofficeServiceService,private ActivatedRoute:ActivatedRoute) { }
   Departmentlist:any;
+  result:any;
 
   ngOnInit(): void {
+    this.GetDepartment();
   }
 
 
   public GetDepartment() {
+    debugger
     this.DgofficeServiceService.GetDepartment().subscribe(data=>{
       debugger
       this.Departmentlist=data ;
      })
   }
 
+  
+  delete(dept: any){
+  
+    debugger
+    this.DgofficeServiceService.DeleteDepartment(dept).subscribe(
+      data => {
+        debugger        
+        this.DgofficeServiceService.GetDepartment().subscribe(
+          data => {
+            debugger
+            this.result = data;
+            location.reload()
+           
+        })
+    })
+  }
 
 
 

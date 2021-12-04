@@ -31,38 +31,13 @@
                     <td><span class="menu">Personal Share</span></td> 
                     <td><span class="menu">Employer Share</span></td>                                        
                 </tr>          
-                <tr>
-                    <td>10,000</td>
-                    <td>20%</td>
-                    <td>10%</td>
-                    <td>15%</td>
-                </tr>
-                <tr>
-                    <td>10,000</td>
-                    <td>20%</td>
-                    <td>10%</td>
-                    <td>15%</td>
-                </tr>
-                <tr>
-                    <td>10,000</td>
-                    <td>20%</td>
-                    <td>10%</td>
-                    <td>15%</td>
-                </tr>
-                <tr>
-                    <td>10,000</td>
-                    <td>20%</td>
-                    <td>10%</td>
-                    <td>15%</td>
-                </tr>
-                
-
-
-
-
-
-
-
+             
+                <tr *ngFor="let salary of salarylist">                 
+                    <td>{{salary.monthly_Basic_Salary_Into_Five}}</td>
+                    <td>{{salary.monthly_Share}}</td>
+                    <td>{{salary.personal_Share}}</td> 
+                    <td>{{salary.employee_Share}}</td>                                        
+                </tr>   
             </table>
         </div><br>
     </div>

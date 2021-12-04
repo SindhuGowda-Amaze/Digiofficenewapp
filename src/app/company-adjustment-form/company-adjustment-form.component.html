@@ -15,10 +15,11 @@
             <label>Type</label>
         </div>
         <div class="col-lg-4">
-            <select class="form-control" name="countryID">
+            <!-- <select class="form-control" name="countryID"  [(ngModel)]="type" >
                 <option value="">Select</option>
-                <option value="">Type</option>
-            </select>
+                <option value="type">Type</option>
+            </select> -->
+            
         </div>
     </div>
     <br>
@@ -27,7 +28,8 @@
             <label>Name</label>
         </div>
         <div class="col-lg-4">
-            <input type="text" class="form-control" placeholder="Name">
+            <input type="text" class="form-control" placeholder="Name"  name="name" [(ngModel)]="name">
+         
         </div>
     </div>
     <br>
@@ -36,7 +38,7 @@
             <label>Code</label>
         </div>
         <div class="col-lg-4">
-            <input type="text" class="form-control" placeholder="Code" >
+            <input type="text" class="form-control" placeholder="Code"  name="code" [(ngModel)]="code" >
         </div>
     </div>
     <br>
@@ -45,7 +47,7 @@
             <label>Amount</label>
         </div>
         <div class="col-lg-4">
-            <input type="text" class="form-control" placeholder="Amount">
+            <input type="text" class="form-control" placeholder="Amount" name="amount" [(ngModel)]="amount" >
         </div>
     </div>
     <br>
@@ -54,7 +56,7 @@
             <label>Remark</label>
         </div>
         <div class="col-lg-4">
-            <textarea rows="5" class="form-control" placeholder="Write remarks"></textarea>
+            <textarea rows="5" class="form-control" placeholder="Write remarks" name="writeremarks" [(ngModel)]="writeremarks" ></textarea>
         </div>
     </div>
     <br>
@@ -63,7 +65,9 @@
             <label>Before</label>
         </div>
         <div class="col-lg-4">
-            <textarea rows="5" class="form-control" placeholder="Before"></textarea>
+            <!-- <textarea rows="5" class="form-control" placeholder="Before" [(ngModel)]="before"></textarea> -->
+            <input type="radio" value="1"   name="before" [(ngModel)]="before"> Yes
+            <input type="radio" value="0"   name="before" [(ngModel)]="before"> No
         </div>
     </div>
     <br>
@@ -72,7 +76,8 @@
             <label>Taxable</label>
         </div>
         <div class="col-lg-4">
-            <input type="text" class="form-control" placeholder="Taxable">
+            <input type="radio" value="1"   name="taxable" [(ngModel)]="taxable"> Yes
+            <input type="radio" value="0"   name="taxable" [(ngModel)]="taxable"> No
         </div>
     </div>
     <br>
@@ -81,14 +86,14 @@
             <label>Max Accumulated</label>
         </div>
         <div class="col-lg-4">
-            <input type="text" class="form-control" placeholder="Max Accumulated">
+            <input type="text" class="form-control" placeholder="Max Accumulated" name="maxaccumulated" [(ngModel)]="maxaccumulated">
         </div>
     </div>
     <br>
     <div class="row">
         <div class="col-lg-5"></div>
         <div class="col-lg-2">
-            <button type="button" class="addbtns">Save</button>
+            <button type="button" class="addbtns" (click)="Save()">Save</button>
         </div>
         <div class="col-lg-5"></div>
     </div>
