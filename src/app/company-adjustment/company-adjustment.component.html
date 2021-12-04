@@ -41,11 +41,14 @@
                     <td>{{company.name}}</td>
                     <td>{{company.code}}</td>
                     <td>{{company.amount}}</td>
-                    <td>{{company.writeremarks}}</td>
-                    <td>{{company.before}}</td>
+                    <td>{{company.remarks}}</td>
+                    <td>{{company.beforeTax}}</td>
                     <td>{{company.taxable}}</td>
-                    <td>{{company.maxaccumulated}}</td>
-                    <td style="text-align: center;"><span class="menu">Actions </span></td>
+                    <td>{{company.maxAccumulated}}</td>
+                    <td>
+                        <button class="Button" (click)="delete(company.id)">Delete</button>
+                    </td>
+
                 </tr>   
             </table>
         </div>

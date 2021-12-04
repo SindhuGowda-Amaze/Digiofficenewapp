@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DgofficeServiceService } from '../dgoffice-service.service';
 import { ActivatedRoute } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-company-adjustment',
@@ -22,6 +23,17 @@ export class CompanyAdjustmentComponent implements OnInit {
       this.companylist=data ;
      })
   }
+
+delete(ID:any){
+  debugger
+  
+  this.DgofficeServiceService.DeleteCompanyAdjustment(ID).subscribe(data=>{
+     Swal.fire("Deleted Sucesfully")
+     this.GetCompanyAdjustment();
+  })
+}
+
+
 
 
 }

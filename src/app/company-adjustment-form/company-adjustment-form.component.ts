@@ -40,7 +40,7 @@ export class CompanyAdjustmentFormComponent implements OnInit {
         data=>{
           debugger
           Swal.fire("Saved Sucessfully");
-          // location.href = "CompanyAdjustment";
+           location.href = "CompanyAdjustment";
           
         }
        

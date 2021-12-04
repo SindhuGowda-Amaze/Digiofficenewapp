@@ -127,6 +127,12 @@ export class DgofficeServiceService {
     return this.http.post<any[]>(APIURL, json);
   }
 
+  
+  public DeleteCompanyAdjustment(ID:any) {
+    debugger
+    let APIURL = this.baseURL+"Master/DeleteCompanyAdjustment?ID="+ID;
+    return this.http.get<any[]>(APIURL);
+  }
 
 
 }
