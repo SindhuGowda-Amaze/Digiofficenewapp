@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { DgofficeServiceService } from '../dgoffice-service.service';
+import { ActivatedRoute } from '@angular/router';
+
 
 @Component({
   selector: 'app-phil-health',
@@ -7,9 +10,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PhilHealthComponent implements OnInit {
 
-  constructor() { }
+  salarylist:any;
+
+
+  constructor(private DgofficeServiceService:DgofficeServiceService,private ActivatedRoute:ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.GetPhilHealth();
   }
+
+  public GetPhilHealth() {
+    debugger
+    this.DgofficeServiceService.GetPhilHealth().subscribe(data=>{
+      debugger
+      this.salarylist=data ;
+     })
+  }
+
 
 }

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { DgofficeServiceService } from '../dgoffice-service.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-cost-center-form',
@@ -7,9 +10,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CostCenterFormComponent implements OnInit {
 
-  constructor() { }
+  constructor(private DgofficeService:DgofficeServiceService,private ActivatedRoute:ActivatedRoute) { }
+ 
+ 
 
   ngOnInit(): void {
   }
+
+  name:any;
+  code:any;
+  writeremarks:any;
+  
+  Save() {
+    debugger;
+    var json = {
+      "Name": this.name,
+      "Code": this.code,
+      "Remarks": this.writeremarks, 
+    };
+    this.DgofficeService.InsertCostcenter(json).subscribe(
+      data => {     
+        Swal.fire("Saved Sucessfully");
+        location.href = "CostCenter";
+
+      }
+    )
+  }
+
 
 }
