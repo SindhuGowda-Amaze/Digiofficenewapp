@@ -83,7 +83,7 @@ export class CompanyprofileComponent implements OnInit {
     debugger
     var json = {
 
-      "company_logo": this.Company_logo,
+         "company_logo": "Company1 logo",
 		  "company_Name": this.Company_Name,
 		  "nature_Of_Business": this.Nature_Of_Business,
 		  "address1": this.Address1,
@@ -104,7 +104,7 @@ export class CompanyprofileComponent implements OnInit {
 		  "hR_PositionTitle": this.HR_PositionTitle, 
 		  "finance_AuthorisedPerson": this.Finance_AuthorisedPerson,
 		  "finance_PositionTitle": this.Finance_PositionTitle, 
-		  "e_Signatory": this.E_Signatory, 
+		  "e_Signatory": "sign" ,
 		  "work_Days_Per_Year": this.Work_Days_Per_Year, 
 		  "work_Days_Per_Day": this.Work_Days_Per_Day, 
 		  "work_Months_Per_Year": this.Work_Months_Per_Year, 
@@ -133,7 +133,7 @@ export class CompanyprofileComponent implements OnInit {
 		  "PayRoll_Calender": this.PayRoll_Calender, 
 		  "Tax_Table": this.Tax_Table, 
 		  "Tax_Table_Starts_on": this.Tax_Table_Starts_on, 
-		  "Tax_Table_Including_13thmonth": this.Tax_Table_Including_13thmonth, 
+		  "Tax_Table_Including_13thmonth": "true", 
 		  "Non_Tax_Essential_Sealing": this.Non_Tax_Essential_Sealing ,
 		  "Deminimis_Exemption": this.Deminimis_Exemption 
     };
@@ -144,6 +144,47 @@ export class CompanyprofileComponent implements OnInit {
         this.GetCompanyProfile();
         location.reload();
       })
+  }
+
+
+
+
+
+
+
+  files: File[] = [];
+
+  onSelect(event: { addedFiles: any; }) {
+    debugger
+    console.log(event);
+    this.files.push(event.addedFiles[0]);
+    this.uploadattachments();
+	this.uploadattachments2();
+    console.log("content", this.files);
+  }
+
+  onRemove(event:any)
+  {
+debugger
+console.log(event);
+this.files.splice(this.files.indexOf(event),1);
+  }
+
+  public uploadattachments() {
+    debugger
+    this.DgofficeServiceService.AttachmentsUpload(this.files).subscribe(res => {
+      debugger
+      this.Company_logo = res;
+      alert("ATTACHMENT UPLOADED");
+    })
+  }
+  public uploadattachments2() {
+    debugger
+    this.DgofficeServiceService.AttachmentsUpload(this.files).subscribe(res => {
+      debugger
+      this.E_Signatory = res;
+      alert("ATTACHMENT UPLOADED");
+    })
   }
 }
 
