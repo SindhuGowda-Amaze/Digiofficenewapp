@@ -38,6 +38,17 @@ export class DgofficeServiceService {
     let APIURL=this.baseURL+"Master/InsertDepartment";
     return this.http.post<any[]>(APIURL,json);
   }
+
+  public AttachmentsUpload(files: any) {
+    debugger
+    let formdata: FormData = new FormData();
+    for (let i = 0; i < files.length; i++) {
+      formdata.append('file_upload', files[i], files[i].name);
+    }
+    debugger
+    let APIURL = this.baseURL + "Master/UploadImages/";
+    return this.http.post(APIURL, formdata);
+  }
   
 
   
