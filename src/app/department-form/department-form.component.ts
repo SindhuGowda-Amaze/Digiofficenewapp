@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DgofficeServiceService } from '../dgoffice-service.service';
 import { ActivatedRoute } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-department-form',
@@ -21,17 +22,17 @@ export class DepartmentFormComponent implements OnInit {
   writeremarks:any;
 
   Save() {
-    debugger;
+    debugger
     var json = {
       "Name": this.name,
       "Code": this.code,
-      "Remarks": this.writeremarks,
+      "Remarks": this.writeremarks
      
     };
     this.DgofficeServiceService.InsertDepartment(json).subscribe(
       data => {     
-        alert("Saved Sucessfully");
-        // location.href = "NewFormDashboard";
+        Swal.fire("Saved Sucessfully");
+      location.href = "Department";
 
       }
     )

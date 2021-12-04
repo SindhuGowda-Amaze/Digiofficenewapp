@@ -37,31 +37,16 @@
                     <td><span class="menu">Remarks</span></td>                  
                     <td><span class="menu">Actions</span></td>
                 </tr>   
-                <tr>
-                    <td></td>    
-                    <td>
-                        CREFCO
-                    </td>
-                    <Td>CR01</Td>
-                    <td>For The CREFCO OutSourced Employees</td>
-                    <td class="text"><button class="act">Delete</button> <br>
-                        <button class="act">AuditTrail</button>  <br>
-                        <button class="act">Edit</button>
-                     </td>               
-                </tr>     
-                
-                <tr>
-                    <td></td>
-                     <td>
-                        Management Team
-                    </td>
-                    <Td>CR01</Td>
-                    <td>Internal Pitaca Team</td>
-                    <td class="text"><button class="act">Delete</button> <br>
-                        <button class="act">AuditTrail</button>  <br>
-                        <button class="act">Edit</button>
-                     </td>    
-                </tr>     
+                  
+                <tr *ngFor="let cost of costcenterlist">
+                    <td>{{cost.name}}</td>
+                    <td>{{cost.code}}</td>
+                    <td>{{cost.remarks}}</td>  
+                    <td class="Align"> <button class="Extra">Edit</button> <br>
+                         <button class="Extra" (click)="delete(cost.id)">Delete</button> <br> 
+                        <button class="Extra">Audit Trail</button> <br>
+                    </td>        
+                </tr>                     
             </table>
         </div> <br>  
     </div>
