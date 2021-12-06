@@ -1,0 +1,76 @@
+<div class="container-fluid">
+    <div class="body">
+        <div class="card card-padding">
+            <div class="row">
+                <div class="col-lg-10">
+                    <span class="pckg">Company Profile</span>
+                </div>
+                <div class="col-lg-2">
+                    <button class="add" routerLink="/Companyprofile">Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <div class="card2 card-padding2">
+        <div class="row">
+            <div class="col-lg-3 Srch">
+                <input type="text" class="form-control" placeholder="Search...">
+            </div>
+            <div class="col-lg-3">
+                <input type="date" placeholder="dd-mm-yyyy" class="form-control">
+            </div>
+        </div>
+        <div class="col-lg-12"><br>
+            <table>
+                <tr>                  
+                   <td><span class="menu">Company Logo</span></td>
+                    <td><span class="menu">Company Name</span></td>                  
+                    <td><span class="menu">Remarks</span></td>  
+                    <td><span class="menu">Address1</span></td>  
+                    <td><span class="menu">Address2</span></td>  
+                    <td><span class="menu">Zipcode</span></td>  
+                    <td style="text-align: center;" ><span class="menu" >Actions</span></td>           
+                </tr>
+                <tr *ngFor="let dept of CompanyProfilelist">
+                    <td><img src="{{dept.company_logo}}"></td>
+                    <td>{{dept.company_Name}}</td>
+                    <td>{{dept.nature_Of_Business}}</td>
+                    <td>{{dept.address1}}</td>
+                    <td>{{dept.address2}}</td>
+                    <td>{{dept.zipcode}}</td>
+                    <td class="align">
+                        <button class="edit" data-toggle="modal"  (click)="getcompany(dept.id)" data-target="#bigimg16">view</button>  
+                    </td>                      
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+<div id="bigimg16" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Company Details</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-12" >
+                        <br>
+                        <table>
+                             <tr>
+                                 <td>RDO</td>
+                                 <td>{{RDO}}</td>
+                             </tr>                      
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

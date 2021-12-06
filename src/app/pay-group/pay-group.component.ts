@@ -16,7 +16,7 @@ export class PayGroupComponent implements OnInit {
   }
 
   result:any
-
+ 
   public GetPayGroup() {
     this.DgofficeServiceService.GetPayGroup().subscribe(data=>{
       debugger
@@ -24,6 +24,12 @@ export class PayGroupComponent implements OnInit {
      })
   }
 
+
+   
+  Update (details: any){
+    debugger
+   location.href="/PayGroupForm/"+ details.id;
+  }
 
 
   delete(id: any){
@@ -37,3 +43,5 @@ export class PayGroupComponent implements OnInit {
   }
 
 }
+
+

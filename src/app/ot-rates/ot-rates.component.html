@@ -29,27 +29,25 @@
                     <td><span class="menu"> Normal</span></td>
                     <td><span class="menu">OT </span></td>
                     <td><span class="menu">ND</span></td>
-                    <td><span class="menu">NDOT</span></td> 
-                    <td style="text-align: center;"><span class="menu">Actions </span></td>                
+                    <td><span class="menu">NDOT</span></td>
+                    <td style="text-align: center;"><span class="menu">Actions </span></td>
                 </tr>
-               <tr  *ngFor="let application of Otlist">
-                   <td>
-                       {{application.day}}
-                   </td>
-                   <td>
-                    {{application.normal}}
-                </td>
-                <td> {{application.ot}}</td>
-                <td>{{application.nd}}</td>
-                <td>{{application.ndot}}</td>
-                <td>                                                                                                                                                                                                                                                                                                            </td>
-                <td style="text-align: center;"><button class="button">Edit </button><br>
-                    <button class="button">Delete </button>
-                </td>
-               </tr>
-             
+                <tr *ngFor="let application of Otlist">
+                    <td>
+                        {{application.day}}
+                    </td>
+                    <td>
+                        {{application.normal}}
+                    </td>
+                    <td> {{application.ot}}</td>
+                    <td>{{application.nd}}</td>
+                    <td>{{application.ndot}}</td>
+                    <td style="text-align: center;"><button class="button">Edit </button><br>
+                        <button class="button">Delete </button>
+                    </td>
+                </tr>
+
             </table>
         </div><br>
     </div>
 </div>
-

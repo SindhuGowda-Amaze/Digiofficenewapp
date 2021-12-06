@@ -18,6 +18,8 @@
     "@angular/platform-browser": "~13.0.0",
     "@angular/platform-browser-dynamic": "~13.0.0",
     "@angular/router": "~13.0.0",
+    "ngx-dropzone": "^3.0.0",
+    "angular-carousel": "^1.1.0",
     "rxjs": "~7.4.0",
     "sweetalert2": "^11.2.1",
     "tslib": "^2.3.0",
