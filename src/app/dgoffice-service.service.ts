@@ -158,6 +158,13 @@ export class DgofficeServiceService {
     let APIURL = this.baseURL + "Master/UpdateDepartment";
     return this.http.post<any[]>(APIURL, json);
   }
+  
+  
+  public GetTaxtable() {
+    debugger
+    let APIURL = this.baseURL+"Master/GetTaxtable";
+    return this.http.get<any[]>(APIURL);
+  }
 
 
 

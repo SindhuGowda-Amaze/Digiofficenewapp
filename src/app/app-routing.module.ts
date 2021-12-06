@@ -86,6 +86,12 @@ const routes: Routes = [
   {
     path: "PayGroupForm", component: PayGroupFormComponent
   },
+
+  {
+    path: "PayGroupForm/:id", component: PayGroupFormComponent
+  },
+
+
   {
     path: "PayRollForm", component: PayRollFormComponent
   },

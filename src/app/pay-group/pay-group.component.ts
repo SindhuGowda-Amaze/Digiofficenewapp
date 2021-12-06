@@ -25,6 +25,12 @@ export class PayGroupComponent implements OnInit {
   }
 
 
+   
+  Update (details: any){
+    debugger
+   location.href="/PayGroupForm/"+ details.id;
+  }
+
 
   delete(id: any){
     debugger;
