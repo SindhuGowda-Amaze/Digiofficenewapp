@@ -147,6 +147,29 @@ export class DgofficeServiceService {
     return this.http.get<any[]>(APIURL);
   }
 
+  public GetSSS() {
+    debugger
+    let APIURL = this.baseURL+"Master/GetSSS";
+    return this.http.get<any[]>(APIURL);
+  }
+
+  public InsertSSS(json:any) {
+    debugger
+    let APIURL = this.baseURL+"Master/InsertSSS";
+    return this.http.post<any[]>(APIURL, json);
+  }
+
+  public GetGovernmentRecords() {
+    debugger
+    let APIURL = this.baseURL+"Master/GetGovernmentRecords";
+    return this.http.get<any[]>(APIURL);
+  }
+
+  public InsertGovernmentRecords(json:any) {
+    debugger
+    let APIURL = this.baseURL+"Master/InsertGovernmentRecords";
+    return this.http.post<any[]>(APIURL, json);
+  }
   public UpdateCostcenter(json: any) {
     debugger
     let APIURL = this.baseURL + "Master/UpdateCostcenter";
