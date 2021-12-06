@@ -133,13 +133,14 @@ export class DgofficeServiceService {
     return this.http.post<any[]>(APIURL, json);
   }
 
-  public DeletePayGroup(json : any) {
+  public DeletePayGroup(ID : any) {
     debugger
-    let APIURL = this.baseURL + "Master/DeletePayGroup";
-    return this.http.post<any[]>(APIURL, json);
+    
+    return this.http.get<any[]>(this.baseURL+ "Master/DeletePayGroup?ID=" +ID);
   }
 
-  
+
+
   public DeleteCompanyAdjustment(ID:any) {
     debugger
     let APIURL = this.baseURL+"Master/DeleteCompanyAdjustment?ID="+ID;
