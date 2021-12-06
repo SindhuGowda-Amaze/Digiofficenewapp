@@ -37,54 +37,18 @@
                     <td><span class="menu">EC-ER</span></td>   
                     <td><span class="menu">Total Contibution</span></td>                         
                 </tr>     
-                <tr>                 
-                    <td>1000</td>
-                    <td>2000</td>
-                    <td>2000</td> 
-                    <td>2000</td>   
-                    <td>2000</td>   
-                    <td>2000</td>                                        
-                    <td>2000</td>   
-                    <td>2000</td>   
-                    <td>2000</td>   
-                    <td>2000</td>                         
-                </tr>        
-                <tr>                 
-                    <td>1000</td>
-                    <td>2000</td>
-                    <td>2000</td> 
-                    <td>2000</td>   
-                    <td>2000</td>   
-                    <td>2000</td>                                        
-                    <td>2000</td>   
-                    <td>2000</td>   
-                    <td>2000</td>   
-                    <td>2000</td>                         
-                </tr>     
-                <tr>                 
-                    <td>1000</td>
-                    <td>2000</td>
-                    <td>2000</td> 
-                    <td>2000</td>   
-                    <td>2000</td>   
-                    <td>2000</td>                                        
-                    <td>2000</td>   
-                    <td>2000</td>   
-                    <td>2000</td>   
-                    <td>2000</td>                         
-                </tr>     
-                <tr>                 
-                    <td>1000</td>
-                    <td>2000</td>
-                    <td>2000</td> 
-                    <td>2000</td>   
-                    <td>2000</td>   
-                    <td>2000</td>                                        
-                    <td>2000</td>   
-                    <td>2000</td>   
-                    <td>2000</td>   
-                    <td>2000</td>                         
-                </tr>          
+                <tr *ngFor="let SSSdata of SSSdatalist">                 
+                    <td>{{SSSdata.min_Range}}</td>
+                    <td>{{SSSdata.max_Range}}</td>
+                    <td>{{SSSdata.monthly_Salary_Creadited}}</td> 
+                    <td>{{SSSdata.sS_ER}}</td>   
+                    <td>{{SSSdata.sS_EE}}</td>   
+                    <td>{{SSSdata.sS_Total}}</td>                                        
+                    <td>{{SSSdata.mPF_ER}}</td>   
+                    <td>{{SSSdata.mPF_EE}}</td>   
+                    <td>{{SSSdata.eC_ER}}</td>   
+                    <td>{{SSSdata.total_Contribution}}</td>                         
+                </tr> 
             </table>
         </div><br>
     </div>
