@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DgofficeServiceService } from '../dgoffice-service.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-bank',
@@ -8,10 +9,16 @@ import { DgofficeServiceService } from '../dgoffice-service.service';
 })
 export class BankComponent implements OnInit {
 
-  constructor( private DgofficeServiceService:DgofficeServiceService) { }
+  constructor( private DgofficeServiceService:DgofficeServiceService, private ActivatedRoute:ActivatedRoute) { }
 
   ngOnInit(): void {
    this.GetBanks()
+  }
+
+
+  Update (dept: any){
+    debugger
+   location.href="/BankForm/"+ dept.id;
   }
 
 

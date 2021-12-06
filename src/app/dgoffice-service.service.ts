@@ -115,6 +115,13 @@ export class DgofficeServiceService {
     return this.http.post<any[]>(APIURL, json);
   }
 
+  public UpdateBanks(json: any) {
+    debugger
+    let APIURL = this.baseURL + "Master/UpdateBanks";
+    return this.http.post<any[]>(APIURL, json);
+  }
+
+
   public DeleteBanks(json : any) {
     debugger
     let APIURL = this.baseURL + "Master/DeleteBanks";
