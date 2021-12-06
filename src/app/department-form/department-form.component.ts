@@ -13,13 +13,37 @@ export class DepartmentFormComponent implements OnInit {
   constructor(private DgofficeServiceService: DgofficeServiceService,private ActivatedRoute: ActivatedRoute) { }
 
   Departmentlist:any;
-  ngOnInit(): void {
-  }
-
-
+  id:any;
   name:any;
   code:any;
   writeremarks:any;
+  result:any;
+
+
+
+  ngOnInit(): void {
+
+    this.ActivatedRoute.params.subscribe(params=>{
+      debugger
+     this.id=params["id"];
+     if(this.id!=null&&this.id!=undefined){  
+       this.GetDepartment();
+     }
+    })
+  }
+
+  GetDepartment()
+  {
+  this.DgofficeServiceService.GetDepartment().subscribe(
+    data => {
+      debugger
+      this.result = data;
+      this.result=this.result.filter((x: { id: any; })=>x.id==Number(this.id));
+      this.name=this.result[0].name;
+      this.code=this.result[0].code;
+      this.writeremarks=this.result[0].remarks;   
+    })
+  } 
 
   Save() {
     debugger
@@ -37,6 +61,35 @@ export class DepartmentFormComponent implements OnInit {
       }
     )
   }
+ 
+  Update(){
+    debugger
+    var json = {
+      "ID":this.id,
+      "Name": this.name,
+      "Code": this.code,
+      "Remarks": this.writeremarks     
+    };
+  
+    this.DgofficeServiceService.UpdateDepartment(json).subscribe(
+      data => {
+      debugger
+      let result = data;
+      location.href="/Department";
+      Swal.fire("Update Sucessfully");
+    })
+  }
+
+
+
+
+
+
+
+
+
+
+
 
 
 }

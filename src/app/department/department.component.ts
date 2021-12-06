@@ -26,6 +26,13 @@ export class DepartmentComponent implements OnInit {
      })
   }
 
+
+  
+  Update (dept: any){
+    debugger
+   location.href="/DepartmentForm/"+ dept.id;
+  }
+
   
   delete(dept: any){
   

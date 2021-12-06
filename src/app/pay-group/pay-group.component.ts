@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import Swal from 'sweetalert2';
 import { DgofficeServiceService } from '../dgoffice-service.service';
 
 @Component({
@@ -25,18 +26,13 @@ export class PayGroupComponent implements OnInit {
 
 
 
-  delete(details: any){
-    var json={
-      "ID":details.id
-    }
-    this.DgofficeServiceService.DeletePayGroup(json).subscribe(
+  delete(id: any){
+    debugger;
+  
+    this.DgofficeServiceService.DeletePayGroup(id).subscribe(
       data => {
-        debugger        
-        this.DgofficeServiceService.GetPayGroup().subscribe(
-          data => {
-            debugger
-            this.result = data;
-        })
+       Swal.fire('Deleted Successfully')   
+       location.reload() 
     })
   }
 
