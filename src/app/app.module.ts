@@ -39,6 +39,8 @@ import { GovernmentComponent } from './government/government.component';
 import { TaxTableComponent } from './tax-table/tax-table.component';
 import { BankFormComponent } from './bank-form/bank-form.component';
 import { LoginScreenComponent } from './login-screen/login-screen.component';
+import { NgxDropzoneModule } from 'ngx-dropzone';
+import { CompanyProfileDashboardComponent } from './company-profile-dashboard/company-profile-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -78,12 +80,14 @@ import { LoginScreenComponent } from './login-screen/login-screen.component';
     TaxTableComponent,
     BankFormComponent,
     LoginScreenComponent,
+    CompanyProfileDashboardComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxDropzoneModule
 
   ],
   providers: [],

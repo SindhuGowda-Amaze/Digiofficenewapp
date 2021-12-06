@@ -15,16 +15,23 @@
                 <label>Company Logo</label>
             </div>
             <div class="col-lg-5">
-                <img class="profilelogo" src="/assets/img/amazefblogo.jpg" alt="logo image" [(ngModel)]="Company_logo">
+                <ngx-dropzone (change)="onSelect($event)">
+                    <ngx-dropzone-label>Drop it, baby!</ngx-dropzone-label>
+                     <ngx-dropzone-preview *ngFor="let f of files" [removable]="true" (removed)="onRemove(f)">
+                        <ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label>
+                    </ngx-dropzone-preview>
+                </ngx-dropzone> 
+
+                <!-- <img class="profilelogo" src="/assets/img/amazefblogo.jpg" alt="logo image" [(ngModel)]="Company_logo"> -->
             </div>
         </div>
 
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-lg-4"></div>
             <div class="col-lg-1">
                 <input type="file">
             </div>
-        </div>
+        </div> -->
         <br>
         <div class="row">
             <div class="col-lg-4">
@@ -233,7 +240,14 @@
             </div>
             <div class="col-lg-5">
                 <!-- <input type="file" id="myFile" name="filename"> -->
-                <input type="file" placeholder="Choose file" [(ngModel)]="E_Signatory">
+                <!-- <input type="file" placeholder="Choose file" [(ngModel)]="E_Signatory"> -->
+
+                <ngx-dropzone (change)="onSelect1($event)">
+                    <ngx-dropzone-label>Drop it, baby!</ngx-dropzone-label>
+                     <ngx-dropzone-preview *ngFor="let f of files1" [removable]="true" (removed)="onRemove1(f)">
+                        <ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label>
+                    </ngx-dropzone-preview>
+                </ngx-dropzone> 
             </div>
         </div>
 
@@ -292,7 +306,7 @@
                 <label>Work Hours Start</label>
             </div>
             <div class="col-lg-5">
-                <input type="date" placeholder="10.00 PM" [(ngModel)]="Work_hour_Start">
+                <input type="time" placeholder="10.00 PM" class="form-control" [(ngModel)]="Work_hour_Start">
             </div>
             <img src="/assets/img/alarm-clock.png" class="icon">
         </div>
@@ -301,7 +315,7 @@
                 <label>Work Hours End</label>
             </div>
             <div class="col-lg-5">
-                <input type="date" placeholder="6.00 AM" [(ngModel)]="Work_hour_End">
+                <input type="time" placeholder="6.00 AM" class="form-control" [(ngModel)]="Work_hour_End">
             </div>
             <img src="/assets/img/alarm-clock.png" class="icon">
         </div>
@@ -310,7 +324,7 @@
                 <label>Break Hours</label>
             </div>
             <div class="col-lg-5">
-                <input type="date" placeholder=" " [(ngModel)]="Break_Hours">
+                <input type="time" placeholder="0.00" class="form-control" [(ngModel)]="Break_Hours">
             </div>
             <img src="/assets/img/alarm-clock.png" class="icon">
         </div>
@@ -370,32 +384,32 @@
                         <!-- <input type="checkbox" id="Basic_Salary1" name="Absent_Deduction"
                          value="Basic Salary">
                         <label for="Basic_Salary1" class="checkboxtxt"></label> -->
-                        <input type="checkbox" id="Basic_Salary" class="checkboxtxt" [(ngModel)]="Absent_Deduction"  name="Basic_Salary" value="Basic_Salary">
-                        <label for="Basic_Salary"> Basic Salary</label><br>
+                        <input type="checkbox" id="Basic_Salary" class="checkboxtxt"  (change)="GetAbsent_Deduction_BasicSalary($event)"  name="Basic_Salary" value="Basic_Salary">
+                        <label for="Basic_Salary" class="checkboxtxt"> Basic Salary</label><br>
                     </div>
                     <div class="col-lg-2">
                         <input type="checkbox" class="checkboxtxt" id="Deminimis1" name="Deminimis1"
-                        [(ngModel)]="Absent_Deduction" value="Deminimis">
+                        (change)="GetAbsent_Deduction_Deminimis($event)" value="Deminimis">
                         <label  for="Deminimis1" class="checkboxtxt" >Deminimis</label>
                     </div>
                     <div class="col-lg-2">
                         <input type="checkbox" class="checkboxtxt" id="Allowance1" name="Absent_Deduction"
-                        [(ngModel)]="Absent_Deduction" value="Allowance">
+                        (change)="GetAbsent_Deduction_Allowance($event)" value="Allowance">
                         <label for="Allowance1" class="checkboxtxt" >Allowance</label>
                     </div>
                     <div class="col-lg-4">
                         <input type="checkbox" class="checkboxtxt" id="Reimbursement_Allowance1" name="Absent_Deduction"
-                        [(ngModel)]="Absent_Deduction" value="Reimbursement Allowance">
+                        (change)="GetAbsent_Deduction_Reimbursement($event)" value="Reimbursement Allowance">
                         <label for="Reimbursement_Allowance1" class="checkboxtxt" >Reimbursement Allowance</label>
                     </div>
                     <div class="col-lg-2">
                         <input type="checkbox" class="checkboxtxt" id="ECOLA1" name="Absent_Deduction"
-                        [(ngModel)]="Absent_Deduction" value="ECOLA">
+                        (change)="GetAbsent_Deduction_ECOLA($event)" value="ECOLA">
                         <label for="ECOLA1" class="checkboxtxt" >ECOLA</label>
                     </div>
                     <div class="col-lg-2">
                         <input type="checkbox" class="checkboxtxt" id="Bonus1" name="Absent_Deduction"
-                        [(ngModel)]="Absent_Deduction" value="Bonus">
+                        (change)="GetAbsent_Deduction_bonus($event)" value="Bonus">
                         <label for="Bonus1" class="checkboxtxt" >Bonus</label>
                     </div>
                 </div>
@@ -410,32 +424,32 @@
                 <div class="row">
                     <div class="col-lg-2">
                         <input type="checkbox" id="Late_Deduction" name="Late_Deduction"
-                        [(ngModel)]="Late_Deduction" value="Basic Salary">
+                        (change)="GetLate_Deduction_BasicSalary($event)"  value="Basic Salary">
                         <label class="checkboxtxt">Basic Salary</label>
                     </div>
                     <div class="col-lg-2">
                         <input type="checkbox" class="checkboxtxt"  id="Late_Deduction" name="Late_Deduction"
-                        [(ngModel)]="Late_Deduction" value="Deminimis">
+                        (change)="GetLate_Deduction_Deminimis($event)"  value="Deminimis">
                         <label class="checkboxtxt">Deminimis</label>
                     </div>
                     <div class="col-lg-2">
                         <input type="checkbox" class="checkboxtxt"  id="Late_Deduction" name="Late_Deduction"
-                        [(ngModel)]="Late_Deduction" value="Allowance">
+                        (change)="GetLate_Deduction_ECOLA($event)"  value="Allowance">
                         <label class="checkboxtxt">Allowance</label>
                     </div>
                     <div class="col-lg-4">
                         <input type="checkbox" class="checkboxtxt"  id="Late_Deduction" name="Late_Deduction"
-                        [(ngModel)]="Late_Deduction" value="Reimbursement Allowance">
+                        (change)="GetLate_Deduction_Allowance($event)"  value="Reimbursement Allowance">
                         <label class="checkboxtxt">Reimbursement Allowance</label>
                     </div>
                     <div class="col-lg-2">
                         <input type="checkbox" class="checkboxtxt"  id="Late_Deduction" name="Late_Deduction"
-                        [(ngModel)]="Late_Deduction" value="ECOLA">
+                        (change)="GetLate_Deduction_Reimbursement($event)" value="ECOLA">
                         <label class="checkboxtxt">ECOLA</label>
                     </div>
                     <div class="col-lg-2">
                         <input type="checkbox" class="checkboxtxt"  id="Late_Deduction" name="Late_Deduction"
-                        [(ngModel)]="Late_Deduction" value="Bonus">
+                        (change)="GetLate_Deduction_bonus($event)" value="Bonus">
                         <label class="checkboxtxt">Bonus</label>
                     </div>
                 </div>
@@ -498,17 +512,17 @@
                     <div class="col-lg-2 "></div>
                     <div class="col-lg-2 ">
                         <input type="checkbox" id="OverTime_Comeptition_OTRates" name="OverTime_Comeptition_OTRates"
-                        [(ngModel)]="OverTime_Comeptition_OTRates" value="Ord-OT">
+                        (change)="Getord_ot($event)" value="Ord-OT">
                         <label class="checkboxtxt">Ord-OT</label>
                     </div>
                     <div class="col-lg-2">
                         <input type="checkbox" class="checkboxtxt" id="OverTime_Comeptition_OTRates" name="OverTime_Comeptition_OTRates"
-                        [(ngModel)]="OverTime_Comeptition_OTRates" value="Ord-ND">
+                        (change)="Getord_nd($event)" value="Ord-ND">
                         <label class="checkboxtxt">Ord-ND</label>
                     </div>
                     <div class="col-lg-2">
                         <input type="checkbox" class="checkboxtxt" id="OverTime_Comeptition_OTRates" name="OverTime_Comeptition_OTRates"
-                        [(ngModel)]="OverTime_Comeptition_OTRates" value="Ord-ND-OT">
+                        (change)="Getord_nd_ot($event)" value="Ord-ND-OT">
                         <label class="checkboxtxt">Ord-ND-OT</label>
                     </div>
                 </div>
@@ -520,22 +534,22 @@
                 <div class="row">
                     <div class="col-lg-2 ">
                         <input type="checkbox" id="OverTime_Comeptition_OTRates" name="OverTime_Comeptition_OTRates"
-                        [(ngModel)]="OverTime_Comeptition_OTRates" value="RD">
+                        (change)="Getrd($event)" value="RD">
                         <label class="checkboxtxt">RD</label>
                     </div>
                     <div class="col-lg-2 ">
                         <input type="checkbox" id="OverTime_Comeptition_OTRates" name="OverTime_Comeptition_OTRates"
-                        [(ngModel)]="OverTime_Comeptition_OTRates" value="RD-OT">
+                        (change)="Getrd_ot($event)" value="RD-OT">
                         <label class="checkboxtxt">RD-OT</label>
                     </div>
                     <div class="col-lg-2">
                         <input type="checkbox" class="checkboxtxt" id="OverTime_Comeptition_OTRates" name="OverTime_Comeptition_OTRates"
-                        [(ngModel)]="OverTime_Comeptition_OTRates" value="RD-ND">
+                        (change)="Getrd_nd($event)" value="RD-ND">
                         <label class="checkboxtxt">RD-ND</label>
                     </div>
                     <div class="col-lg-2">
                         <input type="checkbox" class="checkboxtxt" id="OverTime_Comeptition_OTRates" name="OverTime_Comeptition_OTRates"
-                        [(ngModel)]="OverTime_Comeptition_OTRates" value="RD-ND-OT">
+                        (change)="Getrd_nd_ot($event)" value="RD-ND-OT">
                         <label class="checkboxtxt">RD-ND-OT</label>
                     </div>
                 </div>
@@ -547,22 +561,22 @@
                 <div class="row">
                     <div class="col-lg-2 ">
                         <input type="checkbox" id="OverTime_Comeptition_OTRates" name="OverTime_Comeptition_OTRates"
-                        [(ngModel)]="OverTime_Comeptition_OTRates" value="SH">
+                        (change)="Getsh($event)" value="SH">
                         <label class="checkboxtxt">SH</label>
                     </div>
                     <div class="col-lg-2 ">
                         <input type="checkbox" id="OverTime_Comeptition_OTRates" name="OverTime_Comeptition_OTRates"
-                        [(ngModel)]="OverTime_Comeptition_OTRates" value="SH-OT">
+                        (change)="Getsh_ot($event)" value="SH-OT">
                         <label class="checkboxtxt">SH-OT</label>
                     </div>
                     <div class="col-lg-2">
                         <input type="checkbox" class="checkboxtxt" id="OverTime_Comeptition_OTRates" name="OverTime_Comeptition_OTRates"
-                        [(ngModel)]="OverTime_Comeptition_OTRates" value="SH-ND">
+                        (change)="Getsh_nd($event)" value="SH-ND">
                         <label class="checkboxtxt">SH-ND</label>
                     </div>
                     <div class="col-lg-2">
                         <input type="checkbox" class="checkboxtxt" id="OverTime_Comeptition_OTRates" name="OverTime_Comeptition_OTRates"
-                        [(ngModel)]="OverTime_Comeptition_OTRates" value="SH-ND-OT">
+                        (change)="Getsh_nd_ot($event)" value="SH-ND-OT">
                         <label class="checkboxtxt">SH-ND-OT</label>
                     </div>
                 </div>
@@ -574,22 +588,22 @@
                 <div class="row">
                     <div class="col-lg-2 ">
                         <input type="checkbox" id="OverTime_Comeptition_OTRates" name="OverTime_Comeptition_OTRates"
-                        [(ngModel)]="OverTime_Comeptition_OTRates" value="LH">
+                        (change)="Getlh($event)" value="LH">
                         <label class="checkboxtxt">LH</label>
                     </div>
                     <div class="col-lg-2 ">
                         <input type="checkbox" id="OverTime_Comeptition_OTRates" name="OverTime_Comeptition_OTRates"
-                        [(ngModel)]="OverTime_Comeptition_OTRates" value="LH-OT">
+                        (change)="Getlh_ot($event)" value="LH-OT">
                         <label class="checkboxtxt">LH-OT</label>
                     </div>
                     <div class="col-lg-2">
                         <input type="checkbox" class="checkboxtxt" id="OverTime_Comeptition_OTRates" name="OverTime_Comeptition_OTRates"
-                        [(ngModel)]="OverTime_Comeptition_OTRates" value="LH-ND">
+                        (change)="Getlh_nd($event)" value="LH-ND">
                         <label class="checkboxtxt">LH-ND</label>
                     </div>
                     <div class="col-lg-2">
                         <input type="checkbox" class="checkboxtxt" id="OverTime_Comeptition_OTRates" name="OverTime_Comeptition_OTRates"
-                        [(ngModel)]="OverTime_Comeptition_OTRates" value="LH-ND-OT">
+                        (change)="Getlh_nd_ot($event)" value="LH-ND-OT">
                         <label class="checkboxtxt">LH-ND-OT</label>
                     </div>
                 </div>
@@ -601,22 +615,22 @@
                 <div class="row">
                     <div class="col-lg-2 ">
                         <input type="checkbox" id="OverTime_Comeptition_OTRates" name="OverTime_Comeptition_OTRates"
-                        [(ngModel)]="OverTime_Comeptition_OTRates" value="SH-RD">
+                        (change)="Getsh_rd($event)" value="SH-RD">
                         <label class="checkboxtxt">SH-RD</label>
                     </div>
                     <div class="col-lg-2 ">
                         <input type="checkbox" id="OverTime_Comeptition_OTRates" name="OverTime_Comeptition_OTRates"
-                        [(ngModel)]="OverTime_Comeptition_OTRates" value="SH-RD-OT">
+                        (change)="Getsh_rd_ot($event)" value="SH-RD-OT">
                         <label class="checkboxtxt">SH-RD-OT</label>
                     </div>
                     <div class="col-lg-2">
                         <input type="checkbox" class="checkboxtxt" id="OverTime_Comeptition_OTRates" name="OverTime_Comeptition_OTRates"
-                        [(ngModel)]="OverTime_Comeptition_OTRates" value="SH-RD-ND">
+                        (change)="Getsh_rd_nd($event)" value="SH-RD-ND">
                         <label class="checkboxtxt">SH-RD-ND</label>
                     </div>
                     <div class="col-lg-3">
                         <input type="checkbox" class="checkboxtxt" id="OverTime_Comeptition_OTRates" name="OverTime_Comeptition_OTRates"
-                        [(ngModel)]="OverTime_Comeptition_OTRates" value="SH-RD-ND-OT">
+                        (change)="Getsh_rd_nd_ot($event)" value="SH-RD-ND-OT">
                         <label class="checkboxtxt">SH-RD-ND-OT</label>
                     </div>
                 </div>
@@ -628,21 +642,21 @@
                 <div class="row">
                     <div class="col-lg-2">
                         <input type="checkbox" id="OverTime_Comeptition_OTRates" name="OverTime_Comeptition_OTRates"
-                        [(ngModel)]="OverTime_Comeptition_OTRates" value="LH-RD">
+                        (change)="Getlh_rd($event)" value="LH-RD">
                         <label class="checkboxtxt">LH-RD</label>
                     </div>
                     <div class="col-lg-2" id="OverTime_Comeptition_OTRates" name="OverTime_Comeptition_OTRates"
-                    [(ngModel)]="OverTime_Comeptition_OTRates" value="LH-RD-OT">
+                    (change)="Getlh_rd_ot($event)" value="LH-RD-OT">
                         <input type="checkbox">
                         <label class="checkboxtxt">LH-RD-OT</label>
                     </div>
                     <div class="col-lg-2" id="OverTime_Comeptition_OTRates" name="OverTime_Comeptition_OTRates"
-                    [(ngModel)]="OverTime_Comeptition_OTRates" value="LH-RD-ND">
+                    (change)="Getlh_rd_nd($event)" value="LH-RD-ND">
                         <input type="checkbox" class="checkboxtxt">
                         <label class="checkboxtxt">LH-RD-ND</label>
                     </div>
                     <div class="col-lg-3" id="OverTime_Comeptition_OTRates" name="OverTime_Comeptition_OTRates"
-                    [(ngModel)]="OverTime_Comeptition_OTRates" value="LH-RD-ND-OT">
+                    (change)="Getlh_rd_nd_ot($event)" value="LH-RD-ND-OT">
                         <input type="checkbox" class="checkboxtxt">
                         <label class="checkboxtxt">LH-RD-ND-OT</label>
                     </div>
@@ -655,22 +669,22 @@
                 <div class="row">
                     <div class="col-lg-2">
                         <input type="checkbox" id="OverTime_Comeptition_OTRates" name="OverTime_Comeptition_OTRates"
-                        [(ngModel)]="OverTime_Comeptition_OTRates" value="DH">
+                        (change)="Getdh($event)" value="DH">
                         <label class="checkboxtxt">DH</label>
                     </div>
                     <div class="col-lg-2">
                         <input type="checkbox" id="OverTime_Comeptition_OTRates" name="OverTime_Comeptition_OTRates"
-                        [(ngModel)]="OverTime_Comeptition_OTRates" value="DH-OT">
+                        (change)="Getdh_ot($event)" value="DH-OT">
                         <label class="checkboxtxt">DH-OT</label>
                     </div>
                     <div class="col-lg-2">
                         <input type="checkbox" class="checkboxtxt" id="OverTime_Comeptition_OTRates" name="OverTime_Comeptition_OTRates"
-                        [(ngModel)]="OverTime_Comeptition_OTRates" value="DH-ND">
+                        (change)="Getdh_nd($event)" value="DH-ND">
                         <label class="checkboxtxt">DH-ND</label>
                     </div>
                     <div class="col-lg-2">
                         <input type="checkbox" class="checkboxtxt" id="OverTime_Comeptition_OTRates" name="OverTime_Comeptition_OTRates"
-                        [(ngModel)]="OverTime_Comeptition_OTRates" value="DH-ND-OT">
+                        (change)="Getdh_nd_ot($event)" value="DH-ND-OT">
                         <label class="checkboxtxt">DH-ND-OT</label>
                     </div>
                 </div>
@@ -682,22 +696,22 @@
                 <div class="row">
                     <div class="col-lg-2 ">
                         <input type="checkbox" id="OverTime_Comeptition_OTRates" name="OverTime_Comeptition_OTRates"
-                        [(ngModel)]="OverTime_Comeptition_OTRates" value="DH-RD">
+                        (change)="Getdh_rd($event)" value="DH-RD">
                         <label class="checkboxtxt">DH-RD</label>
                     </div>
                     <div class="col-lg-2 ">
                         <input type="checkbox" id="OverTime_Comeptition_OTRates" name="OverTime_Comeptition_OTRates"
-                        [(ngModel)]="OverTime_Comeptition_OTRates" value="DH-RD-OT">
+                        (change)="Getdh_rd_ot($event)" value="DH-RD-OT">
                         <label class="checkboxtxt">DH-RD-OT</label>
                     </div>
                     <div class="col-lg-2">
                         <input type="checkbox" class="checkboxtxt" id="OverTime_Comeptition_OTRates" name="OverTime_Comeptition_OTRates"
-                        [(ngModel)]="OverTime_Comeptition_OTRates" value="DH-RD-ND">
+                        (change)="Getdh_rd_nd($event)" value="DH-RD-ND">
                         <label class="checkboxtxt">DH-RD-ND</label>
                     </div>
                     <div class="col-lg-3">
                         <input type="checkbox" class="checkboxtxt" id="OverTime_Comeptition_OTRates" name="OverTime_Comeptition_OTRates"
-                        [(ngModel)]="OverTime_Comeptition_OTRates" value="DH-RD-ND-OT">
+                        (change)="Getdh_rd_nd_ot($event)" value="DH-RD-ND-OT">
                         <label class="checkboxtxt">DH-RD-ND-OT</label>
                     </div>
                 </div>
@@ -711,38 +725,39 @@
             <div class="col-lg-8">
                 <div class="row">
                     <div class="col-lg-2 ">
+
                         <input type="checkbox" id="RestDays" name="RestDays"
-                        [(ngModel)]="RestDays" value="Monday">
+                        (change)="Getmonday($event)" value="Monday">
                         <label class="checkboxtxt">Monday</label>
                     </div>
                     <div class="col-lg-2 ">
                         <input type="checkbox" class="checkboxtxt" id="RestDays" name="RestDays"
-                        [(ngModel)]="RestDays" value="Tuesday">
+                        (change)="Gettuesday($event)" value="Tuesday">
                         <label class="checkboxtxt">Tuesday</label>
                     </div>
                     <div class="col-lg-2 ">
                         <input type="checkbox" class="checkboxtxt" id="RestDays" name="RestDays"
-                        [(ngModel)]="RestDays" value="Wednesday">
+                        (change)="Getwednesday($event)" value="Wednesday">
                         <label class="checkboxtxt">Wednesday</label>
                     </div>
                     <div class="col-lg-2 ">
                         <input type="checkbox" class="checkboxtxt" id="RestDays" name="RestDays"
-                        [(ngModel)]="RestDays" value="Thursday">
+                        (change)="Getthursday($event)" value="Thursday">
                         <label class="checkboxtxt">Thursday</label>
                     </div>
                     <div class="col-lg-2 ">
                         <input type="checkbox" class="checkboxtxt" id="RestDays" name="RestDays"
-                        [(ngModel)]="RestDays" value="Friday">
+                        (change)="Getfriday($event)" value="Friday">
                         <label class="checkboxtxt">Friday</label>
                     </div>
                     <div class="col-lg-2">
                         <input type="checkbox" class="checkboxtxt" id="RestDays" name="RestDays"
-                        [(ngModel)]="RestDays" value="Saturday">
+                        (change)="Getsaturday($event)" value="Saturday">
                         <label class="checkboxtxt">Saturday</label>
                     </div>
                     <div class="col-lg-2">
                         <input type="checkbox" class="checkboxtxt" id="RestDays" name="RestDays"
-                        [(ngModel)]="RestDays" value="Sunday">
+                        (change)="Getsunday($event)" value="Sunday">
                         <label class="checkboxtxt">Sunday</label>
                     </div>
                 </div>
@@ -818,14 +833,14 @@
                     <div class="col-lg-6">
                         <div class="form-check">
                             <input class="form-check-input" type="radio" id="thirteen_Month_Compuatation_Type" name="thirteen_Month_Compuatation_Type"
-                            [(ngModel)]="thirteen_Month_Compuatation_Type" value="Yes">
+                            [(ngModel)]="thirteen_Month_Compuatation_Type" value="Pro-rated/Advanced">
                             <label class="form-check-label" for="flexRadioDefault1">
                                 Pro-rated/Advanced
                             </label>
                         </div>
                         <div class="form-check">
                             <input class="form-check-input" type="radio"  id="thirteen_Month_Compuatation_Type" name="thirteen_Month_Compuatation_Type"
-                            [(ngModel)]="thirteen_Month_Compuatation_Type" value="No">
+                            [(ngModel)]="thirteen_Month_Compuatation_Type" value="Pro-rated/Current/Full Salary">
                             <label class="form-check-label" for="flexRadioDefault1">
                                 Pro-rated/Current/Full Salary
                             </label>
@@ -857,7 +872,7 @@
                     <div class="col-lg-2">
                         <div class="form-check">
                             <input class="form-check-input" type="radio" id="thirteen_Month_Deduct_Absent" name="thirteen_Month_Deduct_Absent"
-                            [(ngModel)]="thirteen_Month_Deduct_Absent" value="No">>
+                            [(ngModel)]="thirteen_Month_Deduct_Absent" value="No">
                             <label class="form-check-label" for="flexRadioDefault1">
                                 No
                             </label>
@@ -906,67 +921,67 @@
                 <div class="row">
                     <div class="col-lg-4 ">
                         <input type="checkbox" id="thirteen_Month_Optional" name="thirteen_Month_Optional"
-                        [(ngModel)]="thirteen_Month_Optional" value="Basic">
+                        (change)="Getthirteen_Month_Optional_Basic($event)" value="Basic">
                         <label class="checkboxtxt">Basic</label>
                     </div>
                     <div class="col-lg-4">
                         <input type="checkbox" class="checkboxtxt" id="thirteen_Month_Optional" name="thirteen_Month_Optional"
-                        [(ngModel)]="thirteen_Month_Optional" value="ECOLA">
+                        (change)="Getthirteen_Month_Optional_ECOLA($event)" value="ECOLA">
                         <label class="checkboxtxt">ECOLA</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-4">
                         <input type="checkbox" class="checkboxtxt" id="thirteen_Month_Optional" name="thirteen_Month_Optional"
-                        [(ngModel)]="thirteen_Month_Optional" value="Basic Adjustment">
+                        (change)="Getthirteen_Month_Optional_BasicAdjustment($event)" value="Basic Adjustment">
                         <label class="checkboxtxt">Basic Adjustment</label>
                     </div>
                     <div class="col-lg-4 ">
                         <input type="checkbox" class="checkboxtxt" id="thirteen_Month_Optional" name="thirteen_Month_Optional"
-                        [(ngModel)]="thirteen_Month_Optional" value="Other Taxable Income">
+                        (change)=" Getthirteen_Month_Optional_OtherTaxableIncome($event)" value="Other Taxable Income">
                         <label class="checkboxtxt">Other Taxable Income</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-4">
                         <input type="checkbox" class="checkboxtxt" id="thirteen_Month_Optional" name="thirteen_Month_Optional"
-                        [(ngModel)]="thirteen_Month_Optional" value="OverTime">
+                        (change)="Getthirteen_Month_Optional_OverTime($event)" value="OverTime">
                         <label class="checkboxtxt">OverTime</label>
                     </div>
                     <div class="col-lg-4">
                         <input type="checkbox" class="checkboxtxt" id="thirteen_Month_Optional" name="thirteen_Month_Optional"
-                        [(ngModel)]="thirteen_Month_Optional" value="Allowance">
+                        (change)="Getthirteen_Month_Optional_Allowance($event)" value="Allowance">
                         <label class="Allowance">Allowance</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-4">
                         <input type="checkbox" class="checkboxtxt" id="thirteen_Month_Optional" name="thirteen_Month_Optional"
-                        [(ngModel)]="thirteen_Month_Optional" value="Deminimis">
+                        (change)="Getthirteen_Month_Optional_Deminimis($event)" value="Deminimis">
                         <label class="checkboxtxt">Deminimis</label>
                     </div>
                     <div class="col-lg-4">
                         <input type="checkbox" class="checkboxtxt" id="thirteen_Month_Optional" name="thirteen_Month_Optional"
-                        [(ngModel)]="thirteen_Month_Optional" value="Reimbursable Allowance">
+                        (change)="Getthirteen_Month_Optional_Reimbursement($event)" value="Reimbursable Allowance">
                         <label class="Allowance">Reimbursable Allowance</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-4">
                         <input type="checkbox" class="checkboxtxt" id="thirteen_Month_Optional" name="thirteen_Month_Optional"
-                        [(ngModel)]="thirteen_Month_Optional" value="Bonus">
+                        (change)="Getthirteen_Month_Optional_Bonus($event)" value="Bonus">
                         <label class="checkboxtxt">Bonus</label>
                     </div>
                     <div class="col-lg-4">
                         <input type="checkbox" class="checkboxtxt" id="thirteen_Month_Optional" name="thirteen_Month_Optional"
-                        [(ngModel)]="thirteen_Month_Optional" value="Salary Adjustment">
+                        (change)="Getthirteen_Month_Optional_SalaryAdjustment($event)" value="Salary Adjustment">
                         <label class="Allowance">Salary Adjustment</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-4">
                         <input type="checkbox" class="checkboxtxt" id="thirteen_Month_Optional" name="thirteen_Month_Optional"
-                        [(ngModel)]="thirteen_Month_Optional" value="Commission">
+                        (change)="Getthirteen_Month_Optional_Commission($event)" value="Commission">
                         <label class="checkboxtxt">Commission</label>
                     </div>
                 </div>
@@ -988,7 +1003,7 @@
                     <div class="col-lg-2">
                         <div class="form-check">
                             <input class="form-check-input" type="radio" id="FinalPay_Deduct_Absent" name="FinalPay_Deduct_Absent"
-                            [(ngModel)]="FinalPay_Deduct_Absent" value="Yes">>
+                            [(ngModel)]="FinalPay_Deduct_Absent" value="Yes">
                             <label class="form-check-label" for="flexRadioDefault1">
                                 Yes
                             </label>
@@ -1129,56 +1144,56 @@
                 <div class="row">
                     <div class="col-lg-2">
                         <input type="checkbox" id="SSS_Optional" name="SSS_Optional"
-                        [(ngModel)]="SSS_Optional" value="Basic Salary">
+                        (change)="GetSSS_Optional_BasicSalary($event)" value="Basic Salary">
                         <label class="checkboxtxt">Basic Salary</label>
                     </div>
                     <div class="col-lg-3">
                         <input type="checkbox" class="checkboxtxt" id="SSS_Optional" name="SSS_Optional"
-                        [(ngModel)]="SSS_Optional" value="Dominimis">
+                        (change)="GetSSS_Optional_Deminimis($event)" value="Dominimis">
                         <label class="checkboxtxt">Dominimis</label>
                     </div>
                     <div class="col-lg-3">
                         <input type="checkbox" class="checkboxtxt" id="SSS_Optional" name="SSS_Optional"
-                        [(ngModel)]="SSS_Optional" value="Bonuses">
+                        (change)="GetSSS_Optional_Bonuses($event)"  value="Bonuses">
                         <label class="checkboxtxt">Bonuses</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-2">
                         <input type="checkbox" class="checkboxtxt" id="SSS_Optional" name="SSS_Optional"
-                        [(ngModel)]="SSS_Optional" value="OverTime">
+                        (change)="GetSSS_Optional_OverTime($event)"  value="OverTime">
                         <label class="checkboxtxt">OverTime</label>
                     </div>
                     <div class="col-lg-3">
                         <input type="checkbox" class="checkboxtxt" id="SSS_Optional" name="SSS_Optional"
-                        [(ngModel)]="SSS_Optional" value="Absent/Late">
+                        (change)="GetSSS_Optional_Absent_late($event)"  value="Absent/Late">
                         <label class="checkboxtxt">Absent/Late</label>
                     </div>
                     <div class="col-lg-4">
                         <input type="checkbox" class="checkboxtxt" id="SSS_Optional" name="SSS_Optional"
-                        [(ngModel)]="SSS_Optional" value="Salary Adjustment">
+                        (change)="GetSSS_Optional_SalaryAdjustment($event)"  value="Salary Adjustment">
                         <label class="checkboxtxt">Salary Adjustment</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-2">
                         <input type="checkbox" class="checkboxtxt" id="SSS_Optional" name="SSS_Optional"
-                        [(ngModel)]="SSS_Optional" value="ECOLA">
+                        (change)="GetSSS_Optional_ECOLA($event)"  value="ECOLA">
                         <label class="checkboxtxt">ECOLA</label>
                     </div>
                     <div class="col-lg-3">
                         <input type="checkbox" class="checkboxtxt" id="SSS_Optional" name="SSS_Optional"
-                        [(ngModel)]="SSS_Optional" value="Allowance">
+                        (change)="GetSSS_Optional_Allowance($event)"  value="Allowance">
                         <label class="checkboxtxt">Allowance</label>
                     </div>
                     <div class="col-lg-4">
                         <input type="checkbox" class="checkboxtxt" id="SSS_Optional" name="SSS_Optional"
-                        [(ngModel)]="SSS_Optional" value="Reimbursement Allowance">
+                        (change)="GetSSS_Optional_Reimbursement($event)"  value="Reimbursement Allowance">
                         <label class="checkboxtxt">Reimbursement Allowance</label>
                     </div>
                     <div class="col-lg-3">
                         <input type="checkbox" class="checkboxtxt" id="SSS_Optional" name="SSS_Optional"
-                        [(ngModel)]="SSS_Optional" value="Commision">
+                        (change)="GetSSS_Optional_Commission($event)"  value="Commision">
                         <label class="checkboxtxt">Commision</label>
                     </div>
                 </div>
@@ -1234,56 +1249,56 @@
                 <div class="row">
                     <div class="col-lg-2">
                         <input type="checkbox" id="PhilHealth_Optional" name="PhilHealth_Optional"
-                        [(ngModel)]="PhilHealth_Optional" value="Basic Salary">
+                        (change)="GetPhilHealth_Optional_BasicSalary($event)" value="Basic Salary">
                         <label class="checkboxtxt">Basic Salary</label>
                     </div>
                     <div class="col-lg-3">
                         <input type="checkbox" class="checkboxtxt" id="PhilHealth_Optional" name="PhilHealth_Optional"
-                        [(ngModel)]="PhilHealth_Optional" value="Dominimis">
+                        (change)="GetPhilHealth_Optional_Deminimis($event)" value="Dominimis">
                         <label class="checkboxtxt">Dominimis</label>
                     </div>
                     <div class="col-lg-3">
                         <input type="checkbox" class="checkboxtxt" id="PhilHealth_Optional" name="PhilHealth_Optional"
-                        [(ngModel)]="PhilHealth_Optional" value="Bonuses">
+                        (change)="GetPhilHealth_Optional_Bonuses($event)" value="Bonuses">
                         <label class="checkboxtxt">Bonuses</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-2">
                         <input type="checkbox" class="checkboxtxt" id="PhilHealth_Optional" name="PhilHealth_Optional"
-                        [(ngModel)]="PhilHealth_Optional" value="OverTime">
+                        (change)="GetPhilHealth_Optional_OverTime($event)" value="OverTime">
                         <label class="checkboxtxt">OverTime</label>
                     </div>
                     <div class="col-lg-3">
                         <input type="checkbox" class="checkboxtxt" id="PhilHealth_Optional" name="PhilHealth_Optional"
-                        [(ngModel)]="PhilHealth_Optional" value="Absent/Late">
+                        (change)="GetPhilHealth_Optional_Absent_late($event)" value="Absent/Late">
                         <label class="checkboxtxt">Absent/Late</label>
                     </div>
                     <div class="col-lg-4">
                         <input type="checkbox" class="checkboxtxt" id="PhilHealth_Optional" name="PhilHealth_Optional"
-                        [(ngModel)]="PhilHealth_Optional" value="Salary Adjustment">
+                        (change)="GetPhilHealth_Optional_SalaryAdjustment($event)" value="Salary Adjustment">
                         <label class="checkboxtxt">Salary Adjustment</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-2">
                         <input type="checkbox" class="checkboxtxt" id="PhilHealth_Optional" name="PhilHealth_Optional"
-                        [(ngModel)]="PhilHealth_Optional" value="ECOLA">
+                        (change)="GetPhilHealth_Optional_ECOLA($event)" value="ECOLA">
                         <label class="checkboxtxt">ECOLA</label>
                     </div>
                     <div class="col-lg-3">
                         <input type="checkbox" class="checkboxtxt" id="PhilHealth_Optional" name="PhilHealth_Optional"
-                        [(ngModel)]="PhilHealth_Optional" value="Allowance">
+                        (change)="GetPhilHealth_Optional_Allowance($event)" value="Allowance">
                         <label class="checkboxtxt">Allowance</label>
                     </div>
                     <div class="col-lg-4">
                         <input type="checkbox" class="checkboxtxt" id="PhilHealth_Optional" name="PhilHealth_Optional"
-                        [(ngModel)]="PhilHealth_Optional" value="Reimbursement Allowance">
+                        (change)="GetPhilHealth_Optional_Reimbursement($event)" value="Reimbursement Allowance">
                         <label class="checkboxtxt">Reimbursement Allowance</label>
                     </div>
                     <div class="col-lg-3">
                         <input type="checkbox" class="checkboxtxt" id="PhilHealth_Optional" name="PhilHealth_Optional"
-                        [(ngModel)]="PhilHealth_Optional" value="Commision">
+                        (change)="GetPhilHealth_Optional_Commission($event)" value="Commision">
                         <label class="checkboxtxt">Commision</label>
                     </div>
                 </div>
@@ -1297,7 +1312,8 @@
             </div>
             <div class="col-lg-6">
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <input class="form-check-input" type="radio" id="HDMS" name="HDMS"
+                    [(ngModel)]="HDMF" value="Fixed deduction of PHP 100.00 per month from each employee">
                     <label class="form-check-label" for="flexRadioDefault1">
                         Fixed deduction of PHP 100.00 per month from each employee
                     </label>
@@ -1330,7 +1346,8 @@
                 </div>
 
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <input class="form-check-input" type="radio" id="HDMS" name="HDMS"
+                [(ngModel)]="HDMF" value="Follow this table to determine amount of deduction per month">
                 <label class="form-check-label" for="flexRadioDefault1">
                     Follow this table to determine amount of deduction per month
                 </label>
