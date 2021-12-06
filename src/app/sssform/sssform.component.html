@@ -14,7 +14,7 @@
             <label>Min. Range</label>
         </div>
         <div class="col-lg-4">
-            <input type="text" class="form-control" placeholder="Min. Range">
+            <input type="text" class="form-control" placeholder="Min. Range" [(ngModel)]="selectMinRange">
         </div>
     </div>
     <br>
@@ -23,7 +23,7 @@
             <label>Max. Range</label>
         </div>
         <div class="col-lg-4">
-            <input type="text" class="form-control" placeholder="Max. Range" >
+            <input type="text" class="form-control" placeholder="Max. Range" [(ngModel)]="selectMaxRange">
         </div>
     </div>
     <br>
@@ -32,7 +32,7 @@
             <label>Monthly Salary Credit</label>
         </div>
         <div class="col-lg-4">
-            <input type="text" class="form-control">
+            <input type="text" class="form-control" [(ngModel)]="selectMonthlySalaryCredit">
         </div>
     </div>
     <br>
@@ -41,7 +41,7 @@
             <label>SS-ER</label>
         </div>
         <div class="col-lg-4">
-            <input type="text" class="form-control">
+            <input type="text" class="form-control" [(ngModel)]="selectSSER">
         </div>
     </div>
     <br>
@@ -50,7 +50,7 @@
             <label>SS-EE</label>
         </div>
         <div class="col-lg-4">
-            <input type="text" class="form-control">
+            <input type="text" class="form-control" [(ngModel)]="selectSSEE">
         </div>
     </div>
     <br>
@@ -59,7 +59,7 @@
             <label>SS Total</label>
         </div>
         <div class="col-lg-4">
-            <input type="text" class="form-control">
+            <input type="text" class="form-control" [(ngModel)]="selectSSTotal">
         </div>
     </div>
     <br>
@@ -68,7 +68,7 @@
             <label>MPF-ER</label>
         </div>
         <div class="col-lg-4">
-            <input type="text" class="form-control">
+            <input type="text" class="form-control" [(ngModel)]="selectMpfEr">
         </div>
     </div>
     <br>
@@ -77,7 +77,7 @@
             <label>MPF-EE</label>
         </div>
         <div class="col-lg-4">
-            <input type="text" class="form-control">
+            <input type="text" class="form-control" [(ngModel)]="selectMpfEe">
         </div>
     </div>
     <br>
@@ -86,7 +86,7 @@
             <label>EC-ER</label>
         </div>
         <div class="col-lg-4">
-            <input type="text" class="form-control">
+            <input type="text" class="form-control" [(ngModel)]="selectEcEr">
         </div>
     </div>
     <br>
@@ -95,14 +95,14 @@
             <label>Total Contribution</label>
         </div>
         <div class="col-lg-4">
-            <input type="text" class="form-control">
+            <input type="text" class="form-control" [(ngModel)]="selectTotalContribution">
         </div>
     </div>
     <br>
     <div class="row">
         <div class="col-lg-5"></div>
         <div class="col-lg-2">
-            <button type="button" class="addbtns">Save</button>
+            <button type="button" class="addbtns" *ngIf="id==null || id==undefined" (click)="save()">Save</button>
         </div>
         <div class="col-lg-5"></div>
     </div>

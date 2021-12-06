@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DgofficeServiceService } from '../dgoffice-service.service';
 
 @Component({
   selector: 'app-sss',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SSSComponent implements OnInit {
 
-  constructor() { }
+  constructor( private DgofficeServiceService:DgofficeServiceService) { }
 
   ngOnInit(): void {
+   this.GetSSS()
   }
 
+
+  SSSdatalist:any
+  public GetSSS() {
+    this.DgofficeServiceService.GetSSS().subscribe(data=>{
+      debugger
+      this.SSSdatalist=data ;
+     })
+  }
 }

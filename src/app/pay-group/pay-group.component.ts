@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import Swal from 'sweetalert2';
 import { DgofficeServiceService } from '../dgoffice-service.service';
 
 @Component({
@@ -14,13 +15,33 @@ export class PayGroupComponent implements OnInit {
     this.GetPayGroup()
   }
 
-  Paygrouplist:any
-
+  result:any
+ 
   public GetPayGroup() {
     this.DgofficeServiceService.GetPayGroup().subscribe(data=>{
       debugger
-      this.Paygrouplist=data ;
+      this.result=data ;
      })
   }
 
+
+   
+  Update (details: any){
+    debugger
+   location.href="/PayGroupForm/"+ details.id;
+  }
+
+
+  delete(id: any){
+    debugger;
+  
+    this.DgofficeServiceService.DeletePayGroup(id).subscribe(
+      data => {
+       Swal.fire('Deleted Successfully')   
+       location.reload() 
+    })
+  }
+
 }
+
+

@@ -115,6 +115,12 @@ export class DgofficeServiceService {
     return this.http.post<any[]>(APIURL, json);
   }
 
+  public DeleteBanks(json : any) {
+    debugger
+    let APIURL = this.baseURL + "Master/DeleteBanks";
+    return this.http.post<any[]>(APIURL, json);
+  }
+
   public GetPayGroup() {
     debugger
     let APIURL = this.baseURL+"Master/GetPayGroup";
@@ -127,12 +133,68 @@ export class DgofficeServiceService {
     return this.http.post<any[]>(APIURL, json);
   }
 
-  
+  public DeletePayGroup(ID : any) {
+    debugger
+    
+    return this.http.get<any[]>(this.baseURL+ "Master/DeletePayGroup?ID=" +ID);
+  }
+
+
+
   public DeleteCompanyAdjustment(ID:any) {
     debugger
     let APIURL = this.baseURL+"Master/DeleteCompanyAdjustment?ID="+ID;
     return this.http.get<any[]>(APIURL);
   }
+
+  public GetSSS() {
+    debugger
+    let APIURL = this.baseURL+"Master/GetSSS";
+    return this.http.get<any[]>(APIURL);
+  }
+
+  public InsertSSS(json:any) {
+    debugger
+    let APIURL = this.baseURL+"Master/InsertSSS";
+    return this.http.post<any[]>(APIURL, json);
+  }
+
+  public GetGovernmentRecords() {
+    debugger
+    let APIURL = this.baseURL+"Master/GetGovernmentRecords";
+    return this.http.get<any[]>(APIURL);
+  }
+
+  public InsertGovernmentRecords(json:any) {
+    debugger
+    let APIURL = this.baseURL+"Master/InsertGovernmentRecords";
+    return this.http.post<any[]>(APIURL, json);
+  }
+  public UpdateCostcenter(json: any) {
+    debugger
+    let APIURL = this.baseURL + "Master/UpdateCostcenter";
+    return this.http.post<any[]>(APIURL, json);
+  }
+
+  public UpdateDepartment(json: any) {
+    debugger
+    let APIURL = this.baseURL + "Master/UpdateDepartment";
+    return this.http.post<any[]>(APIURL, json);
+  }
+  
+  
+  public GetTaxtable() {
+    debugger
+    let APIURL = this.baseURL+"Master/GetTaxtable";
+    return this.http.get<any[]>(APIURL);
+  }
+
+  public UpdatePayGroup(json: any) {
+    debugger
+    let APIURL = this.baseURL + "Master/UpdatePayGroup";
+    return this.http.post<any[]>(APIURL, json);
+  }
+  
 
 
 }

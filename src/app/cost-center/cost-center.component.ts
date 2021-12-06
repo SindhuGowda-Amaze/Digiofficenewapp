@@ -24,9 +24,15 @@ export class CostCenterComponent implements OnInit {
     this.DgofficeServiceService.GetCostcenter().subscribe(data=>{
       debugger
       this.costcenterlist=data ;
+      
      })
    }
+ 
 
+   Update (cost: any){
+    debugger
+   location.href="/CostCenterForm/"+ cost.id;
+  }
    
    delete(cost: any){
   
@@ -44,7 +50,21 @@ export class CostCenterComponent implements OnInit {
     })
   }
 
+  costcenterlist1:any
+  ModifiedBy:any
+  ModifiedDate:any
+  Changes:any
+   public getcost(id:any){
+    debugger
+    this.DgofficeServiceService.GetCostcenter().subscribe(data=>{
+      debugger
+      this.costcenterlist1=data.filter(x=>x.id==id) ;
+      this.ModifiedBy = this.costcenterlist1[0].modifiedBy
+      this.ModifiedDate = this.costcenterlist1[0].modifiedDate
+      this.Changes = this.costcenterlist1[0].changes
 
+   }
+    )}
 
 
 
