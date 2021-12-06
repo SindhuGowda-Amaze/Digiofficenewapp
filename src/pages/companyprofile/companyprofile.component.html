@@ -292,7 +292,7 @@
                 <label>Work Hours Start</label>
             </div>
             <div class="col-lg-5">
-                <input class="form-control" placeholder="10.00 PM" [(ngModel)]="Work_hour_Start">
+                <input type="date" placeholder="10.00 PM" [(ngModel)]="Work_hour_Start">
             </div>
             <img src="/assets/img/alarm-clock.png" class="icon">
         </div>
@@ -301,7 +301,7 @@
                 <label>Work Hours End</label>
             </div>
             <div class="col-lg-5">
-                <input class="form-control" placeholder="6.00 AM" [(ngModel)]="Work_hour_End">
+                <input type="date" placeholder="6.00 AM" [(ngModel)]="Work_hour_End">
             </div>
             <img src="/assets/img/alarm-clock.png" class="icon">
         </div>
@@ -310,7 +310,7 @@
                 <label>Break Hours</label>
             </div>
             <div class="col-lg-5">
-                <input class="form-control" placeholder=" " [(ngModel)]="Break_Hours">
+                <input type="date" placeholder=" " [(ngModel)]="Break_Hours">
             </div>
             <img src="/assets/img/alarm-clock.png" class="icon">
         </div>
@@ -365,14 +365,16 @@
             </div>
             <div class="col-lg-8">
                 <div class="row">
+                    
                     <div class="col-lg-2 ">
-                        <input type="checkbox" id="Basic_Salary1" name="Absent_Deduction"
-                        [(ngModel)]="Absent_Deduction" value="Basic Salary">
-                        <label for="Basic_Salary1" class="checkboxtxt">Basic Salary</label>
-                       
+                        <!-- <input type="checkbox" id="Basic_Salary1" name="Absent_Deduction"
+                         value="Basic Salary">
+                        <label for="Basic_Salary1" class="checkboxtxt"></label> -->
+                        <input type="checkbox" id="Basic_Salary" class="checkboxtxt" [(ngModel)]="Absent_Deduction"  name="Basic_Salary" value="Basic_Salary">
+                        <label for="Basic_Salary"> Basic Salary</label><br>
                     </div>
                     <div class="col-lg-2">
-                        <input type="checkbox" class="checkboxtxt" id="Deminimis1" name="Absent_Deduction"
+                        <input type="checkbox" class="checkboxtxt" id="Deminimis1" name="Deminimis1"
                         [(ngModel)]="Absent_Deduction" value="Deminimis">
                         <label  for="Deminimis1" class="checkboxtxt" >Deminimis</label>
                     </div>
@@ -440,40 +442,40 @@
             </div>
         </div>
         <br>
-        <div class="row">
+        <div class="row form-group">
             <div class="col-lg-4">
                 <label>Over Time Computation</label>
             </div>
-            <div class="col-lg-8">
+            <div class="col-lg-8 form-group">
                 <p>Optional:</p>
-                <div class="row">
-                    <div class="col-lg-4 ">
-                        <input type="checkbox"  id="OverTime_Comeptition_Optional" name="OverTime_Comeptition_Optional"
-                        [(ngModel)]="OverTime_Comeptition_Optional" value="Basic Salary">
+                <div class="row form-group">
+                    <div class="col-lg-4">
+                        <input type="checkbox"   name="OverTime_Comeptition_Optional_BasicSalary"
+                         (change)="GetOverTime_Comeptition_Optional_BasicSalary($event)" value="Basic Salary">
                         <label class="checkboxtxt">Basic Salary</label>
                     </div>
-                    <div class="col-lg-4">
-                        <input type="checkbox" class="checkboxtxt" id="OverTime_Comeptition_Optional" name="OverTime_Comeptition_Optional"
-                        [(ngModel)]="OverTime_Comeptition_Optional" value="Deminimis">
+                    <div class="col-lg-4 ">
+                        <input type="checkbox" class="checkboxtxt"  (change)="GetOverTime_Comeptition_Optional_Deminimis($event)" name="OverTime_Comeptition_Optional_Deminimis"
+                        value="Deminimis">
                         <label class="checkboxtxt">Deminimis</label>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-4">
-                        <input type="checkbox" class="checkboxtxt" id="OverTime_Comeptition_Optional" name="OverTime_Comeptition_Optional"
-                        [(ngModel)]="OverTime_Comeptition_Optional" value="Allowance">
+                    <div class="col-lg-4 form-group">
+                        <input type="checkbox" class="checkboxtxt"  (change)="GetOverTime_Comeptition_Optional_Allowance($event)" name="OverTime_Comeptition_Optional_Allowance"
+                        [(ngModel)]="OverTime_Comeptition_Optional_Allowance" value="Allowance">
                         <label class="checkboxtxt">Allowance</label>
                     </div>
-                    <div class="col-lg-4 ">
-                        <input type="checkbox" class="checkboxtxt" id="OverTime_Comeptition_Optional" name="OverTime_Comeptition_Optional"
-                        [(ngModel)]="OverTime_Comeptition_Optional" value="Reimbursement Allowance">
+                    <div class="col-lg-4 form-group">
+                        <input type="checkbox" class="checkboxtxt" (change)="GetOverTime_Comeptition_Optional_Reimbursement($event)"  name="OverTime_Comeptition_Optional_Reimbursement"
+                        [(ngModel)]="OverTime_Comeptition_Optional_Reimbursement" value="Reimbursement Allowance">
                         <label class="checkboxtxt">Reimbursement Allowance</label>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row form-group">
                     <div class="col-lg-2 ">
-                        <input type="checkbox" class="checkboxtxt" id="OverTime_Comeptition_Optional" name="OverTime_Comeptition_Optional"
-                        [(ngModel)]="OverTime_Comeptition_Optional" value="ECOLA">
+                        <input type="checkbox" class="checkboxtxt"  (change)="GetOverTime_Comeptition_Optional_ECOLA($event)" name="OverTime_Comeptition_Optional_ECOLA"
+                        [(ngModel)]="OverTime_Comeptition_Optional_ECOLA" value="ECOLA">
                         <label class="checkboxtxt">ECOLA</label>
                     </div>
                 </div>

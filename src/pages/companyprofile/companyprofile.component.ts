@@ -39,7 +39,7 @@ export class CompanyprofileComponent implements OnInit {
 		  Periods_Per_Month : any;
 		  Absent_Deduction : any;
 		  Late_Deduction : any;
-		  OverTime_Comeptition_Optional : any;
+		
 		  OverTime_Comeptition_OTRates : any;
 		  RestDays : any;
 		  thirteen_Month_Compuatation_Type : any;
@@ -79,10 +79,62 @@ export class CompanyprofileComponent implements OnInit {
     )
   }
 
+  OverTime_Comeptition_Optional_BasicSalary123:any
+ 
+
+  formData:any
+
+  formData_OverTime_Comeptition_Optional_Deminimis:any
+ OverTime_Comeptition_Optional: any
+ OverTime_Comeptition_Optional_BasicSalary:any
+ OverTime_Comeptition_Optional_Deminimis:any
+ OverTime_Comeptition_Optional_ECOLA:any
+ OverTime_Comeptition_Optional_Allowance:any
+ OverTime_Comeptition_Optional_Reimbursement:any
+
+ GetOverTime_Comeptition_Optional_BasicSalary(event:any){
+	debugger;
+  this.OverTime_Comeptition_Optional_BasicSalary=event.target.value
+}
+
+GetOverTime_Comeptition_Optional_Allowance(event:any)
+{
+	debugger;
+	this.OverTime_Comeptition_Optional_Allowance=event.target.value
+}
+
+
+
+GetOverTime_Comeptition_Optional_Deminimis(event:any)
+{
+	debugger;
+	this.OverTime_Comeptition_Optional_Deminimis=event.target.value
+}
+
+
+
+GetOverTime_Comeptition_Optional_ECOLA(event:any)
+{
+	debugger;
+	this.OverTime_Comeptition_Optional_ECOLA=event.target.value
+}
+
+
+GetOverTime_Comeptition_Optional_Reimbursement(event:any)
+{
+	debugger;
+	this.OverTime_Comeptition_Optional_Reimbursement=event.target.value
+}
+
+
+
+
+ 
   onSave(){
     debugger
+	this.OverTime_Comeptition_Optional=this.OverTime_Comeptition_Optional_BasicSalary  + ',' + this.OverTime_Comeptition_Optional_Deminimis  + ',' + this.OverTime_Comeptition_Optional_ECOLA + ',' + this.OverTime_Comeptition_Optional_Allowance + ',' +this.OverTime_Comeptition_Optional_Reimbursement
     var json = {
-
+		
          "company_logo": "Company1 logo",
 		  "company_Name": this.Company_Name,
 		  "nature_Of_Business": this.Nature_Of_Business,
@@ -114,6 +166,7 @@ export class CompanyprofileComponent implements OnInit {
 		  "periods_Per_Month": this.Periods_Per_Month,
 		  "absent_Deduction": this.Absent_Deduction, 
 		  "late_Deduction": this.Late_Deduction, 
+		
 		  "overTime_Comeptition_Optional": this.OverTime_Comeptition_Optional, 
 		  "overTime_Comeptition_OTRates": this.OverTime_Comeptition_OTRates ,
 		  "restDays": this.RestDays,
@@ -142,7 +195,7 @@ export class CompanyprofileComponent implements OnInit {
         debugger
         let id = data;
         this.GetCompanyProfile();
-        location.reload();
+      
       })
   }
 

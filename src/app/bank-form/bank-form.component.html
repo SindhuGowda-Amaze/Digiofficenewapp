@@ -14,7 +14,7 @@
             <label>Name</label>
         </div>
         <div class="col-lg-4">
-            <input type="text" class="form-control" placeholder="Name">
+            <input type="text" class="form-control" placeholder="Name" [(ngModel)]="selectName">
         </div>
     </div>
     <br>
@@ -23,23 +23,24 @@
             <label>Code</label>
         </div>
         <div class="col-lg-4">
-            <input type="text" class="form-control" placeholder="Code" >
+            <input type="text" class="form-control" placeholder="Code" [(ngModel)]="selectCode">
         </div>
     </div>
     <br>
     <div class="row">
         <div class="col-lg-3">
-            <label>Remark</label>
+            <label>Remarks</label>
         </div>
         <div class="col-lg-4">
-            <textarea rows="5" class="form-control" placeholder="Write remarks"></textarea>
+            <textarea rows="5" class="form-control" placeholder="Write remarks" [(ngModel)]="selectRemarks"></textarea>
         </div>
     </div>
     <br>
     <div class="row">
         <div class="col-lg-5"></div>
         <div class="col-lg-2">
-            <button type="button" class="addbtns">Save</button>
+            <button type="button" class="addbtns" *ngIf="id==null || id==undefined" (click)="save()">Save</button>
+            <!-- <button type="button" class="addbtns" *ngIf="id!=null || id!=undefined" (click)="Update()">Update</button> -->
         </div>
         <div class="col-lg-5"></div>
     </div>

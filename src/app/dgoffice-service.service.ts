@@ -115,6 +115,12 @@ export class DgofficeServiceService {
     return this.http.post<any[]>(APIURL, json);
   }
 
+  public DeleteBanks(json : any) {
+    debugger
+    let APIURL = this.baseURL + "Master/DeleteBanks";
+    return this.http.post<any[]>(APIURL, json);
+  }
+
   public GetPayGroup() {
     debugger
     let APIURL = this.baseURL+"Master/GetPayGroup";
@@ -127,7 +133,14 @@ export class DgofficeServiceService {
     return this.http.post<any[]>(APIURL, json);
   }
 
-  
+  public DeletePayGroup(ID : any) {
+    debugger
+    
+    return this.http.get<any[]>(this.baseURL+ "Master/DeletePayGroup?ID=" +ID);
+  }
+
+
+
   public DeleteCompanyAdjustment(ID:any) {
     debugger
     let APIURL = this.baseURL+"Master/DeleteCompanyAdjustment?ID="+ID;
