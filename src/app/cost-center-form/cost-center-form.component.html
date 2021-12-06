@@ -36,10 +36,29 @@
         </div>
     </div>
     <br>
+    <div class="row " *ngIf="id!=null || id!=undefined">
+        <div class="col-lg-3">
+            <label>Changes</label>
+        </div>
+        <div class="col-lg-4">
+            <input  rows="5" class="form-control" placeholder="Changes"   [(ngModel)]="changes">
+        </div>
+    </div>
+    <br>
+    <div class="row"  *ngIf="id!=null || id!=undefined">
+        <div class="col-lg-3">
+            <label>ModifiedBy</label>
+        </div>
+        <div class="col-lg-4">
+            <input rows="5" class="form-control" placeholder="ModifiedBy"  [(ngModel)]="modifiedBy">
+        </div>
+    </div>
+    <br>
     <div class="row">
         <div class="col-lg-5"></div>
         <div class="col-lg-2">
-            <button type="button" class="addbtns" (click)="Save()" >Save</button>
+            <button type="button" class="addbtns" *ngIf="id==null || id==undefined" (click)="Save()" >Save</button>
+             <button type="button" class="addbtns" *ngIf="id!=null || id!=undefined" (click)="Update()">Update</button>
         </div>
         <div class="col-lg-5"></div>
     </div>

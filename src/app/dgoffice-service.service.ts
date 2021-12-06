@@ -134,5 +134,19 @@ export class DgofficeServiceService {
     return this.http.get<any[]>(APIURL);
   }
 
+  public UpdateCostcenter(json: any) {
+    debugger
+    let APIURL = this.baseURL + "Master/UpdateCostcenter";
+    return this.http.post<any[]>(APIURL, json);
+  }
+
+  public UpdateDepartment(json: any) {
+    debugger
+    let APIURL = this.baseURL + "Master/UpdateDepartment";
+    return this.http.post<any[]>(APIURL, json);
+  }
+
+
+
 
 }

@@ -75,6 +75,9 @@ const routes: Routes = [
     path: "DepartmentForm", component: DepartmentFormComponent
   },
   {
+    path: "DepartmentForm/:id", component: DepartmentFormComponent
+  },
+  {
     path: "GeneralLedgerForm", component: GeneralLedgerFormComponent
   },
   {
@@ -106,6 +109,8 @@ const routes: Routes = [
   {path:"CompanyAdjustment",component:CompanyAdjustmentComponent},
 
   {path:"CostCenter",component:CostCenterComponent},
+
+  {path:"CostCenterForm/:id", component: CostCenterFormComponent},
 
   {path:'Department',component:DepartmentComponent},
   
