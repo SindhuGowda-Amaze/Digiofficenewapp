@@ -16,7 +16,7 @@ export class PayGroupComponent implements OnInit {
   }
 
   result:any
-
+ 
   public GetPayGroup() {
     this.DgofficeServiceService.GetPayGroup().subscribe(data=>{
       debugger
@@ -43,3 +43,5 @@ export class PayGroupComponent implements OnInit {
   }
 
 }
+
+
