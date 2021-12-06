@@ -23,10 +23,10 @@
                     SSS
                 </div>
                 <div class="col-lg-2">
-                   <input class="form-control"><br>
+                   <input class="form-control" [(ngModel)]="selectSSS"><br>
                 </div>
                 <div class="col-lg-2">
-                    <input class="form-control"><br>
+                    <input class="form-control" type="date" [(ngModel)]="selectSSSDatePaid"><br>
                 </div>
                 <div class="col-lg-3"></div>
 
@@ -35,10 +35,10 @@
                    SSS Loan
                 </div>
                 <div class="col-lg-2">
-                   <input class="form-control"><br>
+                   <input class="form-control" [(ngModel)]="selectSSSloan"><br>
                 </div>
                 <div class="col-lg-2 ">
-                    <input class="form-control"><br>
+                    <input class="form-control" type="date" [(ngModel)]="selectSSSloanDatePaid"><br>
                 </div>
                 <div class="col-lg-3"></div>
                 <br>
@@ -47,10 +47,10 @@
                     SSS Calamity Loan
                 </div>
                 <div class="col-lg-2">
-                   <input class="form-control"><br>
+                   <input class="form-control" [(ngModel)]="selectSSSCalamityLoan"><br>
                 </div>
                 <div class="col-lg-2">
-                    <input class="form-control"><br>
+                    <input class="form-control" type="date" [(ngModel)]="selectSSSCalamityLoanDatePaid"><br>
                 </div>
                 <div class="col-lg-3"></div>
                 <br>
@@ -59,10 +59,10 @@
                    PhilHealth
                 </div>
                 <div class="col-lg-2">
-                   <input class="form-control"> <br>
+                   <input class="form-control" [(ngModel)]="selectPhilHealth"> <br>
                 </div>
                 <div class="col-lg-2">
-                    <input class="form-control"><br>
+                    <input class="form-control" type="date" [(ngModel)]="selectPhilHealthDatePaid"><br>
                 </div>
                 <div class="col-lg-3"></div>
                 <div class="col-lg-3"></div>
@@ -70,10 +70,10 @@
                     HDMF
                 </div>
                 <div class="col-lg-2">
-                   <input class="form-control"><br>
+                   <input class="form-control" [(ngModel)]="selectHDMF"><br>
                 </div>
                 <div class="col-lg-2">
-                    <input class="form-control"><br>
+                    <input class="form-control" type="date" [(ngModel)]="selectHDMFDatePaid"><br>
                 </div>
                 <div class="col-lg-3"></div>
 
@@ -82,10 +82,10 @@
                     HDMF Loan
                 </div>
                 <div class="col-lg-2">
-                   <input class="form-control"><br>
+                   <input class="form-control" [(ngModel)]="selectHDMFLoan"><br>
                 </div>
                 <div class="col-lg-2">
-                    <input class="form-control"><br>
+                    <input class="form-control" type="date" [(ngModel)]="selectHDMFLoanDatePaid"><br>
                 </div>
                 <div class="col-lg-3"></div>
            <br>
@@ -95,10 +95,10 @@
                     Hdmp Calamity Loan
                 </div>
                 <div class="col-lg-2">
-                   <input class="form-control"><br>
+                   <input class="form-control" [(ngModel)]="selectHdmpCalamityLoan"><br>
                 </div>
                 <div class="col-lg-2">
-                    <input class="form-control"><br>
+                    <input class="form-control" type="date" [(ngModel)]="selectHdmpCalamityLoanDatePaid"><br>
                 </div>
                 <div class="col-lg-3"></div>
             <br>
@@ -106,7 +106,7 @@
             <div class="col-lg-2">             
             </div>
             <div class="col-lg-2">
-              <button class="save">Save</button> <br>
+              <button class="save" *ngIf="id==null || id==undefined" (click)="save()">Save</button> <br>
             </div>
             <div class="col-lg-3"></div>
             </div><br>

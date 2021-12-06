@@ -2,21 +2,210 @@
     <p class="taxtable">TAX TABLE</p>
 </div>
 <div class="container-fluid">
-
     <div class="container">
-        <div class="row">
-            <div class="col-lg-12 table">              
-                <table>
-                    <tr>
-                        <td><span class="menu">1</span></td>
-                        <td><span class="menu">2</span></td>
-                        <td><span class="menu">3</span></td>
-                        <td><span class="menu">4</span></td>
-                        <td><span class="menu">5</span></td>
-                        <td><span class="menu">6</span></td>
-                    </tr>
-                </table>
+        <label class="Label">Daily</label>
+        <div class="Card cardpadding">
+            <label>Deductions</label>
+            <div class="row">
+                <div class="col-lg-12 table">
+                    <table>
+                        <tr>
+                            <td><span class="menu">1</span></td>
+                            <td><span class="menu">2</span></td>
+                            <td><span class="menu">3</span></td>
+                            <td><span class="menu">4</span></td>
+                            <td><span class="menu">5</span></td>
+                            <td><span class="menu">6</span></td>
+                        </tr>
+                        <tr *ngFor="let tax of taxdetails">
+                            <td>{{tax.daily_Deduction1}} +% over</td>
+                            <td>{{tax.daily_Deduction2}} +20% over</td>
+                            <td>{{tax.daily_Deduction3}} +25% over</td>
+                            <td>{{tax.daily_Deduction4}} +30% over</td>
+                            <td>{{tax.daily_Deduction5}} +32% over </td>
+                            <td>{{tax.daily_Deduction6}} +35% over</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <label>Taxtable</label>
+            <div class="row">
+                <div class="col-lg-12 table">
+                    <table>
+                        <tr>
+                            <td><span class="menu">1</span></td>
+                            <td><span class="menu">2</span></td>
+                            <td><span class="menu">3</span></td>
+                            <td><span class="menu">4</span></td>
+                            <td><span class="menu">5</span></td>
+                            <td><span class="menu">6</span></td>
+                        </tr>
+
+                        <tr *ngFor="let tax of taxdetails">
+                            <td>{{tax.daily_TaxTable1}}</td>
+                            <td>{{tax.daily_TaxTable2}}</td>
+                            <td>{{tax.daily_TaxTable3}}</td>
+                            <td>{{tax.daily_TaxTable4}}</td>
+                            <td>{{tax.daily_TaxTable5}}</td>
+                            <td>{{tax.daily_TaxTable6}}</td>
+                        </tr>
+                    </table>
+                </div>
             </div>
         </div>
-    </div>
+    </div> <br>
+    <div class="container">
+        <label class="Label">Weekly</label>
+        <div class="Card">
+            <label>Deductions</label>
+            <div class="row">
+                <div class="col-lg-12 table">
+                    <table>
+                        <tr>
+                            <td><span class="menu">1</span></td>
+                            <td><span class="menu">2</span></td>
+                            <td><span class="menu">3</span></td>
+                            <td><span class="menu">4</span></td>
+                            <td><span class="menu">5</span></td>
+                            <td><span class="menu">6</span></td>
+                        </tr>
+                        <tr *ngFor="let tax of taxdetails">
+                            <td>{{tax.weekly_Deduction1}} +% over</td>
+                            <td>{{tax.weekly_Deduction2}} +20% over</td>
+                            <td>{{tax.weekly_Deduction3}} +25% over</td>
+                            <td>{{tax.weekly_Deduction4}} +30% over</td>
+                            <td>{{tax.weekly_Deduction5}} +32% over </td>
+                            <td>{{tax.weekly_Deduction6}} +35% over</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <label>Taxtable</label>
+            <div class="row">
+                <div class="col-lg-12 table">
+                    <table>
+                        <tr>
+                            <td><span class="menu">1</span></td>
+                            <td><span class="menu">2</span></td>
+                            <td><span class="menu">3</span></td>
+                            <td><span class="menu">4</span></td>
+                            <td><span class="menu">5</span></td>
+                            <td><span class="menu">6</span></td>
+                        </tr>
+                        <tr *ngFor="let tax of taxdetails">
+                            <td>{{tax.weekly_Taxtable1}}</td>
+                            <td>{{tax.weekly_Taxtable2}}</td>
+                            <td>{{tax.weekly_Taxtable3}}</td>
+                            <td>{{tax.weekly_Taxtable4}}</td>
+                            <td>{{tax.weekly_Taxtable5}}</td>
+                            <td>{{tax.weekly_Taxtable6}}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div> <br>
+    <div class="container">
+        <label class="Label">Semi-Monthly</label>
+        <div class="Card ">
+            <label>Deductions</label>
+            <div class="row">
+                <div class="col-lg-12 table">
+                    <table>
+                        <tr>
+                            <td><span class="menu">1</span></td>
+                            <td><span class="menu">2</span></td>
+                            <td><span class="menu">3</span></td>
+                            <td><span class="menu">4</span></td>
+                            <td><span class="menu">5</span></td>
+                            <td><span class="menu">6</span></td>
+                        </tr>
+                        <tr *ngFor="let tax of taxdetails">
+                            <td>{{tax.semi_Monthly_Deduction1}} +% over</td>
+                            <td>{{tax.semi_Monthly_Deduction2}} +20% over</td>
+                            <td>{{tax.semi_Monthly_Deduction3}} +25% over</td>
+                            <td>{{tax.semi_Monthly_Deduction4}} +30% over</td>
+                            <td>{{tax.semi_Monthly_Deduction5}} +32% over </td>
+                            <td>{{tax.semi_Monthly_Deduction6}} +35% over</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <label>Taxtable</label>
+            <div class="row">
+                <div class="col-lg-12 table">
+                    <table>
+                        <tr>
+                            <td><span class="menu">1</span></td>
+                            <td><span class="menu">2</span></td>
+                            <td><span class="menu">3</span></td>
+                            <td><span class="menu">4</span></td>
+                            <td><span class="menu">5</span></td>
+                            <td><span class="menu">6</span></td>
+                        </tr>
+                        <tr *ngFor="let tax of taxdetails">
+                            <td>{{tax.semi_Monthly_Taxtable1}}</td>
+                            <td>{{tax.semi_Monthly_Taxtable2}}</td>
+                            <td>{{tax.semi_Monthly_Taxtable3}}</td>
+                            <td>{{tax.semi_Monthly_Taxtable4}}</td>
+                            <td>{{tax.semi_Monthly_Taxtable5}}</td>
+                            <td>{{tax.semi_Monthly_Taxtable6}}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div> <br>
+
+    <div class="container">
+        <label class="Label">Monthly</label>
+        <div class="Card">
+            <label>Deductions</label>
+            <div class="row">
+                <div class="col-lg-12 table">
+                    <table>
+                        <tr>
+                            <td><span class="menu">1</span></td>
+                            <td><span class="menu">2</span></td>
+                            <td><span class="menu">3</span></td>
+                            <td><span class="menu">4</span></td>
+                            <td><span class="menu">5</span></td>
+                            <td><span class="menu">6</span></td>
+                        </tr>
+                        <tr *ngFor="let tax of taxdetails">
+                            <td>{{tax.monthly_Deduction1}} +% over</td>
+                            <td>{{tax.monthly_Deduction2}} +20% over</td>
+                            <td>{{tax.monthly_Deduction3}} +25% over</td>
+                            <td>{{tax.monthly_Deduction4}} +30% over</td>
+                            <td>{{tax.monthly_Deduction5}} +32% over </td>
+                            <td>{{tax.monthly_Deduction6}} +35% over</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <label>Taxtable</label>
+            <div class="row">
+                <div class="col-lg-12 table">
+                    <table>
+                        <tr>
+                            <td><span class="menu">1</span></td>
+                            <td><span class="menu">2</span></td>
+                            <td><span class="menu">3</span></td>
+                            <td><span class="menu">4</span></td>
+                            <td><span class="menu">5</span></td>
+                            <td><span class="menu">6</span></td>
+                        </tr>
+                        <tr *ngFor="let tax of taxdetails">
+                            <td>{{tax.monthly_Taxtable1}}</td>
+                            <td>{{tax.monthly_Taxtable2}}</td>
+                            <td>{{tax.monthly_Taxtable3}}</td>
+                            <td>{{tax.monthly_Taxtable4}}</td>
+                            <td>{{tax.monthly_Taxtable5}}</td>
+                            <td>{{tax.monthly_Taxtable6}}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div> <br>
 </div>

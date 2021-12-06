@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DgofficeServiceService } from '../dgoffice-service.service';
 
 @Component({
   selector: 'app-tax-table',
@@ -7,9 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TaxTableComponent implements OnInit {
 
-  constructor() { }
+  constructor(private DgofficeService:DgofficeServiceService) { }
+   
+  taxdetails:any;
+
+
 
   ngOnInit(): void {
+    this.GetTaxtable();
   }
+
+  public GetTaxtable() {
+    debugger
+    this.DgofficeService.GetTaxtable().subscribe(data=>{
+      debugger
+      this.taxdetails=data ;
+     })
+  }
+
+
 
 }

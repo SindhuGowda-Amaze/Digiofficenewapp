@@ -40,3 +40,16 @@ table, td {
     .Daily{
         font-family:  'Open Sans', sans-serif;
     }
+    .Card{
+      background-color: White;
+      padding:1%;
+    }
+    .Label{
+      font-family:  'Open Sans', sans-serif;
+      font-size:15px;
+      font-weight: bold;
+      padding-left: 15px;
+   
+    }
+
+    
