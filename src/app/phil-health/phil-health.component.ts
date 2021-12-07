@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DgofficeServiceService } from '../dgoffice-service.service';
 import { ActivatedRoute } from '@angular/router';
+import Swal from 'sweetalert2';
 
 
 @Component({
@@ -16,6 +17,11 @@ export class PhilHealthComponent implements OnInit {
     this.GetPhilHealth();
   }
 
+  Update (salary: any){
+    debugger
+   location.href="/PhillHealthForm/"+ salary.id;
+  }
+
   salarylist:any;
 
   public GetPhilHealth() {
@@ -24,6 +30,17 @@ export class PhilHealthComponent implements OnInit {
       debugger
       this.salarylist=data ;
      })
+  }
+
+
+  delete(id: any){
+    debugger;
+  
+    this.DgofficeServiceService.DeletePhilHealth(id).subscribe(
+      data => {
+       Swal.fire('Deleted Successfully...!')   
+       location.reload() 
+    })
   }
 
 

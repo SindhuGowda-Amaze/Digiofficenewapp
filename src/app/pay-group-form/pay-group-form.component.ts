@@ -69,7 +69,7 @@ export class PayGroupFormComponent implements OnInit {
       debugger
       let result = data;
       location.href="/PayGroup";
-      Swal.fire("Update Sucessfully");
+      Swal.fire("Updated Sucessfully...!");
     })
   }
 

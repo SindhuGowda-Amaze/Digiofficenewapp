@@ -96,7 +96,13 @@ const routes: Routes = [
     path: "PhillHealthForm", component: PhillHealthFormComponent
   },
   {
+    path: "PhillHealthForm/:id", component: PhillHealthFormComponent
+  },
+  {
     path: "sssForm", component: SSSFormComponent
+  },
+  {
+    path: "sssForm/:id", component: SSSFormComponent
   },
   {
     path: "UsersForm", component: UsersFormComponent

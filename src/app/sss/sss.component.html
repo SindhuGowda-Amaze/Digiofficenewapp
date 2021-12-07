@@ -35,7 +35,8 @@
                     <td><span class="menu">MPF-ER</span></td>   
                     <td><span class="menu">MPF-EE</span></td>   
                     <td><span class="menu">EC-ER</span></td>   
-                    <td><span class="menu">Total Contibution</span></td>                         
+                    <td><span class="menu">Total Contibution</span></td>  
+                    <td style="text-align: center;" ><span class="menu" >Actions</span></td>                         
                 </tr>     
                 <tr *ngFor="let SSSdata of SSSdatalist">                 
                     <td>{{SSSdata.min_Range}}</td>
@@ -44,10 +45,14 @@
                     <td>{{SSSdata.sS_ER}}</td>   
                     <td>{{SSSdata.sS_EE}}</td>   
                     <td>{{SSSdata.sS_Total}}</td>                                        
-                    <td>{{SSSdata.mPF_ER}}</td>   
-                    <td>{{SSSdata.mPF_EE}}</td>   
+                    <td>{{SSSdata.mpF_ER}}</td>   
+                    <td>{{SSSdata.mpF_EE}}</td>   
                     <td>{{SSSdata.eC_ER}}</td>   
-                    <td>{{SSSdata.total_Contribution}}</td>                         
+                    <td>{{SSSdata.total_Contribution}}</td>  
+                    <td class="align">
+                        <button class="edit" (click)="Update(SSSdata)">Edit</button>  <br>
+                        <button class="edit" (click)="delete(SSSdata.id)">Delete</button>  <br>
+                    </td>                        
                 </tr> 
             </table>
         </div><br>
