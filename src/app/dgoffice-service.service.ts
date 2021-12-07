@@ -230,6 +230,12 @@ export class DgofficeServiceService {
     return this.http.get<any[]>(APIURL);
   }
 
+  public UpdateTaxtable(json: any) {
+    debugger
+    let APIURL = this.baseURL + "Master/UpdateTaxtable";
+    return this.http.post<any[]>(APIURL, json);
+  }
+
 
   public InsertEmployeeInformation(json:any) {
     debugger
