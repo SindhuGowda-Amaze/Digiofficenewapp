@@ -20,7 +20,11 @@
     "@angular/router": "~13.0.0",
     "ngx-dropzone": "^3.0.0",
     "angular-carousel": "^1.1.0",
+    "auth": "0.0.9",
+    "generate": "^0.14.0",
+    "ng": "0.0.0",
     "rxjs": "~7.4.0",
+    "service": "^0.1.4",
     "sweetalert2": "^11.2.1",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

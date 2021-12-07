@@ -30,3 +30,49 @@
   font-family: 'Open Sans', sans-serif;
   padding:10px;
 }
+.Job{
+  background-color:rgb(7, 106, 119) ;
+  color:white;
+  font-size:18px;
+  font-weight:bold;
+  font-family: 'Open Sans', sans-serif;
+  padding:10px;
+
+}
+.Employee{
+  background-color:rgb(7, 106, 119) ;
+  color:white;
+  font-size:18px;
+  font-weight:bold;
+  font-family: 'Open Sans', sans-serif;
+  padding:10px;
+}
+.Dependents{
+  background-color:rgb(7, 106, 119) ;
+  color:white;
+  font-size:18px;
+  font-weight:bold;
+  font-family: 'Open Sans', sans-serif;
+  padding:10px;
+}
+.Bank{
+  background-color:rgb(7, 106, 119) ;
+  color:white;
+  font-size:18px;
+  font-weight:bold;
+  font-family: 'Open Sans', sans-serif;
+  padding:10px;
+}
+.Previous{
+  background-color:rgb(7, 106, 119) ;
+  color:white;
+  font-size:18px;
+  font-weight:bold;
+  font-family: 'Open Sans', sans-serif;
+  padding:10px;
+
+}
+.img{
+  width:15px;
+  height: auto;
+}

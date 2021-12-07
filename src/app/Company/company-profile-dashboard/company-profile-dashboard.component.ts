@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { DgofficeServiceService } from '../dgoffice-service.service';
 import { ActivatedRoute } from '@angular/router';
+import { DgofficeServiceService } from '../../dgoffice-service.service';
 @Component({
   selector: 'app-company-profile-dashboard',
   templateUrl: './company-profile-dashboard.component.html',

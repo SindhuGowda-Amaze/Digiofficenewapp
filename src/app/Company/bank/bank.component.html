@@ -35,8 +35,8 @@
                     <td>{{dept.code}}</td>
                     <td>{{dept.remarks}}</td>
                     <td class="align">
-                        <button class="edit">Edit</button>  <br>
-                        <button class="edit">Delete</button>  <br>
+                        <button class="edit" (click)="Update(dept)">Edit</button>  <br>
+                        <button class="edit" (click)="delete(dept.id)">Delete</button>  <br>
                     </td>                      
                 </tr>
             </table>

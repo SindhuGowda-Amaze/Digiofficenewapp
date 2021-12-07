@@ -64,3 +64,18 @@ table, th, td {
   .card{
       background-color: rgb(7, 106, 119);
   }
+
+  .edit {
+    width: 85%;
+    border: none;
+    background-color: rgb(7, 106, 119);
+    text-align: center;
+    border-radius: 16px;
+    color: white;
+    margin-top: 6px;
+    font-family: sans-serif;
+  }
+  
+  .align {
+    text-align: center;
+  }

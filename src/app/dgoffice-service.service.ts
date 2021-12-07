@@ -77,15 +77,28 @@ export class DgofficeServiceService {
     return this.http.get<any[]>(APIURL);
   }
 
-  public InsertPhilHealth(json:any){
-    let APIURL=this.baseURL+"Master/InsertPhilHealth";
-    return this.http.post<any[]>(APIURL,json);
-  }
 
   public GetPhilHealth() {
     debugger
     let APIURL = this.baseURL+"Master/GetPhilHealth";
     return this.http.get<any[]>(APIURL);
+  }
+
+  public InsertPhilHealth(json:any){
+    let APIURL=this.baseURL+"Master/InsertPhilHealth";
+    return this.http.post<any[]>(APIURL,json);
+  }
+
+  public UpdatePhilHealth(json: any) {
+    debugger
+    let APIURL = this.baseURL + "Master/UpdatePhilHealth";
+    return this.http.post<any[]>(APIURL, json);
+  }
+
+  public DeletePhilHealth(ID : any) {
+    debugger
+    
+    return this.http.get<any[]>(this.baseURL+ "Master/DeletePhilHealth?ID=" +ID);
   }
 
 
@@ -115,10 +128,16 @@ export class DgofficeServiceService {
     return this.http.post<any[]>(APIURL, json);
   }
 
-  public DeleteBanks(json : any) {
+  public UpdateBanks(json: any) {
     debugger
-    let APIURL = this.baseURL + "Master/DeleteBanks";
+    let APIURL = this.baseURL + "Master/UpdateBanks";
     return this.http.post<any[]>(APIURL, json);
+  }
+
+  public DeleteBanks(ID : any) {
+    debugger
+    
+    return this.http.get<any[]>(this.baseURL+ "Master/DeleteBanks?ID=" +ID);
   }
 
   public GetPayGroup() {
@@ -133,6 +152,13 @@ export class DgofficeServiceService {
     return this.http.post<any[]>(APIURL, json);
   }
 
+  public UpdatePayGroup(json: any) {
+    debugger
+    let APIURL = this.baseURL + "Master/UpdatePayGroup";
+    return this.http.post<any[]>(APIURL, json);
+  }
+  
+
   public DeletePayGroup(ID : any) {
     debugger
     
@@ -146,6 +172,7 @@ export class DgofficeServiceService {
     let APIURL = this.baseURL+"Master/DeleteCompanyAdjustment?ID="+ID;
     return this.http.get<any[]>(APIURL);
   }
+  
 
   public GetSSS() {
     debugger
@@ -158,6 +185,20 @@ export class DgofficeServiceService {
     let APIURL = this.baseURL+"Master/InsertSSS";
     return this.http.post<any[]>(APIURL, json);
   }
+
+  public UpdateSSS(json: any) {
+    debugger
+    let APIURL = this.baseURL + "Master/UpdateBanks";
+    return this.http.post<any[]>(APIURL, json);
+  }
+
+  public DeleteSSS(ID : any) {
+    debugger
+    
+    return this.http.get<any[]>(this.baseURL+ "Master/DeleteSSS?ID=" +ID);
+  }
+
+
 
   public GetGovernmentRecords() {
     debugger
@@ -189,9 +230,15 @@ export class DgofficeServiceService {
     return this.http.get<any[]>(APIURL);
   }
 
-  public UpdatePayGroup(json: any) {
+  public GetPayroll() {
     debugger
-    let APIURL = this.baseURL + "Master/UpdatePayGroup";
+    let APIURL = this.baseURL+"Master/GetPayroll";
+    return this.http.get<any[]>(APIURL);
+  }
+   
+  public InsertPayroll(json:any) {
+    debugger
+    let APIURL = this.baseURL+"Master/InsertPayroll";
     return this.http.post<any[]>(APIURL, json);
   }
   
