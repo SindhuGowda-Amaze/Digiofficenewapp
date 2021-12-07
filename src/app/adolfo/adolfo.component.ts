@@ -103,9 +103,7 @@ export class AdolfoComponent implements OnInit {
   this.GovernmentDeductions=this.result[0].governmentDeductions
   this.PreviousEmployment_Deminimis=this.result[0].previousEmployment_Deminimis
   this.TaxableCompensation=this.result[0].taxableCompensation
-  this.MonetizedLeave=this.result[0].monetizedLeave
-      
-     
+  this.MonetizedLeave=this.result[0].monetizedLeave   
     })
   }  
 
@@ -487,7 +485,7 @@ export class AdolfoComponent implements OnInit {
       data => {
         debugger
         let id = data;
-		alert("Updated saved!!")
+		alert("Successfully saved!!")
        
       
       })
