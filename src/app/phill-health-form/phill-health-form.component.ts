@@ -58,7 +58,7 @@ export class PhillHealthFormComponent implements OnInit {
  
   };
  
-  this.DgofficeServiceService.InsertBanks(json).subscribe(
+  this.DgofficeServiceService.InsertPhilHealth(json).subscribe(
      data => {
      debugger
      let result = data;
