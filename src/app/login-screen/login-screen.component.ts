@@ -27,6 +27,7 @@ export class LoginScreenComponent implements OnInit {
         if (validData.length == 1) {
           debugger
           alert("LOGIN  successful");
+          localStorage.setItem("login",'1')
           sessionStorage.setItem("login",'1')
           sessionStorage.setItem("company_name",validData[0].company_Name);
           sessionStorage.setItem("company_id",validData[0].id);

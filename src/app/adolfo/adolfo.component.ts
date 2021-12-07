@@ -487,7 +487,7 @@ export class AdolfoComponent implements OnInit {
       data => {
         debugger
         let id = data;
-		alert("Successfully saved!!")
+		alert("Updated saved!!")
        
       
       })
