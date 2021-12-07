@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { DgofficeServiceService } from 'src/app/dgoffice-service.service';
+import { ActivatedRoute } from '@angular/router';
+import Swal from 'sweetalert2';
+
 @Component({
   selector: 'app-companyprofile',
   templateUrl: './companyprofile.component.html',
@@ -8,7 +11,7 @@ import { DgofficeServiceService } from 'src/app/dgoffice-service.service';
 export class CompanyprofileComponent implements OnInit {
   result: any;
   count: any;
-         Company_logo : any;
+          Company_logo : any;
 		  Company_Name : any;
 		  Nature_Of_Business : any;
 		  Address1 : any;
@@ -38,8 +41,6 @@ export class CompanyprofileComponent implements OnInit {
 		  Break_Hours : any;
 		  Periods_Per_Month : any;
 		 
-		 
-		
 		  OverTime_Comeptition_OTRates : any;
 		  RestDays : any;
 		  thirteen_Month_Compuatation_Type : any;
@@ -63,11 +64,21 @@ export class CompanyprofileComponent implements OnInit {
 		  Non_Tax_Essential_Sealing : any;
 		  Deminimis_Exemption : any;
 
+		  id:any;
 
-  constructor(private DgofficeServiceService: DgofficeServiceService) { }
+
+  constructor(private DgofficeServiceService: DgofficeServiceService,private ActivatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.GetCompanyProfile();
+	this.ActivatedRoute.params.subscribe(params=>{
+		debugger
+	   this.id=params["id"];
+	   if(this.id!=null&&this.id!=undefined){  
+		this.GetCompanyProfile();
+	   }
+	  })
+
+  
   }
   GetCompanyProfile() {
     this.DgofficeServiceService.GetCompanyProfile().subscribe(
@@ -649,7 +660,6 @@ GetOverTime_Comeptition_Optional_Reimbursement(event:any)
 		  "periods_Per_Month": this.Periods_Per_Month,
 		  "absent_Deduction": this.Absent_Deduction, 
 		  "late_Deduction": this.Late_Deduction, 
-		
 		  "overTime_Comeptition_Optional": this.OverTime_Comeptition_Optional, 
 		  "overTime_Comeptition_OTRates": this.OverTime_Comeptition_OTRates ,
 		  "restDays": this.RestDays,
@@ -679,16 +689,11 @@ GetOverTime_Comeptition_Optional_Reimbursement(event:any)
         debugger
         let id = data;
 		alert("Successfully saved!!")
-        this.GetCompanyProfile();
-      
+      location.href=""
       })
   }
 
-
-
-
-
-
+ 
 
   files: File[] = [];
   files1: File[] = [];
@@ -715,6 +720,87 @@ this.files.splice(this.files.indexOf(event),1);
       debugger
       this.Company_logo = res;
       alert("ATTACHMENT UPLOADED");
+    })
+  }
+
+
+
+  Update(){
+	debugger
+	this.OverTime_Comeptition_Optional=this.OverTime_Comeptition_Optional_BasicSalary  + ',' + this.OverTime_Comeptition_Optional_Deminimis  + ',' + this.OverTime_Comeptition_Optional_ECOLA + ',' + this.OverTime_Comeptition_Optional_Allowance + ',' +this.OverTime_Comeptition_Optional_Reimbursement
+	this.RestDays=this.monday  + ',' + this.tuesday  + ',' + this.wednesday + ',' + this.thursday + ',' +this.friday + ',' +this.saturday + ',' +this.sunday
+	this.OverTime_Comeptition_OTRates=this.ord_ot  + ',' + this.ord_nd  + ',' + this.ord_nd_ot + ',' + this.rd + ',' +this.rd_ot + ',' +this.rd_ot + ',' +this.rd_nd+ ',' +this.rd_nd_ot+ ',' +this.rd_nd+ ',' +this.sh+ ',' +this.sh_ot+ ',' +this.sh_nd+ ',' +this.sh_nd_ot+ ',' +this.lh+ ',' +this.lh_nd+ ',' +this.lh_nd_ot+ ',' +this.sh_rd+ ',' +this.sh_rd_ot+ ',' +this.sh_rd_nd+ ',' +this.sh_rd_nd_ot+ ',' +this.lh_rd+ ',' +this.lh_rd_ot+ ',' +this.lh_rd_nd+ ',' +this.lh_rd_nd_ot+ ',' +this.dh+ ',' +this.dh_ot+ ',' +this.dh_nd+ ',' +this.dh_nd_ot+ ',' +this.dh_rd+ ',' +this.dh_rd_ot+ ',' +this.dh_rd_nd+ ',' +this.dh_rd_nd_ot
+	this.Late_Deduction=this.Late_Deduction_BasicSalary  + ',' + this.Late_Deduction_Deminimis  + ',' + this.Late_Deduction_ECOLA + ',' + this.Late_Deduction_Allowance + ',' +this.Late_Deduction_Reimbursement + ',' +this.Late_Deduction_bonus
+	this.Absent_Deduction=this.Absent_Deduction_BasicSalary  + ',' + this.Absent_Deduction_Deminimis  + ',' + this.	Absent_Deduction_ECOLA+ ',' + this.Absent_Deduction_Allowance + ',' +this.Absent_Deduction_Reimbursement + ',' +this.Absent_Deduction_bonus
+	this.thirteen_Month_Optional=this.thirteen_Month_Optional_Basic  + ',' + this.thirteen_Month_Optional_BasicAdjustment  + ',' + this.thirteen_Month_Optional_OverTime+ ',' + this.thirteen_Month_Optional_Deminimis + ',' +this.thirteen_Month_Optional_Bonus + ',' +this.thirteen_Month_Optional_Commission+ ',' +this.thirteen_Month_Optional_ECOLA+ ',' +this.thirteen_Month_Optional_OtherTaxableIncome+ ',' +this.thirteen_Month_Optional_Allowance+ ',' +this.thirteen_Month_Optional_Reimbursement+ ',' +this.thirteen_Month_Optional_SalaryAdjustment
+    this.SSS_Optional =this.SSS_Optional_BasicSalary  + ',' + this.SSS_Optional_OverTime  + ',' + this.SSS_Optional_ECOLA  + ',' + this.SSS_Optional_Deminimis  + ',' + this.SSS_Optional_Absent_late  + ',' + this.SSS_Optional_Allowance  + ',' + this.SSS_Optional_Bonuses + ',' + this.SSS_Optional_Bonuses + ',' + this.SSS_Optional_SalaryAdjustment + ',' + this.SSS_Optional_Reimbursement + ',' + this.SSS_Optional_Commission 	
+	this.PhilHealth_Optional=this.PhilHealth_Optional_BasicSalary  + ',' + this.PhilHealth_Optional_OverTime  + ',' + this.PhilHealth_Optional_ECOLA  + ',' + this.SSS_Optional_Deminimis  + ',' + this.PhilHealth_Optional_Deminimis  + ',' + this.PhilHealth_Optional_Absent_late  + ',' + this.PhilHealth_Optional_Allowance + ',' + this.PhilHealth_Optional_Bonuses + ',' + this.PhilHealth_Optional_SalaryAdjustment + ',' + this.PhilHealth_Optional_Reimbursement + ',' + this.PhilHealth_Optional_Commission 
+
+   
+   var json = {
+		
+         "company_Logo": this.Company_logo,
+		  "company_Name": this.Company_Name,
+		  "nature_Of_Business": this.Nature_Of_Business,
+		  "address1": this.Address1,
+		  "address2": this.Address2,
+		  "zipcode": this.Zipcode, 
+		  "rdo": this.RDO, 
+		  "email": this.Email, 
+		  "phone": this.Phone,
+		  "password": this.Password, 
+		  "fax": this.Fax, 
+		  "tin": this.Tin, 
+          "ssN_No": this.SSN_No ,
+		  "philHealthNumber": this.PhilHealthNumber, 
+		  "hdmfNumber": this.HDMFNumber, 
+		  "admin_AuthorisedPerson": this.Admin_AuthorisedPerson, 
+		  "admin_PositionTitle": this.Admin_PositionTitle, 
+		  "hR_AuthorisedPerson": this.HR_AuthorisedPerson, 
+		  "hR_PositionTitle": this.HR_PositionTitle, 
+		  "finance_AuthorisedPerson": this.Finance_AuthorisedPerson,
+		  "finance_PositionTitle": this.Finance_PositionTitle, 
+		  "e_Signatory": this.E_Signatory,
+		  "work_Days_Per_Year": this.Work_Days_Per_Year, 
+		  "work_Days_Per_Day": this.Work_Days_Per_Day, 
+		  "work_Months_Per_Year": this.Work_Months_Per_Year, 
+		  "work_hour_Start": this.Work_hour_Start,
+		  "work_hour_End": this.Work_hour_End, 
+		  "break_Hours": this.Break_Hours,
+		  "periods_Per_Month": this.Periods_Per_Month,
+		  "absent_Deduction": this.Absent_Deduction, 
+		  "late_Deduction": this.Late_Deduction, 
+		  "overTime_Comeptition_Optional": this.OverTime_Comeptition_Optional, 
+		  "overTime_Comeptition_OTRates": this.OverTime_Comeptition_OTRates ,
+		  "restDays": this.RestDays,
+		  "thirteen_Month_Compuatation_Type": this.thirteen_Month_Compuatation_Type, 
+		  "thirteen_Month_Deduct_Absent": this.thirteen_Month_Deduct_Absent,
+		  "thirteen_Month_Deduct_Late": this.thirteen_Month_Deduct_Late, 
+		  "thirteen_Month_Optional": this.thirteen_Month_Optional, 
+		  "finalPay_Deduct_Absent": this.FinalPay_Deduct_Absent, 
+		  "finalPay_Deduct_Late": this.FinalPay_Deduct_Late, 
+		  "final_Pay_13th_Month": this.Final_Pay_13th_Month, //
+		  "NetPay_Threshold": this.NetPay_Threshold, 
+		  "SSS_Coverage": this.SSS_Coverage ,
+		  "SSS_Optional": this.SSS_Optional ,
+		  "PhilHealth_Coverage": this.PhilHealth_Coverage, 
+		  "PhilHealth_Optional": this.PhilHealth_Optional, 
+		  "HDMF": this.HDMF, 
+		  "HDMF_Employer_Contribution": this.HDMF_Employer_Contribution, 
+		  "PayRoll_Calender": this.PayRoll_Calender, 
+		  "Tax_Table": this.Tax_Table, 
+		  "Tax_Table_Starts_on": this.Tax_Table_Starts_on, 
+		  "Tax_Table_Including_13thmonth": this.Tax_Table_Including_13thmonth, 
+		  "Non_Tax_Essential_Sealing": this.Non_Tax_Essential_Sealing ,
+		  "Deminimis_Exemption": this.Deminimis_Exemption 
+    };
+  
+    this.DgofficeServiceService.UpdateCompanyProfile(json).subscribe(
+      data => {
+      debugger
+      let result = data;
+      location.href="/CompanyProfileDashboard";
+      Swal.fire("Update Sucessfully");
     })
   }
 

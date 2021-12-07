@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DgofficeServiceService } from '../dgoffice-service.service';
+import { DgofficeServiceService } from '../../dgoffice-service.service';
 import { ActivatedRoute } from '@angular/router';
 import Swal from 'sweetalert2';
 
@@ -43,7 +43,8 @@ export class BankFormComponent implements OnInit {
       
 
     })
-  }  
+  }
+    
   save(){
      var json = {
     

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DgofficeServiceService } from '../dgoffice-service.service';
+import { DgofficeServiceService } from '../../dgoffice-service.service';
 import { ActivatedRoute } from '@angular/router';
 import Swal from 'sweetalert2';
 
@@ -69,7 +69,7 @@ export class PayGroupFormComponent implements OnInit {
       debugger
       let result = data;
       location.href="/PayGroup";
-      Swal.fire("Update Sucessfully");
+      Swal.fire("Updated Sucessfully...!");
     })
   }
 

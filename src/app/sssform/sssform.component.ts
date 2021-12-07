@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DgofficeServiceService } from '../dgoffice-service.service';
 import { ActivatedRoute } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-sssform',
@@ -49,8 +50,8 @@ export class SSSFormComponent implements OnInit {
       this.selectSSER=this.result[0].sS_ER;
       this.selectSSEE=this.result[0].sS_EE;
       this.selectSSTotal=this.result[0].sS_Total;
-      this.selectMpfEr=this.result[0].mPF_ER;
-      this.selectMpfEe=this.result[0].mPF_EE;
+      this.selectMpfEr=this.result[0].mpF_ER;
+      this.selectMpfEe=this.result[0].mpF_EE;
       this.selectEcEr=this.result[0].eC_ER;
       this.selectTotalContribution=this.result[0].total_Contribution;
 
@@ -81,5 +82,31 @@ export class SSSFormComponent implements OnInit {
 
   alert("Mentioned MaxRange is "+this.selectMinRange)
   alert("Mentioned MaxRange is "+this.selectMaxRange)
+  }
+
+
+  Update(){
+    debugger
+    var json = {
+     "ID":this.id,
+     "Min_Range": this.selectMinRange,
+     "Max_Range": this.selectMaxRange,
+     "Monthly_Salary_Creadited": this.selectMonthlySalaryCredit,
+     "SS_ER": this.selectSSER,
+     "SS_EE": this.selectSSEE,
+     "SS_Total": this.selectSSTotal,
+     "MPF_ER": this.selectMpfEr,
+     "MPF_EE": this.selectMpfEe,
+     "EC_ER": this.selectEcEr,
+     "Total_Contribution": this.selectTotalContribution,
+    };
+  
+    this.DgofficeServiceService.UpdateSSS(json).subscribe(
+      data => {
+      debugger
+      let result = data;
+      location.href="/SSS";
+      Swal.fire("Updated Sucessfully....!");
+    })
   }
 }

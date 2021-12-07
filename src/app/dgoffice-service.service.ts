@@ -172,6 +172,7 @@ export class DgofficeServiceService {
     let APIURL = this.baseURL+"Master/DeleteCompanyAdjustment?ID="+ID;
     return this.http.get<any[]>(APIURL);
   }
+  
 
   public GetSSS() {
     debugger
@@ -184,6 +185,20 @@ export class DgofficeServiceService {
     let APIURL = this.baseURL+"Master/InsertSSS";
     return this.http.post<any[]>(APIURL, json);
   }
+
+  public UpdateSSS(json: any) {
+    debugger
+    let APIURL = this.baseURL + "Master/UpdateBanks";
+    return this.http.post<any[]>(APIURL, json);
+  }
+
+  public DeleteSSS(ID : any) {
+    debugger
+    
+    return this.http.get<any[]>(this.baseURL+ "Master/DeleteSSS?ID=" +ID);
+  }
+
+
 
   public GetGovernmentRecords() {
     debugger
@@ -239,8 +254,22 @@ export class DgofficeServiceService {
   
 
 
+  public GetPayroll() {
+    debugger
+    let APIURL = this.baseURL+"Master/GetPayroll";
+    return this.http.get<any[]>(APIURL);
+  }
+   
+  public InsertPayroll(json:any) {
+    debugger
+    let APIURL = this.baseURL+"Master/InsertPayroll";
+    return this.http.post<any[]>(APIURL, json);
+  }
   
-  
-
+  public UpdateCompanyProfile(json: any) {
+    debugger
+    let APIURL = this.baseURL + "Master/UpdateCompanyProfile";
+    return this.http.post<any[]>(APIURL, json);
+  }
 
 }

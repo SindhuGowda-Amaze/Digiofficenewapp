@@ -1,0 +1,257 @@
+<div class="container-fluid">
+    <div class="body">
+        <div class="card card-padding">
+            <div class="row">
+                <div class="col-lg-10">
+                    <span class="pckg">Company Profile</span>
+                </div>
+                <div class="col-lg-2">
+                    <button class="add" routerLink="/Companyprofile">Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <div class="card2 card-padding2">
+        <div class="row">
+            <div class="col-lg-3 Srch">
+                <input type="text" class="form-control" placeholder="Search...">
+            </div>
+            <div class="col-lg-3">
+                <input type="date" placeholder="dd-mm-yyyy" class="form-control">
+            </div>
+        </div>
+        <div class="col-lg-12"><br>
+            <table>
+                <tr>                  
+                   <td><span class="menu">Company Logo</span></td>
+                    <td><span class="menu">Company Name</span></td>                  
+                    <td><span class="menu">Nature of Business</span></td>  
+                    <td><span class="menu">Address1</span></td>  
+                    <td><span class="menu">Address2</span></td>  
+                    <td><span class="menu">Zipcode</span></td>  
+                    <td style="text-align: center;" ><span class="menu" >Actions</span></td>           
+                </tr>
+                <tr *ngFor="let dept of CompanyProfilelist">
+                    <td><img src="{{dept.company_logo}}"></td>
+                    <td>{{dept.company_Name}}</td>
+                    <td>{{dept.nature_Of_Business}}</td>
+                    <td>{{dept.address1}}</td>
+                    <td>{{dept.address2}}</td>
+                    <td>{{dept.zipcode}}</td>
+                    <td class="align">
+                        <button class="edit" data-toggle="modal"  (click)="getcompany(dept.id)" data-target="#bigimg16">view</button>  <br>
+                        <button class="edit" data-toggle="modal"  (click)="getcompany(dept.id)" data-target="#bigimg16">edit</button>  
+
+                    </td>   
+                                       
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+<div id="bigimg16" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Company Details</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-12" >
+                        <br>
+                        <table>
+                             <tr>
+                                 <td>RDO</td>
+                                 <td>{{RDO}}</td>
+                             </tr>   
+                             <tr>
+                                <td>Email</td>
+                                <td>{{Email}}</td>
+                            </tr>  
+                            <tr>
+                                <td>Phone</td>
+                                <td>{{Phone}}</td>
+                            </tr>  
+                            <tr>
+                                <td>Password</td>
+                                <td>{{Password}}</td>
+                            </tr>  
+                            <tr>
+                                <td>Fax</td>
+                                <td>{{Fax}}</td>
+                            </tr>         
+                            <tr>
+                                <td>Tin</td>
+                                <td>{{Tin}}</td>
+                            </tr>  
+                            <tr>
+                                <td>SSN_No</td>
+                                <td>{{SSN_No}}</td>
+                            </tr>  
+                            <tr>
+                                <td>PhilHealthNumber</td>
+                                <td>{{PhilHealthNumber}}</td>
+                            </tr>  
+                            <tr>
+                                <td>Admin_AuthorisedPerson</td>
+                                <td>{{Admin_AuthorisedPerson}}</td>
+                            </tr>  
+                            <tr>
+                                <td>Admin_PositionTitle</td>
+                                <td>{{Admin_PositionTitle}}</td>
+                            </tr>  
+                            <tr>
+                                <td>HR_AuthorisedPerson</td>
+                                <td>{{HR_AuthorisedPerson}}</td>
+                            </tr>  
+                            <tr>
+                                <td>HR_PositionTitle</td>
+                                <td>{{HR_PositionTitle}}</td>
+                            </tr>  
+
+                            <tr>
+                                <td>Finance_AuthorisedPerson</td>
+                                <td>{{Finance_AuthorisedPerson}}</td>
+                            </tr>  
+                            <tr>
+                                <td>Finance_PositionTitle</td>
+                                <td>{{Finance_PositionTitle}}</td>
+                            </tr>  
+                            <tr>
+                                <td>E_Signatory</td>
+                                <td>{{E_Signatory}}</td>
+                            </tr>  
+                            <tr>
+                                <td>Work_Days_Per_Year</td>
+                                <td>{{Work_Days_Per_Year}}</td>
+                            </tr>  
+                            <tr>
+                                <td>Work_Days_Per_Day</td>
+                                <td>{{Work_Days_Per_Day}}</td>
+                            </tr>  
+                            <tr>
+                                <td>Work_Months_Per_Year</td>
+                                <td>{{Work_Months_Per_Year}}</td>
+                            </tr>  
+                            <tr>
+                                <td>Work_hour_Start</td>
+                                <td>{{Work_hour_Start}}</td>
+                            </tr>  
+                            <tr>
+                                <td>Work_hour_End</td>
+                                <td>{{Work_hour_End}}</td>
+                            </tr>  
+                           
+                            <tr>
+                                <td>Break_Hours</td>
+                                <td>{{Break_Hours}}</td>
+                            </tr>  
+                            <tr>
+                                <td>Periods_Per_Month</td>
+                                <td>{{Periods_Per_Month}}</td>
+                            </tr>  
+                            <tr>
+                                <td>Absent_Deduction</td>
+                                <td>{{Absent_Deduction}}</td>
+                            </tr>  
+                            <tr>
+                                <td>Late_Deduction</td>
+                                <td>{{Late_Deduction}}</td>
+                            </tr>  
+                            <tr>
+                                <td>OverTime_Comeptition_Optional</td>
+                                <td>{{OverTime_Comeptition_Optional}}</td>
+                            </tr>  
+                            <tr>
+                                <td>OverTime_Comeptition_OTRates</td>
+                                <td>{{OverTime_Comeptition_OTRates}}</td>
+                            </tr>  
+                            <tr>
+                                <td>RestDays</td>
+                                <td>{{RestDays}}</td>
+                            </tr>  
+                            <tr>
+                                <td>thirteen_Month_Compuatation_Type</td>
+                                <td>{{thirteen_Month_Compuatation_Type}}</td>
+                            </tr>  
+                            <tr>
+                                <td>thirteen_Month_Deduct_Absent</td>
+                                <td>{{thirteen_Month_Deduct_Absent}}</td>
+                            </tr>  
+                            <tr>
+                                <td>thirteen_Month_Deduct_Late</td>
+                                <td>{{thirteen_Month_Deduct_Late}}</td>
+                            </tr>  
+                            <tr>
+                                <td>thirteen_Month_Optional</td>
+                                <td>{{thirteen_Month_Optional}}</td>
+                            </tr>  
+                            <tr>
+                                <td>FinalPay_Deduct_Absent</td>
+                                <td>{{FinalPay_Deduct_Absent}}</td>
+                            </tr>  
+                            <tr>
+                                <td>Final_Pay_13th_Month</td>
+                                <td>{{Final_Pay_13th_Month}}</td>
+                            </tr>  
+                            <tr>
+                                <td>NetPay_Threshold</td>
+                                <td>{{NetPay_Threshold}}</td>
+                            </tr>  
+                            <tr>
+                                <td>SSS_Coverage</td>
+                                <td>{{SSS_Coverage}}</td>
+                            </tr>  
+                            <tr>
+                                <td>SSS_Optional</td>
+                                <td>{{SSS_Optional}}</td>
+                            </tr>  
+                            <tr>
+                                <td>PhilHealth_Coverage</td>
+                                <td>{{PhilHealth_Coverage}}</td>
+                            </tr>  
+                            <tr>
+                                <td>PhilHealth_Optional</td>
+                                <td>{{PhilHealth_Optional}}</td>
+                            </tr>  
+                            <tr>
+                                <td>HDMF</td>
+                                <td>{{HDMF}}</td>
+                            </tr> 
+                            <tr>
+                                <td>HDMF_Employer_Contribution</td>
+                                <td>{{HDMF_Employer_Contribution}}</td>
+                            </tr> 
+                            <tr>
+                                <td>Tax_Table</td>
+                                <td>{{Tax_Table}}</td>
+                            </tr> 
+                            <tr>
+                                <td>Tax_Table_Starts_on</td>
+                                <td>{{Tax_Table_Starts_on}}</td>
+                            </tr> 
+                            <tr>
+                                <td>Tax_Table_Including_13thmonth</td>
+                                <td>{{Tax_Table_Including_13thmonth}}</td>
+                            </tr> 
+                            <tr>
+                                <td>Non_Tax_Essential_Sealing</td>
+                                <td>{{Non_Tax_Essential_Sealing}}</td>
+                            </tr> 
+                            <tr>
+                                <td>Deminimis_Exemption</td>
+                                <td>{{Deminimis_Exemption}}</td>
+                            </tr> 
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
