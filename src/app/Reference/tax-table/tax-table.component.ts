@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DgofficeServiceService } from '../dgoffice-service.service';
+import { DgofficeServiceService } from '../../dgoffice-service.service';
 
 @Component({
   selector: 'app-tax-table',
