@@ -42,9 +42,6 @@ const routes: Routes = [
 
   
   { path: "", redirectTo: "Login", pathMatch: "full" }, 
-
-
-
   {
     path: "Sidebar", component: SidebarComponent,canActivate: [AuthGuard]
   },
