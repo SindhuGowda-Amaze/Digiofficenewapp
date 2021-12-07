@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'officeapp';
+
+  company_name: any;
+  login:any
+  ngOnInit() {
+    this.login=sessionStorage.getItem('login')
+    this.company_name = localStorage.getItem("company_name");
+  }
 }

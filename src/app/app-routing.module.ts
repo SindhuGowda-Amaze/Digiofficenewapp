@@ -41,7 +41,7 @@ import { CompanyProfileDashboardComponent } from './company-profile-dashboard/co
 const routes: Routes = [
 
   
-  { path: "", redirectTo: "PayRoll", pathMatch: "full" }, 
+  { path: "", redirectTo: "Login", pathMatch: "full" }, 
 
   {
     path: "Sidebar", component: SidebarComponent
@@ -53,6 +53,9 @@ const routes: Routes = [
   },
   {
     path: "Companyprofile", component: CompanyprofileComponent
+  },
+  {
+    path: "Companyprofile/:id", component: CompanyprofileComponent
   },
   {
     path: "Help", component: HelpComponent

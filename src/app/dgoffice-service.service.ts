@@ -195,6 +195,10 @@ export class DgofficeServiceService {
     return this.http.post<any[]>(APIURL, json);
   }
   
-
+  public UpdateCompanyProfile(json: any) {
+    debugger
+    let APIURL = this.baseURL + "Master/UpdateCompanyProfile";
+    return this.http.post<any[]>(APIURL, json);
+  }
 
 }
