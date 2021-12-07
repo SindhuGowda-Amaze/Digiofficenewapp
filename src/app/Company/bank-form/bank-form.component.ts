@@ -43,7 +43,8 @@ export class BankFormComponent implements OnInit {
       
 
     })
-  }  
+  }
+    
   save(){
      var json = {
     

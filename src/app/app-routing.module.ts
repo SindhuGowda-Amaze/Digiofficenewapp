@@ -96,7 +96,13 @@ const routes: Routes = [
     path: "PhillHealthForm", component: PhillHealthFormComponent
   },
   {
+    path: "PhillHealthForm/:id", component: PhillHealthFormComponent
+  },
+  {
     path: "sssForm", component: SSSFormComponent
+  },
+  {
+    path: "sssForm/:id", component: SSSFormComponent
   },
   {
     path: "UsersForm", component: UsersFormComponent
@@ -149,6 +155,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+ 
 })
 export class AppRoutingModule { }
