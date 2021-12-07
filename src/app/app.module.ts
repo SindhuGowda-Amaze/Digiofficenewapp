@@ -41,6 +41,7 @@ import { BankFormComponent } from './Company/bank-form/bank-form.component';
 import { LoginScreenComponent } from './login-screen/login-screen.component';
 import { NgxDropzoneModule } from 'ngx-dropzone';
 import { CompanyProfileDashboardComponent } from './Company/company-profile-dashboard/company-profile-dashboard.component';
+import { AuthGuard } from './services/auth.guard';
 
 @NgModule({
   declarations: [
@@ -90,7 +91,7 @@ import { CompanyProfileDashboardComponent } from './Company/company-profile-dash
     NgxDropzoneModule
 
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
