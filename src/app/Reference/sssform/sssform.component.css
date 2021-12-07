@@ -1,0 +1,49 @@
+label {
+    font-family: "Bookman Old Style";
+    font-size: 14px;
+}
+
+.form-control {
+    font-family: "Bookman Old Style";
+    font-size: 14px;
+}
+
+p {
+    font-family: "Bookman Old Style";
+}
+
+table {
+    font-family: "Bookman Old Style";
+    font-size: 12px;
+}
+
+a {
+    font-family: "Bookman Old Style";
+    font-size: 14px;
+}
+
+button {
+    font-family: "Bookman Old Style";
+    font-size: 14px;
+}
+
+.card {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.addbtns {
+    width: 100%;
+    background-color: rgb(7, 106, 119);
+    color: aliceblue;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    height: 30px;
+}
+
+.dashhead {
+    background-color: rgb(7, 106, 119);
+    color: white;
+    font-family: auto;
+}

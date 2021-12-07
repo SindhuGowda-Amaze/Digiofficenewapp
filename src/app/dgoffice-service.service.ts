@@ -236,8 +236,46 @@ export class DgofficeServiceService {
     return this.http.post<any[]>(APIURL, json);
   }
 
+
+  public InsertEmployeeInformation(json:any) {
+    debugger
+    let APIURL = this.baseURL+"Master/InsertEmployeeInformation";
+    return this.http.post<any[]>(APIURL, json);
+  }
+
+
   
+  public GetEmployeeInformation() {
+    debugger
+    let APIURL = this.baseURL+"Master/GetEmployeeInformation";
+    return this.http.get<any[]>(APIURL);
+  }
+
+
+  public UpdateEmployeeInformation(json: any) {
+    debugger
+    let APIURL = this.baseURL + "Master/UpdateEmployeeInformation";
+    return this.http.post<any[]>(APIURL, json);
+  }
   
 
+
+  public GetPayroll() {
+    debugger
+    let APIURL = this.baseURL+"Master/GetPayroll";
+    return this.http.get<any[]>(APIURL);
+  }
+   
+  public InsertPayroll(json:any) {
+    debugger
+    let APIURL = this.baseURL+"Master/InsertPayroll";
+    return this.http.post<any[]>(APIURL, json);
+  }
+  
+  public UpdateCompanyProfile(json: any) {
+    debugger
+    let APIURL = this.baseURL + "Master/UpdateCompanyProfile";
+    return this.http.post<any[]>(APIURL, json);
+  }
 
 }

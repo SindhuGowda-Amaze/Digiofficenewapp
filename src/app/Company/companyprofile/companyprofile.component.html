@@ -1,0 +1,1663 @@
+<div class="bandtxt">
+    <p>COMPANY PROFILE</p>
+</div>
+<div class="container-fluid">
+    <br>
+    <div class="container">
+        <div class="row ">
+            <div class="col-lg-12 negative-padding">
+                <p class="companyinfo">Company Information</p>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-lg-4">
+                <label>Company Logo</label>
+            </div>
+            <div class="col-lg-5">
+                <ngx-dropzone (change)="onSelect($event)">
+                    <ngx-dropzone-label>Drop it here!</ngx-dropzone-label>
+                     <ngx-dropzone-preview *ngFor="let f of files" [removable]="true" (removed)="onRemove(f)">
+                        <ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label>
+                    </ngx-dropzone-preview>
+                </ngx-dropzone> 
+
+                <!-- <img class="profilelogo" src="/assets/img/amazefblogo.jpg" alt="logo image" [(ngModel)]="Company_logo"> -->
+            </div>
+        </div>
+
+        <!-- <div class="row">
+            <div class="col-lg-4"></div>
+            <div class="col-lg-1">
+                <input type="file">
+            </div>
+        </div> -->
+        <br>
+        <div class="row">
+            <div class="col-lg-4">
+                <label>Company Name*</label>
+            </div>
+            <div class="col-lg-5">
+                <input class="form-control" [(ngModel)]="Company_Name" placeholder="company Name">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4">
+                <label>Nature of Business</label>
+            </div>
+            <div class="col-lg-5">
+                <input class="form-control" [(ngModel)]="Nature_Of_Business" placeholder="Nature of Business">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4">
+                <label>Address1</label>
+            </div>
+            <div class="col-lg-5">
+                <input class="form-control" [(ngModel)]="Address1" placeholder="Address1">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4">
+                <label>Address2</label>
+            </div>
+            <div class="col-lg-5">
+                <input class="form-control" [(ngModel)]="Address2" placeholder="Address2">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4">
+                <label>Zip Code</label>
+            </div>
+            <div class="col-lg-5">
+                <input class="form-control" [(ngModel)]="Zipcode" placeholder="Zip Code">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4">
+                <label>RDO</label>
+            </div>
+            <div class="col-lg-5">
+                <input class="form-control" [(ngModel)]="RDO" placeholder="RDO">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4">
+                <label>Email</label>
+            </div>
+            <div class="col-lg-5">
+                <input class="form-control" [(ngModel)]="Email" placeholder="Email">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4">
+                <label>Phone</label>
+            </div>
+            <div class="col-lg-5">
+                <input class="form-control" [(ngModel)]="Phone" placeholder="Phone">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4">
+                <label>Password</label>
+            </div>
+            <div class="col-lg-5">
+                <input typ class="form-control" [(ngModel)]="Password" placeholder="Password">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4">
+                <label>Fax</label>
+            </div>
+            <div class="col-lg-5">
+                <input class="form-control" [(ngModel)]="Fax" placeholder="Fax">
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-lg-4">
+                <label>TIN</label>
+            </div>
+            <div class="col-lg-5">
+                <input class="form-control" [(ngModel)]="Tin" placeholder="TIN">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4">
+                <label>SSS No.</label>
+            </div>
+            <div class="col-lg-5">
+                <input class="form-control" [(ngModel)]="SSN_No" placeholder="SSS No.">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4">
+                <label>PhilHealth No.</label>
+            </div>
+            <div class="col-lg-5">
+                <input class="form-control" [(ngModel)]="PhilHealthNumber" placeholder="PhilHealth No.">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4">
+                <label>HDMF No.</label>
+            </div>
+            <div class="col-lg-5">
+                <input class="form-control" [(ngModel)]="HDMFNumber" placeholder="HDMF No.">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4">
+                <label>Admin Signatory</label><br>
+                <label style="font-size: 13px;">*For Payroll Summary and Employer Contribution</label>
+            </div>
+            <div class="col-lg-5">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <label>Authorized Person:</label>
+                    </div>
+                    <div class="col-lg-7">
+                        <input class="form-control" [(ngModel)]="Admin_AuthorisedPerson">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-5">
+                        <label>Position Title:</label>
+                    </div>
+                    <div class="col-lg-7">
+                        <input class="form-control" [(ngModel)]="Admin_PositionTitle"><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4">
+                <label>HR Signatory</label>
+            </div>
+            <div class="col-lg-5">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <label>Authorized Person:</label>
+                    </div>
+                    <div class="col-lg-7">
+                        <input class="form-control" [(ngModel)]="HR_AuthorisedPerson">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-5">
+                        <label>Position Title:</label>
+                    </div>
+                    <div class="col-lg-7">
+                        <input class="form-control" [(ngModel)]="HR_PositionTitle"><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4">
+                <label>Finance Signatory</label><br>
+            </div>
+            <div class="col-lg-5">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <label>Authorized Person:</label>
+                    </div>
+                    <div class="col-lg-7">
+                        <input class="form-control" [(ngModel)]="Finance_AuthorisedPerson">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-5">
+                        <label>Position Title:</label>
+                    </div>
+                    <div class="col-lg-7">
+                        <input class="form-control" [(ngModel)]="Finance_PositionTitle"><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4">
+                <label>E-Signatory</label>
+            </div>
+            <div class="col-lg-5">
+                <!-- <input type="file" id="myFile" name="filename"> -->
+                <!-- <input type="file" placeholder="Choose file" [(ngModel)]="E_Signatory"> -->
+
+                <ngx-dropzone (change)="onSelect1($event)">
+                    <ngx-dropzone-label>Drop it here!</ngx-dropzone-label>
+                     <ngx-dropzone-preview *ngFor="let f of files1" [removable]="true" (removed)="onRemove1(f)">
+                        <ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label>
+                    </ngx-dropzone-preview>
+                </ngx-dropzone> 
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12 negative-padding">
+                <p class="formheading">Work Policy</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4">
+                <label>Work Days Per Year*</label>
+            </div>
+            <div class="col-lg-5">
+                <input class="form-control" placeholder="365" [(ngModel)]="Work_Days_Per_Year">
+
+                <!-- <select class="form-control">
+                    <option>261</option>
+                    <option>260</option>
+                    <option>259</option>
+                </select> -->
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <label>Work Hours Per Day</label>
+            </div>
+            <div class="col-lg-5">
+                <input class="form-control" placeholder="8" [(ngModel)]="Work_Days_Per_Day">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <label>Work Months Per Year*</label>
+            </div>
+            <div class="col-lg-5">
+
+                <select class="form-control" [(ngModel)]="Work_Months_Per_Year">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <label>Work Hours Start</label>
+            </div>
+            <div class="col-lg-5">
+                <input type="time" placeholder="10.00 PM" class="form-control" [(ngModel)]="Work_hour_Start">
+            </div>
+            <img src="/assets/img/alarm-clock.png" class="icon">
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <label>Work Hours End</label>
+            </div>
+            <div class="col-lg-5">
+                <input type="time" placeholder="6.00 AM" class="form-control" [(ngModel)]="Work_hour_End">
+            </div>
+            <img src="/assets/img/alarm-clock.png" class="icon">
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <label>Break Hours</label>
+            </div>
+            <div class="col-lg-5">
+                <input type="time" placeholder="0.00" class="form-control" [(ngModel)]="Break_Hours">
+            </div>
+            <img src="/assets/img/alarm-clock.png" class="icon">
+        </div>
+        <div class="row">
+            <div class="col-lg-12 negative-padding">
+                <p class="formheading">PAYROLL COMPUTATION</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <label>Periods Per Month*</label>
+            </div>
+            <div class="col-lg-5">
+                <select class="form-control" [(ngModel)]="Periods_Per_Month">
+                    <option value="1(Semi-Monthly)">1(Semi-Monthly)</option>
+                    <option value="2(Semi-Monthly)">2(Semi-Monthly)</option>
+                    <option value="3(Semi-Monthly)">3(Semi-Monthly)</option>
+                    <option value="4(Semi-Monthly)">4(Semi-Monthly)</option>
+                </select>
+            </div>
+            <img src="/assets/img/question.png" class="icon" >
+        </div><br>
+        <!-- <div class="row">
+            <div class="col-lg-4">
+                <label>Statutory Period Schedule</label>
+            </div>
+            <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                Regular(1-15 and 16-30)
+                            </label>&nbsp;&nbsp;&nbsp;
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="form-check ">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                Irregular(Any other Schedule)
+                            </label>
+                        </div>
+                    </div>
+                    <img src="/assets/img/question.png" class="icon" >
+                </div>
+            </div>
+        </div> -->
+        <div class="row">
+            <div class="col-lg-4">
+                <label>Absent Deduction</label>
+            </div>
+            <div class="col-lg-8">
+                <div class="row">
+                    
+                    <div class="col-lg-2 ">
+                        <!-- <input type="checkbox" id="Basic_Salary1" name="Absent_Deduction"
+                         value="Basic Salary">
+                        <label for="Basic_Salary1" class="checkboxtxt"></label> -->
+                        <input type="checkbox" id="Basic_Salary" class="checkboxtxt"  (change)="GetAbsent_Deduction_BasicSalary($event)"  name="Basic_Salary" value="Basic_Salary">
+                        <label for="Basic_Salary" class="checkboxtxt"> Basic Salary</label><br>
+                    </div>
+                    <div class="col-lg-2">
+                        <input type="checkbox" class="checkboxtxt" id="Deminimis1" name="Deminimis1"
+                        (change)="GetAbsent_Deduction_Deminimis($event)" value="Deminimis">
+                        <label  for="Deminimis1" class="checkboxtxt" >Deminimis</label>
+                    </div>
+                    <div class="col-lg-2">
+                        <input type="checkbox" class="checkboxtxt" id="Allowance1" name="Absent_Deduction"
+                        (change)="GetAbsent_Deduction_Allowance($event)" value="Allowance">
+                        <label for="Allowance1" class="checkboxtxt" >Allowance</label>
+                    </div>
+                    <div class="col-lg-4">
+                        <input type="checkbox" class="checkboxtxt" id="Reimbursement_Allowance1" name="Absent_Deduction"
+                        (change)="GetAbsent_Deduction_Reimbursement($event)" value="Reimbursement Allowance">
+                        <label for="Reimbursement_Allowance1" class="checkboxtxt" >Reimbursement Allowance</label>
+                    </div>
+                    <div class="col-lg-2">
+                        <input type="checkbox" class="checkboxtxt" id="ECOLA1" name="Absent_Deduction"
+                        (change)="GetAbsent_Deduction_ECOLA($event)" value="ECOLA">
+                        <label for="ECOLA1" class="checkboxtxt" >ECOLA</label>
+                    </div>
+                    <div class="col-lg-2">
+                        <input type="checkbox" class="checkboxtxt" id="Bonus1" name="Absent_Deduction"
+                        (change)="GetAbsent_Deduction_bonus($event)" value="Bonus">
+                        <label for="Bonus1" class="checkboxtxt" >Bonus</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-lg-4">
+                <label>Late Deduction</label>
+            </div>
+            <div class="col-lg-8">
+                <div class="row">
+                    <div class="col-lg-2">
+                        <input type="checkbox" id="Late_Deduction" name="Late_Deduction"
+                        (change)="GetLate_Deduction_BasicSalary($event)"  value="Basic Salary">
+                        <label class="checkboxtxt">Basic Salary</label>
+                    </div>
+                    <div class="col-lg-2">
+                        <input type="checkbox" class="checkboxtxt"  id="Late_Deduction" name="Late_Deduction"
+                        (change)="GetLate_Deduction_Deminimis($event)"  value="Deminimis">
+                        <label class="checkboxtxt">Deminimis</label>
+                    </div>
+                    <div class="col-lg-2">
+                        <input type="checkbox" class="checkboxtxt"  id="Late_Deduction" name="Late_Deduction"
+                        (change)="GetLate_Deduction_ECOLA($event)"  value="Allowance">
+                        <label class="checkboxtxt">Allowance</label>
+                    </div>
+                    <div class="col-lg-4">
+                        <input type="checkbox" class="checkboxtxt"  id="Late_Deduction" name="Late_Deduction"
+                        (change)="GetLate_Deduction_Allowance($event)"  value="Reimbursement Allowance">
+                        <label class="checkboxtxt">Reimbursement Allowance</label>
+                    </div>
+                    <div class="col-lg-2">
+                        <input type="checkbox" class="checkboxtxt"  id="Late_Deduction" name="Late_Deduction"
+                        (change)="GetLate_Deduction_Reimbursement($event)" value="ECOLA">
+                        <label class="checkboxtxt">ECOLA</label>
+                    </div>
+                    <div class="col-lg-2">
+                        <input type="checkbox" class="checkboxtxt"  id="Late_Deduction" name="Late_Deduction"
+                        (change)="GetLate_Deduction_bonus($event)" value="Bonus">
+                        <label class="checkboxtxt">Bonus</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row form-group">
+            <div class="col-lg-4">
+                <label>Over Time Computation</label>
+            </div>
+            <div class="col-lg-8 form-group">
+                <p>Optional:</p>
+                <div class="row form-group">
+                    <div class="col-lg-4">
+                        <input type="checkbox"   name="OverTime_Comeptition_Optional_BasicSalary"
+                         (change)="GetOverTime_Comeptition_Optional_BasicSalary($event)" value="Basic Salary">
+                        <label class="checkboxtxt">Basic Salary</label>
+                    </div>
+                    <div class="col-lg-4 ">
+                        <input type="checkbox" class="checkboxtxt"  (change)="GetOverTime_Comeptition_Optional_Deminimis($event)" name="OverTime_Comeptition_Optional_Deminimis"
+                        value="Deminimis">
+                        <label class="checkboxtxt">Deminimis</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 form-group">
+                        <input type="checkbox" class="checkboxtxt"  (change)="GetOverTime_Comeptition_Optional_Allowance($event)" name="OverTime_Comeptition_Optional_Allowance"
+                        [(ngModel)]="OverTime_Comeptition_Optional_Allowance" value="Allowance">
+                        <label class="checkboxtxt">Allowance</label>
+                    </div>
+                    <div class="col-lg-4 form-group">
+                        <input type="checkbox" class="checkboxtxt" (change)="GetOverTime_Comeptition_Optional_Reimbursement($event)"  name="OverTime_Comeptition_Optional_Reimbursement"
+                        [(ngModel)]="OverTime_Comeptition_Optional_Reimbursement" value="Reimbursement Allowance">
+                        <label class="checkboxtxt">Reimbursement Allowance</label>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-lg-2 ">
+                        <input type="checkbox" class="checkboxtxt"  (change)="GetOverTime_Comeptition_Optional_ECOLA($event)" name="OverTime_Comeptition_Optional_ECOLA"
+                        [(ngModel)]="OverTime_Comeptition_Optional_ECOLA" value="ECOLA">
+                        <label class="checkboxtxt">ECOLA</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <div class="row">
+            <div class="col-lg-4"></div>
+            <div class="col-lg-1">
+                <p>OT Rates</p>
+            </div>
+            <img src="/assets/img/question.png" class="icon" >
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4"></div>
+            <div class="col-lg-8">
+                <div class="row">
+                    <div class="col-lg-2 "></div>
+                    <div class="col-lg-2 ">
+                        <input type="checkbox" id="OverTime_Comeptition_OTRates" name="OverTime_Comeptition_OTRates"
+                        (change)="Getord_ot($event)" value="Ord-OT">
+                        <label class="checkboxtxt">Ord-OT</label>
+                    </div>
+                    <div class="col-lg-2">
+                        <input type="checkbox" class="checkboxtxt" id="OverTime_Comeptition_OTRates" name="OverTime_Comeptition_OTRates"
+                        (change)="Getord_nd($event)" value="Ord-ND">
+                        <label class="checkboxtxt">Ord-ND</label>
+                    </div>
+                    <div class="col-lg-2">
+                        <input type="checkbox" class="checkboxtxt" id="OverTime_Comeptition_OTRates" name="OverTime_Comeptition_OTRates"
+                        (change)="Getord_nd_ot($event)" value="Ord-ND-OT">
+                        <label class="checkboxtxt">Ord-ND-OT</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4"></div>
+            <div class="col-lg-8">
+                <div class="row">
+                    <div class="col-lg-2 ">
+                        <input type="checkbox" id="OverTime_Comeptition_OTRates" name="OverTime_Comeptition_OTRates"
+                        (change)="Getrd($event)" value="RD">
+                        <label class="checkboxtxt">RD</label>
+                    </div>
+                    <div class="col-lg-2 ">
+                        <input type="checkbox" id="OverTime_Comeptition_OTRates" name="OverTime_Comeptition_OTRates"
+                        (change)="Getrd_ot($event)" value="RD-OT">
+                        <label class="checkboxtxt">RD-OT</label>
+                    </div>
+                    <div class="col-lg-2">
+                        <input type="checkbox" class="checkboxtxt" id="OverTime_Comeptition_OTRates" name="OverTime_Comeptition_OTRates"
+                        (change)="Getrd_nd($event)" value="RD-ND">
+                        <label class="checkboxtxt">RD-ND</label>
+                    </div>
+                    <div class="col-lg-2">
+                        <input type="checkbox" class="checkboxtxt" id="OverTime_Comeptition_OTRates" name="OverTime_Comeptition_OTRates"
+                        (change)="Getrd_nd_ot($event)" value="RD-ND-OT">
+                        <label class="checkboxtxt">RD-ND-OT</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4"></div>
+            <div class="col-lg-8">
+                <div class="row">
+                    <div class="col-lg-2 ">
+                        <input type="checkbox" id="OverTime_Comeptition_OTRates" name="OverTime_Comeptition_OTRates"
+                        (change)="Getsh($event)" value="SH">
+                        <label class="checkboxtxt">SH</label>
+                    </div>
+                    <div class="col-lg-2 ">
+                        <input type="checkbox" id="OverTime_Comeptition_OTRates" name="OverTime_Comeptition_OTRates"
+                        (change)="Getsh_ot($event)" value="SH-OT">
+                        <label class="checkboxtxt">SH-OT</label>
+                    </div>
+                    <div class="col-lg-2">
+                        <input type="checkbox" class="checkboxtxt" id="OverTime_Comeptition_OTRates" name="OverTime_Comeptition_OTRates"
+                        (change)="Getsh_nd($event)" value="SH-ND">
+                        <label class="checkboxtxt">SH-ND</label>
+                    </div>
+                    <div class="col-lg-2">
+                        <input type="checkbox" class="checkboxtxt" id="OverTime_Comeptition_OTRates" name="OverTime_Comeptition_OTRates"
+                        (change)="Getsh_nd_ot($event)" value="SH-ND-OT">
+                        <label class="checkboxtxt">SH-ND-OT</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4"></div>
+            <div class="col-lg-8">
+                <div class="row">
+                    <div class="col-lg-2 ">
+                        <input type="checkbox" id="OverTime_Comeptition_OTRates" name="OverTime_Comeptition_OTRates"
+                        (change)="Getlh($event)" value="LH">
+                        <label class="checkboxtxt">LH</label>
+                    </div>
+                    <div class="col-lg-2 ">
+                        <input type="checkbox" id="OverTime_Comeptition_OTRates" name="OverTime_Comeptition_OTRates"
+                        (change)="Getlh_ot($event)" value="LH-OT">
+                        <label class="checkboxtxt">LH-OT</label>
+                    </div>
+                    <div class="col-lg-2">
+                        <input type="checkbox" class="checkboxtxt" id="OverTime_Comeptition_OTRates" name="OverTime_Comeptition_OTRates"
+                        (change)="Getlh_nd($event)" value="LH-ND">
+                        <label class="checkboxtxt">LH-ND</label>
+                    </div>
+                    <div class="col-lg-2">
+                        <input type="checkbox" class="checkboxtxt" id="OverTime_Comeptition_OTRates" name="OverTime_Comeptition_OTRates"
+                        (change)="Getlh_nd_ot($event)" value="LH-ND-OT">
+                        <label class="checkboxtxt">LH-ND-OT</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4"></div>
+            <div class="col-lg-8">
+                <div class="row">
+                    <div class="col-lg-2 ">
+                        <input type="checkbox" id="OverTime_Comeptition_OTRates" name="OverTime_Comeptition_OTRates"
+                        (change)="Getsh_rd($event)" value="SH-RD">
+                        <label class="checkboxtxt">SH-RD</label>
+                    </div>
+                    <div class="col-lg-2 ">
+                        <input type="checkbox" id="OverTime_Comeptition_OTRates" name="OverTime_Comeptition_OTRates"
+                        (change)="Getsh_rd_ot($event)" value="SH-RD-OT">
+                        <label class="checkboxtxt">SH-RD-OT</label>
+                    </div>
+                    <div class="col-lg-2">
+                        <input type="checkbox" class="checkboxtxt" id="OverTime_Comeptition_OTRates" name="OverTime_Comeptition_OTRates"
+                        (change)="Getsh_rd_nd($event)" value="SH-RD-ND">
+                        <label class="checkboxtxt">SH-RD-ND</label>
+                    </div>
+                    <div class="col-lg-3">
+                        <input type="checkbox" class="checkboxtxt" id="OverTime_Comeptition_OTRates" name="OverTime_Comeptition_OTRates"
+                        (change)="Getsh_rd_nd_ot($event)" value="SH-RD-ND-OT">
+                        <label class="checkboxtxt">SH-RD-ND-OT</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4"></div>
+            <div class="col-lg-8">
+                <div class="row">
+                    <div class="col-lg-2">
+                        <input type="checkbox" id="OverTime_Comeptition_OTRates" name="OverTime_Comeptition_OTRates"
+                        (change)="Getlh_rd($event)" value="LH-RD">
+                        <label class="checkboxtxt">LH-RD</label>
+                    </div>
+                    <div class="col-lg-2" id="OverTime_Comeptition_OTRates" name="OverTime_Comeptition_OTRates"
+                    (change)="Getlh_rd_ot($event)" value="LH-RD-OT">
+                        <input type="checkbox">
+                        <label class="checkboxtxt">LH-RD-OT</label>
+                    </div>
+                    <div class="col-lg-2" id="OverTime_Comeptition_OTRates" name="OverTime_Comeptition_OTRates"
+                    (change)="Getlh_rd_nd($event)" value="LH-RD-ND">
+                        <input type="checkbox" class="checkboxtxt">
+                        <label class="checkboxtxt">LH-RD-ND</label>
+                    </div>
+                    <div class="col-lg-3" id="OverTime_Comeptition_OTRates" name="OverTime_Comeptition_OTRates"
+                    (change)="Getlh_rd_nd_ot($event)" value="LH-RD-ND-OT">
+                        <input type="checkbox" class="checkboxtxt">
+                        <label class="checkboxtxt">LH-RD-ND-OT</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4"></div>
+            <div class="col-lg-8">
+                <div class="row">
+                    <div class="col-lg-2">
+                        <input type="checkbox" id="OverTime_Comeptition_OTRates" name="OverTime_Comeptition_OTRates"
+                        (change)="Getdh($event)" value="DH">
+                        <label class="checkboxtxt">DH</label>
+                    </div>
+                    <div class="col-lg-2">
+                        <input type="checkbox" id="OverTime_Comeptition_OTRates" name="OverTime_Comeptition_OTRates"
+                        (change)="Getdh_ot($event)" value="DH-OT">
+                        <label class="checkboxtxt">DH-OT</label>
+                    </div>
+                    <div class="col-lg-2">
+                        <input type="checkbox" class="checkboxtxt" id="OverTime_Comeptition_OTRates" name="OverTime_Comeptition_OTRates"
+                        (change)="Getdh_nd($event)" value="DH-ND">
+                        <label class="checkboxtxt">DH-ND</label>
+                    </div>
+                    <div class="col-lg-2">
+                        <input type="checkbox" class="checkboxtxt" id="OverTime_Comeptition_OTRates" name="OverTime_Comeptition_OTRates"
+                        (change)="Getdh_nd_ot($event)" value="DH-ND-OT">
+                        <label class="checkboxtxt">DH-ND-OT</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4"></div>
+            <div class="col-lg-8">
+                <div class="row">
+                    <div class="col-lg-2 ">
+                        <input type="checkbox" id="OverTime_Comeptition_OTRates" name="OverTime_Comeptition_OTRates"
+                        (change)="Getdh_rd($event)" value="DH-RD">
+                        <label class="checkboxtxt">DH-RD</label>
+                    </div>
+                    <div class="col-lg-2 ">
+                        <input type="checkbox" id="OverTime_Comeptition_OTRates" name="OverTime_Comeptition_OTRates"
+                        (change)="Getdh_rd_ot($event)" value="DH-RD-OT">
+                        <label class="checkboxtxt">DH-RD-OT</label>
+                    </div>
+                    <div class="col-lg-2">
+                        <input type="checkbox" class="checkboxtxt" id="OverTime_Comeptition_OTRates" name="OverTime_Comeptition_OTRates"
+                        (change)="Getdh_rd_nd($event)" value="DH-RD-ND">
+                        <label class="checkboxtxt">DH-RD-ND</label>
+                    </div>
+                    <div class="col-lg-3">
+                        <input type="checkbox" class="checkboxtxt" id="OverTime_Comeptition_OTRates" name="OverTime_Comeptition_OTRates"
+                        (change)="Getdh_rd_nd_ot($event)" value="DH-RD-ND-OT">
+                        <label class="checkboxtxt">DH-RD-ND-OT</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-lg-4">
+                <label>Rest Days</label>
+            </div>
+            <div class="col-lg-8">
+                <div class="row">
+                    <div class="col-lg-2 ">
+
+                        <input type="checkbox" id="RestDays" name="RestDays"
+                        (change)="Getmonday($event)" value="Monday">
+                        <label class="checkboxtxt">Monday</label>
+                    </div>
+                    <div class="col-lg-2 ">
+                        <input type="checkbox" class="checkboxtxt" id="RestDays" name="RestDays"
+                        (change)="Gettuesday($event)" value="Tuesday">
+                        <label class="checkboxtxt">Tuesday</label>
+                    </div>
+                    <div class="col-lg-2 ">
+                        <input type="checkbox" class="checkboxtxt" id="RestDays" name="RestDays"
+                        (change)="Getwednesday($event)" value="Wednesday">
+                        <label class="checkboxtxt">Wednesday</label>
+                    </div>
+                    <div class="col-lg-2 ">
+                        <input type="checkbox" class="checkboxtxt" id="RestDays" name="RestDays"
+                        (change)="Getthursday($event)" value="Thursday">
+                        <label class="checkboxtxt">Thursday</label>
+                    </div>
+                    <div class="col-lg-2 ">
+                        <input type="checkbox" class="checkboxtxt" id="RestDays" name="RestDays"
+                        (change)="Getfriday($event)" value="Friday">
+                        <label class="checkboxtxt">Friday</label>
+                    </div>
+                    <div class="col-lg-2">
+                        <input type="checkbox" class="checkboxtxt" id="RestDays" name="RestDays"
+                        (change)="Getsaturday($event)" value="Saturday">
+                        <label class="checkboxtxt">Saturday</label>
+                    </div>
+                    <div class="col-lg-2">
+                        <input type="checkbox" class="checkboxtxt" id="RestDays" name="RestDays"
+                        (change)="Getsunday($event)" value="Sunday">
+                        <label class="checkboxtxt">Sunday</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <!-- <div class="row">
+            <div class="col-lg-4">
+                <label>New Hire Prorated Computation</label>
+            </div>
+            <div class="col-lg-8">
+                <div class="row">
+                    <div class="col-lg-2 ">
+                        <input type="checkbox">
+                        <label class="checkboxtxt">Basic Salary</label>
+                    </div>
+                    <div class="col-lg-2">
+                        <input type="checkbox" class="checkboxtxt">
+                        <label class="checkboxtxt">Deminimis</label>
+                    </div>
+                    <div class="col-lg-2">
+                        <input type="checkbox" class="checkboxtxt">
+                        <label class="checkboxtxt">Allowance</label>
+                    </div>
+                    <div class="col-lg-4">
+                        <input type="checkbox" class="checkboxtxt">
+                        <label class="checkboxtxt">Reimbursement Allowance</label>
+                    </div>
+                    <div class="col-lg-2">
+                        <input type="checkbox" class="checkboxtxt">
+                        <label class="checkboxtxt">ECOLA</label>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- <div class="row">
+            <div class="col-lg-4"></div>
+            <div class="col-lg-4">
+                <p>Proration method</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4"></div>
+            <div class="col-lg-6">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        Probated/Daily multiple by days present
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        Probated/Salaryless absent
+                    </label>
+                </div>
+            </div>
+        </div> -->
+        <br>
+
+        <div class="row">
+            <div class="col-lg-4">
+                <label>13th Month Computation</label>
+            </div>
+            <div class="col-lg-8">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <p>Computation Type:</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="thirteen_Month_Compuatation_Type" name="thirteen_Month_Compuatation_Type"
+                            [(ngModel)]="thirteen_Month_Compuatation_Type" value="Pro-rated/Advanced">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                Pro-rated/Advanced
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio"  id="thirteen_Month_Compuatation_Type" name="thirteen_Month_Compuatation_Type"
+                            [(ngModel)]="thirteen_Month_Compuatation_Type" value="Pro-rated/Current/Full Salary">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                Pro-rated/Current/Full Salary
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <div class="row">
+            <div class="col-lg-4"></div>
+            <div class="col-lg-8">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <p>Deduct Absent:</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="thirteen_Month_Deduct_Absent" name="thirteen_Month_Deduct_Absent"
+                             [(ngModel)]="thirteen_Month_Deduct_Absent" value="Yes">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                Yes
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="thirteen_Month_Deduct_Absent" name="thirteen_Month_Deduct_Absent"
+                            [(ngModel)]="thirteen_Month_Deduct_Absent" value="No">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                No
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4"></div>
+            <div class="col-lg-8">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <p>Deduct Late/Undertime?</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio"  id="thirteen_Month_Deduct_Late" name="thirteen_Month_Deduct_Late"
+                            [(ngModel)]="thirteen_Month_Deduct_Late" value="Yes">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                Yes
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="thirteen_Month_Deduct_Late" name="thirteen_Month_Deduct_Late"
+                            [(ngModel)]="thirteen_Month_Deduct_Late" value="No">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                No
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <div class="row">
+            <div class="col-lg-4"></div>
+            <div class="col-lg-8">
+                <p>Optional:</p>
+                <div class="row">
+                    <div class="col-lg-4 ">
+                        <input type="checkbox" id="thirteen_Month_Optional" name="thirteen_Month_Optional"
+                        (change)="Getthirteen_Month_Optional_Basic($event)" value="Basic">
+                        <label class="checkboxtxt">Basic</label>
+                    </div>
+                    <div class="col-lg-4">
+                        <input type="checkbox" class="checkboxtxt" id="thirteen_Month_Optional" name="thirteen_Month_Optional"
+                        (change)="Getthirteen_Month_Optional_ECOLA($event)" value="ECOLA">
+                        <label class="checkboxtxt">ECOLA</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <input type="checkbox" class="checkboxtxt" id="thirteen_Month_Optional" name="thirteen_Month_Optional"
+                        (change)="Getthirteen_Month_Optional_BasicAdjustment($event)" value="Basic Adjustment">
+                        <label class="checkboxtxt">Basic Adjustment</label>
+                    </div>
+                    <div class="col-lg-4 ">
+                        <input type="checkbox" class="checkboxtxt" id="thirteen_Month_Optional" name="thirteen_Month_Optional"
+                        (change)=" Getthirteen_Month_Optional_OtherTaxableIncome($event)" value="Other Taxable Income">
+                        <label class="checkboxtxt">Other Taxable Income</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <input type="checkbox" class="checkboxtxt" id="thirteen_Month_Optional" name="thirteen_Month_Optional"
+                        (change)="Getthirteen_Month_Optional_OverTime($event)" value="OverTime">
+                        <label class="checkboxtxt">OverTime</label>
+                    </div>
+                    <div class="col-lg-4">
+                        <input type="checkbox" class="checkboxtxt" id="thirteen_Month_Optional" name="thirteen_Month_Optional"
+                        (change)="Getthirteen_Month_Optional_Allowance($event)" value="Allowance">
+                        <label class="Allowance">Allowance</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <input type="checkbox" class="checkboxtxt" id="thirteen_Month_Optional" name="thirteen_Month_Optional"
+                        (change)="Getthirteen_Month_Optional_Deminimis($event)" value="Deminimis">
+                        <label class="checkboxtxt">Deminimis</label>
+                    </div>
+                    <div class="col-lg-4">
+                        <input type="checkbox" class="checkboxtxt" id="thirteen_Month_Optional" name="thirteen_Month_Optional"
+                        (change)="Getthirteen_Month_Optional_Reimbursement($event)" value="Reimbursable Allowance">
+                        <label class="Allowance">Reimbursable Allowance</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <input type="checkbox" class="checkboxtxt" id="thirteen_Month_Optional" name="thirteen_Month_Optional"
+                        (change)="Getthirteen_Month_Optional_Bonus($event)" value="Bonus">
+                        <label class="checkboxtxt">Bonus</label>
+                    </div>
+                    <div class="col-lg-4">
+                        <input type="checkbox" class="checkboxtxt" id="thirteen_Month_Optional" name="thirteen_Month_Optional"
+                        (change)="Getthirteen_Month_Optional_SalaryAdjustment($event)" value="Salary Adjustment">
+                        <label class="Allowance">Salary Adjustment</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <input type="checkbox" class="checkboxtxt" id="thirteen_Month_Optional" name="thirteen_Month_Optional"
+                        (change)="Getthirteen_Month_Optional_Commission($event)" value="Commission">
+                        <label class="checkboxtxt">Commission</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <div class="row">
+            <div class="col-lg-4">
+                Final Pay Computation
+            </div>
+            <div class="col-lg-8">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <p>Deduct Absent?</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="FinalPay_Deduct_Absent" name="FinalPay_Deduct_Absent"
+                            [(ngModel)]="FinalPay_Deduct_Absent" value="Yes">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                Yes
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="FinalPay_Deduct_Absent" name="FinalPay_Deduct_Absent"
+                            [(ngModel)]="FinalPay_Deduct_Absent" value="No">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                No
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4"></div>
+            <div class="col-lg-8">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <p>Deduct Late/Undertime?</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="FinalPay_Deduct_Late" name="FinalPay_Deduct_Late"
+                            [(ngModel)]="FinalPay_Deduct_Late" value="Yes">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                Yes
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="FinalPay_Deduct_Late" name="FinalPay_Deduct_Late"
+                            [(ngModel)]="FinalPay_Deduct_Late" value="No">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                No
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4"></div>
+            <div class="col-lg-8">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <p>Include 13th Month Pay?</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="Final_Pay_13th_Month" name="Final_Pay_13th_Month"
+                            [(ngModel)]="Final_Pay_13th_Month" value="Yes">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                Yes
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="Final_Pay_13th_Month" name="Final_Pay_13th_Month"
+                            [(ngModel)]="Final_Pay_13th_Month" value="No">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                No
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <div class="row">
+            <div class="col-lg-4">
+                Net Pay Threshold
+            </div>
+            <div class="col-lg-8">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <input type="checkbox" class="checkboxtxt"  id="NetPay_Threshold" name="NetPay_Threshold"
+                        [(ngModel)]="NetPay_Threshold" value="Enable Net Pay Threshold">
+                        <label class="checkboxtxt">Enable Net Pay Threshold</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12 negative-padding">
+                <p class="formheading">GOVERNMENT CONTRIBUTIONS</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <label>SSS</label>
+            </div>
+            <div class="col-lg-4">
+                <p>Coverage</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4"></div>
+            <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="SSS_Coverage" name="SSS_Coverage"
+                            [(ngModel)]="SSS_Coverage" value="By Month(custom)">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                By Month(custom)
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="SSS_Coverage" name="SSS_Coverage"
+                            [(ngModel)]="SSS_Coverage" value="By Period(Gross)">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                By Period(Gross)
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-lg-4"></div>
+            <div class="col-lg-8">
+                <p>Optional:</p>
+                <div class="row">
+                    <div class="col-lg-2">
+                        <input type="checkbox" id="SSS_Optional" name="SSS_Optional"
+                        (change)="GetSSS_Optional_BasicSalary($event)" value="Basic Salary">
+                        <label class="checkboxtxt">Basic Salary</label>
+                    </div>
+                    <div class="col-lg-3">
+                        <input type="checkbox" class="checkboxtxt" id="SSS_Optional" name="SSS_Optional"
+                        (change)="GetSSS_Optional_Deminimis($event)" value="Dominimis">
+                        <label class="checkboxtxt">Dominimis</label>
+                    </div>
+                    <div class="col-lg-3">
+                        <input type="checkbox" class="checkboxtxt" id="SSS_Optional" name="SSS_Optional"
+                        (change)="GetSSS_Optional_Bonuses($event)"  value="Bonuses">
+                        <label class="checkboxtxt">Bonuses</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2">
+                        <input type="checkbox" class="checkboxtxt" id="SSS_Optional" name="SSS_Optional"
+                        (change)="GetSSS_Optional_OverTime($event)"  value="OverTime">
+                        <label class="checkboxtxt">OverTime</label>
+                    </div>
+                    <div class="col-lg-3">
+                        <input type="checkbox" class="checkboxtxt" id="SSS_Optional" name="SSS_Optional"
+                        (change)="GetSSS_Optional_Absent_late($event)"  value="Absent/Late">
+                        <label class="checkboxtxt">Absent/Late</label>
+                    </div>
+                    <div class="col-lg-4">
+                        <input type="checkbox" class="checkboxtxt" id="SSS_Optional" name="SSS_Optional"
+                        (change)="GetSSS_Optional_SalaryAdjustment($event)"  value="Salary Adjustment">
+                        <label class="checkboxtxt">Salary Adjustment</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2">
+                        <input type="checkbox" class="checkboxtxt" id="SSS_Optional" name="SSS_Optional"
+                        (change)="GetSSS_Optional_ECOLA($event)"  value="ECOLA">
+                        <label class="checkboxtxt">ECOLA</label>
+                    </div>
+                    <div class="col-lg-3">
+                        <input type="checkbox" class="checkboxtxt" id="SSS_Optional" name="SSS_Optional"
+                        (change)="GetSSS_Optional_Allowance($event)"  value="Allowance">
+                        <label class="checkboxtxt">Allowance</label>
+                    </div>
+                    <div class="col-lg-4">
+                        <input type="checkbox" class="checkboxtxt" id="SSS_Optional" name="SSS_Optional"
+                        (change)="GetSSS_Optional_Reimbursement($event)"  value="Reimbursement Allowance">
+                        <label class="checkboxtxt">Reimbursement Allowance</label>
+                    </div>
+                    <div class="col-lg-3">
+                        <input type="checkbox" class="checkboxtxt" id="SSS_Optional" name="SSS_Optional"
+                        (change)="GetSSS_Optional_Commission($event)"  value="Commision">
+                        <label class="checkboxtxt">Commision</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+
+
+        <div class="row">
+            <div class="col-lg-4">
+                <label>PhilHealth</label><br>
+            </div>
+            <div class="col-lg-4">
+                <p>Coverage</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="row">
+                    <span style="color: red; margin-left: 22px;font-size: 13px;">The basic for PhilHealth
+                        contributionshould be monthly basic
+                        salaryonly.</span>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio"  id="PhilHealth_Coverage" name="PhilHealth_Coverage"
+                            [(ngModel)]="PhilHealth_Coverage" value="By Month(custom)">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                By Month(custom)
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio"id="PhilHealth_Coverage" name="PhilHealth_Coverage"
+                            [(ngModel)]="PhilHealth_Coverage" value="By Period(Gross)">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                By Period(Gross)
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-lg-4"></div>
+            <div class="col-lg-8">
+                <p>Optional:</p>
+                <div class="row">
+                    <div class="col-lg-2">
+                        <input type="checkbox" id="PhilHealth_Optional" name="PhilHealth_Optional"
+                        (change)="GetPhilHealth_Optional_BasicSalary($event)" value="Basic Salary">
+                        <label class="checkboxtxt">Basic Salary</label>
+                    </div>
+                    <div class="col-lg-3">
+                        <input type="checkbox" class="checkboxtxt" id="PhilHealth_Optional" name="PhilHealth_Optional"
+                        (change)="GetPhilHealth_Optional_Deminimis($event)" value="Dominimis">
+                        <label class="checkboxtxt">Dominimis</label>
+                    </div>
+                    <div class="col-lg-3">
+                        <input type="checkbox" class="checkboxtxt" id="PhilHealth_Optional" name="PhilHealth_Optional"
+                        (change)="GetPhilHealth_Optional_Bonuses($event)" value="Bonuses">
+                        <label class="checkboxtxt">Bonuses</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2">
+                        <input type="checkbox" class="checkboxtxt" id="PhilHealth_Optional" name="PhilHealth_Optional"
+                        (change)="GetPhilHealth_Optional_OverTime($event)" value="OverTime">
+                        <label class="checkboxtxt">OverTime</label>
+                    </div>
+                    <div class="col-lg-3">
+                        <input type="checkbox" class="checkboxtxt" id="PhilHealth_Optional" name="PhilHealth_Optional"
+                        (change)="GetPhilHealth_Optional_Absent_late($event)" value="Absent/Late">
+                        <label class="checkboxtxt">Absent/Late</label>
+                    </div>
+                    <div class="col-lg-4">
+                        <input type="checkbox" class="checkboxtxt" id="PhilHealth_Optional" name="PhilHealth_Optional"
+                        (change)="GetPhilHealth_Optional_SalaryAdjustment($event)" value="Salary Adjustment">
+                        <label class="checkboxtxt">Salary Adjustment</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2">
+                        <input type="checkbox" class="checkboxtxt" id="PhilHealth_Optional" name="PhilHealth_Optional"
+                        (change)="GetPhilHealth_Optional_ECOLA($event)" value="ECOLA">
+                        <label class="checkboxtxt">ECOLA</label>
+                    </div>
+                    <div class="col-lg-3">
+                        <input type="checkbox" class="checkboxtxt" id="PhilHealth_Optional" name="PhilHealth_Optional"
+                        (change)="GetPhilHealth_Optional_Allowance($event)" value="Allowance">
+                        <label class="checkboxtxt">Allowance</label>
+                    </div>
+                    <div class="col-lg-4">
+                        <input type="checkbox" class="checkboxtxt" id="PhilHealth_Optional" name="PhilHealth_Optional"
+                        (change)="GetPhilHealth_Optional_Reimbursement($event)" value="Reimbursement Allowance">
+                        <label class="checkboxtxt">Reimbursement Allowance</label>
+                    </div>
+                    <div class="col-lg-3">
+                        <input type="checkbox" class="checkboxtxt" id="PhilHealth_Optional" name="PhilHealth_Optional"
+                        (change)="GetPhilHealth_Optional_Commission($event)" value="Commision">
+                        <label class="checkboxtxt">Commision</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <div class="row">
+            <div class="col-lg-4">
+                <label>HDMF</label>
+            </div>
+            <div class="col-lg-6">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="HDMS" name="HDMS"
+                    [(ngModel)]="HDMF" value="Fixed deduction of PHP 100.00 per month from each employee">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        Fixed deduction of PHP 100.00 per month from each employee
+                    </label>
+                </div>
+                <div>
+                    <label style="margin-left: 18px;">Employer Contribution:</label>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="HDMF_Employer_Contribution" name="HDMF_Employer_Contribution"
+                            [(ngModel)]="HDMF_Employer_Contribution" value="Same as Employee(PHP 100.00)">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                Same as Employee(PHP 100.00)
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="HDMF_Employer_Contribution" name="HDMF_Employer_Contribution"
+                            [(ngModel)]="HDMF_Employer_Contribution" value="Fixed deduction">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                Fixed deduction 
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        PHP<span><input class="form-control php"></span>
+                    </div>
+                </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="radio" id="HDMS" name="HDMS"
+                [(ngModel)]="HDMF" value="Follow this table to determine amount of deduction per month">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    Follow this table to determine amount of deduction per month
+                </label>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="row">
+        <div class="col-lg-12 negative-padding">
+            <p class="formheading">TAX COMPUTATION</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-4">
+            <label>Payroll Calender</label>
+        </div>
+        <div class="col-lg-6">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" id="PayRoll_Calender" name="PayRoll_Calender"
+                [(ngModel)]="PayRoll_Calender" value="Calender Year(From January to December)">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    Calender Year(From January to December)
+                </label>
+            </div>
+        </div>
+    </div>
+<br>
+    <div class="row">
+        <div class="col-lg-4">
+            <label>Tax Table</label>
+        </div>
+        <div class="col-lg-6">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" id="Tax_Table" name="Tax_Table"
+                [(ngModel)]="Tax_Table" value="Normal">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    Normal
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" id="Tax_Table" name="Tax_Table"
+                [(ngModel)]="Tax_Table" value="Pre-Annualised">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    Pre-Annualised
+                </label>
+            </div>
+            <div class="row">
+                <div class="col-lg-5">
+                    <p style="text-align: right;">Pre-Annualised starts on:</p>
+                </div>
+                <div class="col-lg-3">
+                    <select class="form-control" [(ngModel)]="Tax_Table_Starts_on">
+                        <option value="January">January</option>
+                        <option value="February">February</option>
+                        <option value="March">March</option>
+                        <option value="April">April</option>
+                        <option value="May">May</option>
+                        <option value="June">June</option>
+                        <option value="July">July</option>
+                        <option value="August">August</option>
+                        <option value="September">September</option>
+                        <option value="October">October</option>
+                        <option value="November">November</option>
+                        <option value="December">December</option>
+                        
+                    </select>
+                </div>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input  " type="checkbox" id="Tax_Table_Including_13thmonth" name="Tax_Table_Including_13thmonth"
+                [(ngModel)]="Tax_Table_Including_13thmonth" value="Including 13th month pay">
+                <label class="form-check-label" for="flexCheckDefault">Including 13th month pay</label>
+            </div>
+        </div>
+    </div>
+<br>
+    <div class="row">
+        <div class="col-lg-4">
+            <label>Non-Tax Exemption Ceiling*</label>
+        </div>
+        <div class="col-lg-4">
+            <input class="form-control" placeholder="90,00,000" [(ngModel)]="Non_Tax_Essential_Sealing">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-4">
+            <label>Deminimis Exemption Ceiling*</label>
+        </div>
+        <div class="col-lg-4">
+            <input class="form-control" placeholder="80,00,000" [(ngModel)]="Deminimis_Exemption">
+        </div>
+    </div>
+
+    <!-- <div class="row">
+        <div class="col-lg-12 negative-padding">
+            <p class="formheading">PAYSLIP REPORT SETTINGS</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4">
+            <label>Password Required in Payslip sent in email</label>
+        </div>
+        <div class="col-lg-6">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            yes
+                        </label>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            No
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-4">
+            <label>Payslip Template</label>
+        </div>
+        <div class="col-lg-6">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            Default
+                        </label>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            New
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-4">
+            <label>Company Payslip format</label>
+        </div>
+        <div class="col-lg-6">
+            <div class="row">
+                <div class="col-lg-6">
+                    <a href="w3schools.com">Customize</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 negative-padding">
+            <p class="formheading">PAYROLL REPORT SETTINGS</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4">
+            <label>Payroll Summary Format</label>
+        </div>
+        <div class="col-lg-6">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            Default
+                        </label>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            New
+                        </label>&nbsp;
+                        <img src="/assets/img/question.png" class="icon" >
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="row">
+        <div class="col-lg-12 negative-padding">
+            <p class="formheading">DISPLAY SETTINGS</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4">
+            <label>Sort Employee in Tables</label>
+        </div>
+        <div class="col-lg-6">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            By Employee ID
+                        </label>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            By Name
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4">
+            <label>Show Audit Trail Links in Tables</label>
+        </div>
+        <div class="col-lg-6">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            Yes
+                        </label>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            No
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-4">
+            <label>Show Assumed Accured in Payroll Summery</label>
+        </div>
+        <div class="col-lg-6">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            Yes
+                        </label>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            No
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-lg-12 negative-padding">
+            <p class="formheading">PASSWORD SETTINGS</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4">
+            <label>Expiration Days</label>
+        </div>
+        <div class="col-lg-4">
+            <input class="form-control" placeholder="365">
+        </div>
+    </div>
+    <br>
+</div> -->
+</div>
+<br>
+<div class="row">
+    <div class="col-lg-3"></div>
+    <div class="col-lg-3">
+        <button class="btn"  *ngIf="id==null || id==undefined"  type="submit"   (click)="onSave()">SAVE</button>
+        <button class="btn"  *ngIf="id!=null || id!=undefined" (click)="Update()">UPDATE</button>
+    </div>
+    <div class="col-lg-3">
+        <button class="btn">AUDIT TRAIL</button>
+    </div>
+    <div class="col-lg-3"></div>
+</div>
+<br><br>
+</div>
