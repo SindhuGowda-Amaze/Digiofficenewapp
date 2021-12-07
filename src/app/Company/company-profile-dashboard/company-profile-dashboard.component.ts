@@ -26,7 +26,7 @@ export class CompanyProfileDashboardComponent implements OnInit {
 
   Update (dept: any){
     debugger
-   location.href="/Companyprofile/"+ dept.id;
+   location.href="/Companyprofile/"+ dept;
   }
 
   CompanyProfilelist1:any

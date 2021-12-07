@@ -125,7 +125,7 @@ const routes: Routes = [
     path: "BankForm/:id", component: BankFormComponent,canActivate: [AuthGuard]
   },
   {
-    path: "Login", component: LoginScreenComponent,canActivate: [AuthGuard]
+    path: "Login", component: LoginScreenComponent,
   },
   { path: "Adolfo", component: AdolfoComponent,canActivate: [AuthGuard] },
 

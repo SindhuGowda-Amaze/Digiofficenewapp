@@ -799,8 +799,8 @@ this.files.splice(this.files.indexOf(event),1);
       data => {
       debugger
       let result = data;
-      location.href="/CompanyProfileDashboard";
       Swal.fire("Update Sucessfully");
+	  location.href="/CompanyProfileDashboard";
     })
   }
 
