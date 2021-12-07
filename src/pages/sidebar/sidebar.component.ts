@@ -8,8 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class SidebarComponent implements OnInit {
 
   constructor() { }
-
+  company_name: any;
+  login:any
   ngOnInit(): void {
+    this.login=sessionStorage.getItem('login')
+    this.company_name=sessionStorage.getItem('company_name')
   }
 
 }

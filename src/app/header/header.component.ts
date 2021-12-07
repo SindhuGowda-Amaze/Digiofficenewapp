@@ -11,5 +11,9 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  logout() {
+    sessionStorage.clear();
+    location.href = "/Login";
+    //location.reload();
+  }
 }

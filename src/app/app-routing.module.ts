@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { AuthGuard } from './services/auth.guard';
 import { RouterModule, Routes } from '@angular/router';
 import { SidebarComponent } from 'src/pages/sidebar/sidebar.component';
 import { CompanyprofileComponent } from './Company/companyprofile/companyprofile.component';
@@ -40,63 +41,77 @@ import { CompanyProfileDashboardComponent } from './Company/company-profile-dash
 const routes: Routes = [
 
   
-  { path: "", redirectTo: "PayRoll", pathMatch: "full" }, 
+  { path: "", redirectTo: "Login", pathMatch: "full" }, 
+
+
 
   {
-    path: "Sidebar", component: SidebarComponent
+    path: "Sidebar", component: SidebarComponent,canActivate: [AuthGuard]
   },
-  { path: "Adjustment",component:AdjustmentComponent},
+  { path: "Adjustment", component: AdjustmentComponent,canActivate: [AuthGuard] },
   {
-    path: "Header", component: HeaderComponent
-  },
-  {
-    path: "Companyprofile", component: CompanyprofileComponent
+    path: "Header", component: HeaderComponent,canActivate: [AuthGuard]
   },
   {
-    path: "Help", component: HelpComponent
+    path: "Companyprofile", component: CompanyprofileComponent,canActivate: [AuthGuard]
   },
   {
-    path: "Sproutpayroll", component: SproutPayrollComponent
+    path: "Help", component: HelpComponent,canActivate: [AuthGuard]
   },
   {
-    path: "AdjustmentForm", component: AdjustmentFormComponent
+    path: "Companyprofile/:id", component: CompanyprofileComponent
+  },
+
+  {
+    path: "AdjustmentForm", component: AdjustmentFormComponent,canActivate: [AuthGuard]
   },
   {
-    path: "CostCenterForm", component: CostCenterFormComponent
+    path: "CostCenterForm", component: CostCenterFormComponent,canActivate: [AuthGuard]
   },
   {
-    path: "CompanyAdjustmentForm", component: CompanyAdjustmentFormComponent
+    path: "CompanyAdjustmentForm", component: CompanyAdjustmentFormComponent,canActivate: [AuthGuard]
   },
   {
-    path: "EmployeeForm", component: EmployeeFormComponent
+    path: "EmployeeForm", component: EmployeeFormComponent,canActivate: [AuthGuard]
   },
   {
-    path: "DepartmentForm", component: DepartmentFormComponent
+    path: "DepartmentForm", component: DepartmentFormComponent,canActivate: [AuthGuard]
   },
   {
-    path: "DepartmentForm/:id", component: DepartmentFormComponent
+    path: "DepartmentForm/:id", component: DepartmentFormComponent,canActivate: [AuthGuard]
   },
   {
-    path: "GeneralLedgerForm", component: GeneralLedgerFormComponent
+    path: "GeneralLedgerForm", component: GeneralLedgerFormComponent,canActivate: [AuthGuard]
   },
   {
-    path: "OtRatesForm", component: OtRatesFormComponent
+    path: "OtRatesForm", component: OtRatesFormComponent,canActivate: [AuthGuard]
   },
   {
-    path: "PayGroupForm", component: PayGroupFormComponent
+    path: "PayGroupForm", component: PayGroupFormComponent,canActivate: [AuthGuard]
   },
   {
-    path: "PayGroupForm/:id", component: PayGroupFormComponent
+    path: "PayGroupForm/:id", component: PayGroupFormComponent,canActivate: [AuthGuard]
   },
   {
-    path: "PayRollForm", component: PayRollFormComponent
+    path: "PayRollForm", component: PayRollFormComponent,canActivate: [AuthGuard]
   },
   {
-    path: "PhillHealthForm", component: PhillHealthFormComponent
+    path: "PhillHealthForm", component: PhillHealthFormComponent,canActivate: [AuthGuard]
   },
   {
-    path: "PhillHealthForm/:id", component: PhillHealthFormComponent
+    path: "sssForm", component: SSSFormComponent,canActivate: [AuthGuard]
   },
+  {
+    path: "UsersForm", component: UsersFormComponent,canActivate: [AuthGuard]
+  },
+  {
+    path: "BankForm", component: BankFormComponent,canActivate: [AuthGuard]
+  
+  },
+  { 
+    path: "PhillHealthForm/:id", component: PhillHealthFormComponent,canActivate: [AuthGuard]
+  },
+ 
   {
     path: "sssForm", component: SSSFormComponent
   },
@@ -107,54 +122,55 @@ const routes: Routes = [
     path: "UsersForm", component: UsersFormComponent
   },
   {
-    path: "BankForm", component: BankFormComponent
+    path: "BankForm/:id", component: BankFormComponent,canActivate: [AuthGuard]
   },
   {
-    path: "BankForm/:id", component: BankFormComponent
+    path: "Login", component: LoginScreenComponent,canActivate: [AuthGuard]
   },
+  { path: "Adolfo", component: AdolfoComponent,canActivate: [AuthGuard] },
+
   {
-    path: "Login", component: LoginScreenComponent
+    path: "Adolfo/:id", component: AdolfoComponent,canActivate: [AuthGuard]
   },
-  {path:"Adolfo",component:AdolfoComponent},
-  
-  {path:"CompanyAdjustment",component:CompanyAdjustmentComponent},
 
-  {path:"CostCenter",component:CostCenterComponent},
+  { path: "CompanyAdjustment", component: CompanyAdjustmentComponent,canActivate: [AuthGuard] },
 
-  {path:"CostCenterForm/:id", component: CostCenterFormComponent},
+  { path: "CostCenter", component: CostCenterComponent,canActivate: [AuthGuard]},
 
-  {path:'Department',component:DepartmentComponent},
-  
-  {path:'Employee',component:EmployeeComponent},
+  { path: "CostCenterForm/:id", component: CostCenterFormComponent,canActivate: [AuthGuard] },
 
-  {path:'GeneralLedger',component:GeneralLedgerComponent},
-  
-  {path:'OtRates',component:OtRatesComponent},
-  
-  {path:'PayGroup',component:PayGroupComponent},
-  
-  {path:'PayRoll',component:PayRollComponent},
+  { path: 'Department', component: DepartmentComponent,canActivate: [AuthGuard] },
 
-  {path:'PhilHealth',component: PhilHealthComponent},
-  
-  {path:'SSS',component:SSSComponent},
-  
-  {path:'User',component: UserComponent},
+  { path: 'Employee', component: EmployeeComponent,canActivate: [AuthGuard]},
 
-  {path:'Bank',component:BankComponent},
+  { path: 'GeneralLedger', component: GeneralLedgerComponent,canActivate: [AuthGuard] },
 
-  {path:'Government',component:GovernmentComponent},
-  
-  {path:'TaxTable',component:TaxTableComponent},
-  
-  {path:'Government',component:GovernmentComponent},
+  { path: 'OtRates', component: OtRatesComponent,canActivate: [AuthGuard] },
 
-  {path:'CompanyProfileDashboard',component:CompanyProfileDashboardComponent}
+  { path: 'PayGroup', component: PayGroupComponent,canActivate: [AuthGuard] },
+
+  { path: 'PayRoll', component: PayRollComponent,canActivate: [AuthGuard] },
+
+  { path: 'PhilHealth', component: PhilHealthComponent,canActivate: [AuthGuard] },
+
+  { path: 'SSS', component: SSSComponent,canActivate: [AuthGuard] },
+
+  { path: 'User', component: UserComponent ,canActivate: [AuthGuard]},
+
+  { path: 'Bank', component: BankComponent,canActivate: [AuthGuard]},
+
+  { path: 'Government', component: GovernmentComponent,canActivate: [AuthGuard] },
+
+  { path: 'TaxTable', component: TaxTableComponent,canActivate: [AuthGuard]},
+
+  { path: 'Government', component: GovernmentComponent,canActivate: [AuthGuard] },
+
+  { path: 'CompanyProfileDashboard', component: CompanyProfileDashboardComponent,canActivate: [AuthGuard]}
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
- 
+
 })
 export class AppRoutingModule { }
