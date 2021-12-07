@@ -30,13 +30,22 @@
                     <td><span class="menu">Monthly Share</span></td>
                     <td><span class="menu">Personal Share</span></td> 
                     <td><span class="menu">Employer Share</span></td>                                        
+                    <td style="text-align: center;" ><span class="menu" >Actions</span></td>                                         
                 </tr>          
              
                 <tr *ngFor="let salary of salarylist">                 
                     <td>{{salary.monthly_Basic_Salary_Into_Five}}</td>
                     <td>{{salary.monthly_Share}}</td>
                     <td>{{salary.personal_Share}}</td> 
-                    <td>{{salary.employee_Share}}</td>                                        
+                    <td>{{salary.employee_Share}}</td>
+                    <td class="align">
+                        <!-- <button class="edit" (click)="Update(dept)">Edit</button>  <br>
+                        <button class="edit" (click)="delete(dept.id)">Delete</button>  <br> -->
+                       
+                            <button class="edit">Edit</button>  <br>
+                            <button class="edit">Delete</button>  <br>
+                        
+                    </td>                                         
                 </tr>   
             </table>
         </div><br>

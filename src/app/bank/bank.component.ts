@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DgofficeServiceService } from '../dgoffice-service.service';
 import { ActivatedRoute } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-bank',
@@ -23,11 +24,22 @@ export class BankComponent implements OnInit {
 
 
   Departmentlist:any
+  
   public GetBanks() {
     this.DgofficeServiceService.GetBanks().subscribe(data=>{
       debugger
       this.Departmentlist=data ;
      })
+  }
+
+  delete(id: any){
+    debugger;
+  
+    this.DgofficeServiceService.DeleteBanks(id).subscribe(
+      data => {
+       Swal.fire('Deleted Successfully...!')   
+       location.reload() 
+    })
   }
 
 

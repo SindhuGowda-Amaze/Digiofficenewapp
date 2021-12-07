@@ -39,7 +39,7 @@ export class BankFormComponent implements OnInit {
 
       this.selectName=this.result[0].name;
       this.selectCode=this.result[0].code;
-      this.selectRemarks=this.result[0].remark;
+      this.selectRemarks=this.result[0].remarks;
       
 
     })
@@ -77,7 +77,7 @@ export class BankFormComponent implements OnInit {
       data => {
       debugger
       let result = data;
-      location.href="/BankForm/";
+      location.href="/Bank/";
       Swal.fire("Update Sucessfully.....!");
     })
   }

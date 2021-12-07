@@ -46,7 +46,6 @@ const routes: Routes = [
   {
     path: "Sidebar", component: SidebarComponent
   },
-  
   { path: "Adjustment",component:AdjustmentComponent},
   {
     path: "Header", component: HeaderComponent
@@ -87,12 +86,9 @@ const routes: Routes = [
   {
     path: "PayGroupForm", component: PayGroupFormComponent
   },
-
   {
     path: "PayGroupForm/:id", component: PayGroupFormComponent
   },
-
-
   {
     path: "PayRollForm", component: PayRollFormComponent
   },
@@ -107,6 +103,9 @@ const routes: Routes = [
   },
   {
     path: "BankForm", component: BankFormComponent
+  },
+  {
+    path: "BankForm/:id", component: BankFormComponent
   },
   {
     path: "Login", component: LoginScreenComponent
@@ -144,6 +143,7 @@ const routes: Routes = [
   {path:'TaxTable',component:TaxTableComponent},
   
   {path:'Government',component:GovernmentComponent},
+
   {path:'CompanyProfileDashboard',component:CompanyProfileDashboardComponent}
 ];
 
