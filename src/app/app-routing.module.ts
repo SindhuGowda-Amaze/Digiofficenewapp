@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { SidebarComponent } from 'src/pages/sidebar/sidebar.component';
-import { CompanyprofileComponent } from '../pages/companyprofile/companyprofile.component';
+import { CompanyprofileComponent } from './Company/companyprofile/companyprofile.component';
 import { AdjustmentComponent } from 'src/app/adjustment/adjustment.component';
 import { HeaderComponent } from './header/header.component';
 import { HelpComponent } from './help/help.component';
@@ -10,33 +10,33 @@ import { SproutPayrollComponent } from './sprout-payroll/sprout-payroll.componen
 import { AdjustmentFormComponent } from './adjustment-form/adjustment-form.component';
 import { AdolfoComponent } from './adolfo/adolfo.component';
 import { CompanyAdjustmentComponent } from './company-adjustment/company-adjustment.component';
-import { CostCenterComponent } from './cost-center/cost-center.component';
-import { DepartmentComponent } from './department/department.component';
+import { CostCenterComponent } from './Company/cost-center/cost-center.component';
+import { DepartmentComponent } from './Company/department/department.component';
 import { EmployeeComponent } from './employee/employee.component';
-import { CostCenterFormComponent } from './cost-center-form/cost-center-form.component';
+import { CostCenterFormComponent } from './Company/cost-center-form/cost-center-form.component';
 import { CompanyAdjustmentFormComponent } from './company-adjustment-form/company-adjustment-form.component';
 import { EmployeeFormComponent } from './employee-form/employee-form.component';
-import { DepartmentFormComponent } from './department-form/department-form.component';
+import { DepartmentFormComponent } from './Company/department-form/department-form.component';
 import { GeneralLedgerComponent } from './general-ledger/general-ledger.component';
 import { OtRatesComponent } from './ot-rates/ot-rates.component';
-import { PayGroupComponent } from './pay-group/pay-group.component';
+import { PayGroupComponent } from './Company/pay-group/pay-group.component';
 import { PayRollComponent } from './pay-roll/pay-roll.component';
 import { PhilHealthComponent } from './phil-health/phil-health.component';
 import { SSSComponent } from './sss/sss.component';
 import { UserComponent } from './user/user.component';
-import { BankComponent } from './bank/bank.component';
+import { BankComponent } from './Company/bank/bank.component';
 import { GeneralLedgerFormComponent } from './general-ledger-form/general-ledger-form.component';
 import { OtRatesFormComponent } from './ot-rates-form/ot-rates-form.component';
-import { PayGroupFormComponent } from './pay-group-form/pay-group-form.component';
+import { PayGroupFormComponent } from './Company/pay-group-form/pay-group-form.component';
 import { PayRollFormComponent } from './pay-roll-form/pay-roll-form.component';
 import { PhillHealthFormComponent } from './phill-health-form/phill-health-form.component';
 import { SSSFormComponent } from './sssform/sssform.component';
 import { UsersFormComponent } from './users-form/users-form.component';
 import { GovernmentComponent } from './government/government.component';
 import { TaxTableComponent } from './tax-table/tax-table.component';
-import { BankFormComponent } from './bank-form/bank-form.component';
+import { BankFormComponent } from './Company/bank-form/bank-form.component';
 import { LoginScreenComponent } from './login-screen/login-screen.component';
-import { CompanyProfileDashboardComponent } from './company-profile-dashboard/company-profile-dashboard.component';
+import { CompanyProfileDashboardComponent } from './Company/company-profile-dashboard/company-profile-dashboard.component';
 
 const routes: Routes = [
 

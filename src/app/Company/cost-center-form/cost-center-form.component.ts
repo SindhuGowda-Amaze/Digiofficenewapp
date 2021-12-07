@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { DgofficeServiceService } from '../dgoffice-service.service';
+import { DgofficeServiceService } from '../../dgoffice-service.service';
 import Swal from 'sweetalert2';
 
 @Component({

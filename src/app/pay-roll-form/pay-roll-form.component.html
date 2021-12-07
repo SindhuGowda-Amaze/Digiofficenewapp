@@ -14,7 +14,7 @@
             <label>Year</label>
         </div>
         <div class="col-lg-4">
-            <input type="Year" class="form-control" placeholder="yyyy">
+            <input type="Year" class="form-control" placeholder="year" [(ngModel)]="year"  >
         </div>
     </div>
     <br>
@@ -23,7 +23,7 @@
             <label>Month</label>
         </div>
         <div class="col-lg-4">
-            <input type="Month" class="form-control" placeholder="mm">
+            <input type="Month" class="form-control" placeholder="Month" [(ngModel)]="month" >
         </div>
     </div>
     <br>
@@ -32,7 +32,7 @@
             <label>Period</label>
         </div>
         <div class="col-lg-4">
-            <input type="text" class="form-control" placeholder="Period">
+            <input type="text" class="form-control" placeholder="Period" [(ngModel)]="period" >
         </div>
     </div>
     <br>
@@ -41,7 +41,7 @@
             <label>Payroll Run Type</label>
         </div>
         <div class="col-lg-4">
-            <input type="text" class="form-control" placeholder="Payroll Run Type" >
+            <input type="text" class="form-control" placeholder="Payroll Run Type" [(ngModel)]="payrollRunType">
         </div>
     </div>
     <br>
@@ -50,7 +50,7 @@
             <label>Pay Group</label>
         </div>
         <div class="col-lg-4">
-            <input type="text" class="form-control" placeholder="Pay Group">
+            <input type="text" class="form-control" placeholder="Pay Group" [(ngModel)]="payGroup" >
         </div>
     </div>
     <br>
@@ -59,7 +59,7 @@
             <label>Description</label>
         </div>
         <div class="col-lg-4">
-            <textarea rows="5" class="form-control" placeholder="Description"></textarea>
+            <textarea rows="5" class="form-control" placeholder="Description" [(ngModel)]="description"></textarea>
         </div>
     </div>
     <br>
@@ -68,14 +68,15 @@
             <label>Transaction Date</label>
         </div>
         <div class="col-lg-4">
-            <input type="date" class="form-control" placeholder="dd-mm-yyyy">
+            <input type="date" class="form-control" placeholder="dd-mm-yyyy" [(ngModel)]="ddmmyyyy">
         </div>
     </div>
     <br>
     <div class="row">
         <div class="col-lg-5"></div>
         <div class="col-lg-2">
-            <button type="button" class="addbtns">Save</button>
+            <button type="button" class="addbtns" (click)="Save()">Save</button>
+            <!-- <button type="button" class="addbtns" *ngIf="id!=null || id!=undefined" (click)="Update()">Update</button> -->
         </div>
         <div class="col-lg-5"></div>
     </div>

@@ -215,8 +215,21 @@ export class DgofficeServiceService {
     return this.http.get<any[]>(APIURL);
   }
 
-  
-  
+  public GetPayroll() {
+    debugger
+    let APIURL = this.baseURL+"Master/GetPayroll";
+    return this.http.get<any[]>(APIURL);
+  }
+   
+  public InsertPayroll(json:any) {
+    debugger
+    let APIURL = this.baseURL+"Master/InsertPayroll";
+    return this.http.post<any[]>(APIURL, json);
+  }
+
+
+
+
 
 
 }
