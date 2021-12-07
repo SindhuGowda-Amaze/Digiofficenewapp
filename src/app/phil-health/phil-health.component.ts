@@ -10,14 +10,13 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class PhilHealthComponent implements OnInit {
 
-  salarylist:any;
-
-
-  constructor(private DgofficeServiceService:DgofficeServiceService,private ActivatedRoute:ActivatedRoute) { }
+  constructor(private DgofficeServiceService:DgofficeServiceService, private ActivatedRoute:ActivatedRoute) { }
 
   ngOnInit(): void {
     this.GetPhilHealth();
   }
+
+  salarylist:any;
 
   public GetPhilHealth() {
     debugger

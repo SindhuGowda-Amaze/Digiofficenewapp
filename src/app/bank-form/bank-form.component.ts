@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DgofficeServiceService } from '../dgoffice-service.service';
 import { ActivatedRoute } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-bank-form',
@@ -38,7 +39,7 @@ export class BankFormComponent implements OnInit {
 
       this.selectName=this.result[0].name;
       this.selectCode=this.result[0].code;
-      this.selectRemarks=this.result[0].remark;
+      this.selectRemarks=this.result[0].remarks;
       
 
     })
@@ -62,5 +63,25 @@ export class BankFormComponent implements OnInit {
   alert("Mentioned Name is "+this.selectName)
   alert("Mentioned Code is "+this.selectCode)
   }
+
+  Update(){
+    debugger
+    var json = {
+      "ID":this.id,
+      "Name": this.selectName,
+      "Code": this.selectCode,
+      "Remarks": this.selectRemarks     
+    };
+  
+    this.DgofficeServiceService.UpdateBanks(json).subscribe(
+      data => {
+      debugger
+      let result = data;
+      location.href="/Bank/";
+      Swal.fire("Update Sucessfully.....!");
+    })
+  }
+
+  
 
 }
