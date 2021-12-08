@@ -85,10 +85,66 @@ export class CompanyprofileComponent implements OnInit {
       data => {
         debugger
         this.result = data;
-        this.count = this.result.length;
+		this.result=this.result.filter((x: { id: any; })=>x.id==Number(this.id));
+		this.Company_logo=this.result[0].company_Logo;
+		this.Company_Name=this.result[0].company_Name;
+		this.Nature_Of_Business=this.result[0].nature_Of_Business;
+		this.Address1=this.result[0].address1;
+		this.Address2=this.result[0].address2;
+		this.Zipcode=this.result[0].zipcode;
+		this.RDO=this.result[0].rDO;
+		this.Email=this.result[0].email;
+		this.Phone=this.result[0].phone;
+		this.Password=this.result[0].password;
+		this.Fax=this.result[0].fax;
+		this.Tin=this.result[0].tin;
+		this.SSN_No=this.result[0].ssN_No;
+		this.PhilHealthNumber=this.result[0].philHealthNumber;
+		this.HDMFNumber=this.result[0].hdmfNumber;
+		this.Admin_AuthorisedPerson=this.result[0].admin_AuthorisedPerson;
+		this.Admin_PositionTitle=this.result[0].admin_PositionTitle;
+		this.HR_AuthorisedPerson=this.result[0].hR_AuthorisedPerson;
+		this.HR_PositionTitle=this.result[0].hR_PositionTitle;
+		this.Finance_AuthorisedPerson=this.result[0].finance_AuthorisedPerson;
+		this.Finance_PositionTitle=this.result[0].finance_PositionTitle;
+		this.E_Signatory=this.result[0].e_Signatory;
+		this.Work_Days_Per_Year=this.result[0].work_Days_Per_Year;
+		this.Work_Days_Per_Day=this.result[0].work_Days_Per_Day;
+		this.Work_Months_Per_Year=this.result[0].work_Months_Per_Year;
+		this.Work_hour_Start=this.result[0].work_hour_Start;
+		this.Work_hour_End=this.result[0].work_hour_End;
+		this.Break_Hours=this.result[0].break_Hours;
+		this.Periods_Per_Month=this.result[0].periods_Per_Month;
+		this.Absent_Deduction=this.result[0].absent_Deduction;
+		this.Late_Deduction=this.result[0].late_Deduction;
+		this.OverTime_Comeptition_Optional=this.result[0].overTime_Comeptition_Optional;
+		this.OverTime_Comeptition_OTRates=this.result[0].overTime_Comeptition_OTRates;
+		this.RestDays=this.result[0].restDays;
+		this.thirteen_Month_Compuatation_Type=this.result[0].thirteen_Month_Compuatation_Type;
+		this.thirteen_Month_Deduct_Absent=this.result[0].thirteen_Month_Deduct_Absent;
+		this.thirteen_Month_Deduct_Late=this.result[0].thirteen_Month_Deduct_Late;
+		this.thirteen_Month_Optional=this.result[0].thirteen_Month_Optional;
+		this.FinalPay_Deduct_Absent=this.result[0].finalPay_Deduct_Absent;
+		this.FinalPay_Deduct_Late=this.result[0].finalPay_Deduct_Late;
+		this.Final_Pay_13th_Month=this.result[0].final_Pay_13th_Month;
+		this.NetPay_Threshold=this.result[0].netPay_Threshold;
+		this.SSS_Coverage=this.result[0].sSS_Coverage;
+		this.SSS_Optional=this.result[0].SSS_Optional;
+		this.PhilHealth_Coverage=this.result[0].PhilHealth_Coverage;
+		this.PhilHealth_Optional=this.result[0].PhilHealth_Optional;
+		this.HDMF=this.result[0].HDMF;
+		this.HDMF_Employer_Contribution=this.result[0].HDMF_Employer_Contribution;
+		this.PayRoll_Calender=this.result[0].PayRoll_Calender;
+		this.Tax_Table=this.result[0].Tax_Table;
+		this.Tax_Table_Starts_on=this.result[0].Tax_Table_Starts_on;
+		this.Tax_Table_Including_13thmonth=this.result[0].Tax_Table_Including_13thmonth;
+		this.Non_Tax_Essential_Sealing=this.result[0].Non_Tax_Essential_Sealing;
+		this.Deminimis_Exemption=this.result[0].Deminimis_Exemption;
       }
     )
   }
+
+  
 
 
  OverTime_Comeptition_Optional: any
